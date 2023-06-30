@@ -1,0 +1,2282 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3.4 Matching der Redebeiträge &#8212; Goldstandard-Korpus-Evaluation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="3.5 Datenanalyse" href="3-5_analyse.html" />
+    <link rel="prev" title="3.3 Erstellung des Goldstandard-Korpus" href="3-3_korpus-erstellung.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="de">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Goldstandard-Korpus-Evaluation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+<a class="reference internal" href="0_start.html">Goldstandard-Korpus-Evaluation/a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1_einleitung.html">
+   1 Einleitung
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#goldstandard-korpus-evaluation-als-methode-der-digital-history">1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History</a>
+    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2_daten.html">
+   2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+      <a class="reference internal" href="2_daten.html#plenarprotokolle-des-bundestags-als-open-data">2.1 Plenarprotokolle des Bundestags als Open Data</a>
+    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-2_open-discourse.html">
+     2.2	Open Discourse
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="3_methode.html">
+   3 Methode: Goldstandard-Korpus-Evaluation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+    <li class="toctree-l2">
+      <a class="reference internal" href="3_methode.html#untersuchungskriterien">3.1 Untersuchungskriterien</a>
+  </li>
+  <li class="toctree-l2">
+      <a class="reference internal" href="3_methode.html#stichprobe">3.2 Stichprobe</a>
+  </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-3_korpus-erstellung.html">
+     3.3 Erstellung des Goldstandard-Korpus
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.4 Matching der Redebeiträge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-5_analyse.html">
+     3.5 Datenanalyse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-6_fazit.html">
+     3.6 Fazit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_epistemologische-konsequenzen.html">
+   4	Epistemologische Konsequenzen für die Geschichtswissenschaften
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Schluss.html">
+   5 Schluss
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_quellen-und-daten.html">
+   Quellen- &amp; Datenverzeichnis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_literatur.html">
+   Literaturverzeichnis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/3-4_matching.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/3-4_matching.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#daten-laden">
+   3.4.1 Daten laden
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datenvorbereitung">
+   3.4.2 Datenvorbereitung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datenvergleich-kombinierung">
+   3.4.3 Datenvergleich &amp; -kombinierung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uberblickstabelle-erstellen">
+   3.4.4 Überblickstabelle erstellen
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>3.4 Matching der Redebeiträge</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#daten-laden">
+   3.4.1 Daten laden
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datenvorbereitung">
+   3.4.2 Datenvorbereitung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datenvergleich-kombinierung">
+   3.4.3 Datenvergleich &amp; -kombinierung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#uberblickstabelle-erstellen">
+   3.4.4 Überblickstabelle erstellen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="matching-der-redebeitrage">
+<h1>3.4 Matching der Redebeiträge<a class="headerlink" href="#matching-der-redebeitrage" title="Link zu dieser Überschrift">#</a></h1>
+<p>Bis hierhin liegen zwei Korpora vor. Um das OP-Korpus mithilfe des annotierten Goldstandard-Korpus zu untersuchen, müssen beide Korpora zusammengebracht werden, die jeweilige Entsprechung im anderen Korpus also gefunden und gematched werden. Beiträge, die nicht im OP-Korpus enthalten sind, aber im Goldstandard-Korpus, fehlen – sie wurden vom OP-Code nicht erkannt. Andersherum, also Redebeiträge, die im OP-Korpus existieren, aber nicht im Goldstandard-Korpus, sind fälschlich als Redebeiträge erkannte Textfragmente. In diesem Kapitel auch die Zuordnung und der korrekte Umfang eines Redebeitrags untersucht.</p>
+<p>Für den Vergleich wurden beide Korpora in Python bearbeitet. Das OP-Korpus wurde gefiltert, um nur die Redebeiträge der 36 Debatten aus der Stichprobe zu enthalten, die auch manuell annotiert wurden. Für das Matching wurden die Redebeiträge beider Korpora iterativ verglichen und gematched. Nach dem Match wurde auch die Richtigkeit des Redebeitrags-Umfangs bestimmt.
+Der Prozess gliedert sich in die folgenden vier Schritte:</p>
+<ol class="simple">
+<li><p>Daten laden</p></li>
+<li><p>Datenvorbereitung</p></li>
+<li><p>Datenvergleich &amp; -kombinierung</p></li>
+<li><p>Überblickstabelle erstellen</p></li>
+</ol>
+<p>Zu Beginn werden die notwendigen Pakete geladen und Prozess-Variablen für die richtige Typen-Formatierung von Zahlen und das Logging des Prozesses gesetzt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">fuzzywuzzy</span> <span class="kn">import</span> <span class="n">fuzz</span><span class="p">,</span> <span class="n">process</span>
+<span class="kn">from</span> <span class="nn">joblib</span> <span class="kn">import</span> <span class="n">Parallel</span><span class="p">,</span> <span class="n">delayed</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;data-check_open-discourse.log&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="daten-laden">
+<h2>3.4.1 Daten laden<a class="headerlink" href="#daten-laden" title="Link zu dieser Überschrift">#</a></h2>
+<p>Die beiden Korpora haben eine abweichende Datenstruktur und müssen deshalb unterschiedlich für die Durchführung geöffnet werden. Das Open-Discourse-Korpus kann mit einem einfachen Befehl geladen werden und ist dann als Datentabelle im Programm vorhanden.</p>
+<p>Das OP-Korpus wird importiert, für die Goldstandard-XML-Dateien wird der Pfad gesetzt und das leere Dataframe <code class="docutils literal notranslate"><span class="pre">dataset_gold</span></code> erstellt, wie auch das Dafaframe <code class="docutils literal notranslate"><span class="pre">overview_datasets</span></code> für Zusammenfassung aller Kennzahlen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Externe Ressourcen laden/definieren</span>
+<span class="n">dataset_open_discourse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;../data/open_discourse/speeches.feather&quot;</span><span class="p">)</span>
+<span class="n">annotated_xml_path</span> <span class="o">=</span> <span class="s2">&quot;../data/evaluation/annotated_enriched_protocols/&quot;</span>
+
+<span class="c1"># Leeres Dataframe für das Goldstandard-Korpus</span>
+<span class="n">dataset_gold_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;period&quot;</span><span class="p">,</span> <span class="s2">&quot;protocol_number&quot;</span><span class="p">,</span> <span class="s2">&quot;speech_number&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;full_name&quot;</span><span class="p">,</span> <span class="s2">&quot;last_name&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;first_name&quot;</span><span class="p">,</span> <span class="s2">&quot;group&quot;</span><span class="p">,</span> <span class="s2">&quot;party&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="s2">&quot;position_group&quot;</span><span class="p">,</span> <span class="s2">&quot;politician_id&quot;</span><span class="p">,</span> <span class="s2">&quot;GND&quot;</span><span class="p">,</span> <span class="s2">&quot;QID&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;speech_name_data&quot;</span><span class="p">]</span>
+<span class="n">dataset_gold</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">dataset_gold_columns</span><span class="p">)</span>
+
+<span class="c1"># Überblicksdataframe erstellen</span>
+<span class="n">overview_datasets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;period&#39;</span><span class="p">,</span> <span class="s1">&#39;protocol_number&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;gold_count&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Hauptvergleichsinformationen werden in dem Dataframe <code class="docutils literal notranslate"><span class="pre">data_gold</span></code> hinterlegt, beispielsweise ob die jeweilige Rede richtig zugeordnet wurde oder vollständig ist. In <code class="docutils literal notranslate"><span class="pre">dataset_open_discourse</span></code> wird weiterhin aufgezeichnet, ob ein Redebeitrag unerkannt ist und nicht mit seiner Id als Match in <code class="docutils literal notranslate"><span class="pre">data_gold</span></code> auftaucht. Dies ist nur der Fall bei Einträgen, die tatsächlich keine Redebeiträge sind, sondern Fehlerkennungen; dennoch sollen natürlich auch diese erkannt werden.</p>
+<p>Im Folgenden wird über alle Protokolle sowie alle darin enthaltenen Reden iteriert und diese werden dann in das <code class="docutils literal notranslate"><span class="pre">dataset_gold</span></code>-Dataframe übertragen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Über alle Protokolle iterieren</span>
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">annotated_xml_path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.xml&#39;</span><span class="p">):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">annotated_xml_path</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+        <span class="c1"># Öffne die XML-Datei</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+        <span class="n">sitzungsverlauf</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;sitzungsverlauf&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Extrahiere die Protokoll-Meta-Daten</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sitzung-datum&quot;</span><span class="p">)</span>
+        <span class="n">period</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;wahlperiode&quot;</span><span class="p">))</span>
+        <span class="n">protocol_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sitzung-nr&quot;</span><span class="p">))</span>
+
+        <span class="c1"># Über die Reden innerhalb des Protokolls iterieren</span>
+        <span class="n">speech_number</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">speech</span> <span class="ow">in</span> <span class="n">sitzungsverlauf</span><span class="p">:</span>
+            <span class="c1"># Speech Id generieren</span>
+            <span class="c1"># Potentielles Verbesserung: Generierte ID in den Meta-Daten jeder Rede abspeichern</span>
+            <span class="n">speech_number</span> <span class="o">=</span> <span class="n">speech_number</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">period</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">protocol_number</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">speech_number</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+            <span class="c1"># Redner:innen Meta-Daten</span>
+            <span class="n">last_name</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;last_name&quot;</span><span class="p">)</span>
+            <span class="n">first_name</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;first_name&quot;</span><span class="p">)</span>
+            <span class="n">full_name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">])</span>
+            <span class="n">group</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+            <span class="n">party</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;party&quot;</span><span class="p">)</span>
+            <span class="n">position</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;position&quot;</span><span class="p">)</span>
+            <span class="n">position_group</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;position_group&quot;</span><span class="p">)</span>
+            <span class="n">politician_id</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+            <span class="n">GND</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GND&quot;</span><span class="p">)</span>
+            <span class="n">QID</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;QID&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Redetext &amp; -info</span>
+            <span class="n">string</span> <span class="o">=</span> <span class="n">speech</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">speech_name_data_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^.{5,150}?:&quot;</span><span class="p">,</span> <span class="n">speech</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+            <span class="n">speech_name_data</span> <span class="o">=</span> <span class="n">speech_name_data_match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">bool</span><span class="p">(</span><span class="n">speech_name_data_match</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">speech_name_data</span><span class="p">):]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+            <span class="n">data_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="nb">id</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">protocol_number</span><span class="p">,</span> <span class="n">speech_number</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">full_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span>
+                                       <span class="n">group</span><span class="p">,</span> <span class="n">party</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">position_group</span><span class="p">,</span> <span class="n">politician_id</span><span class="p">,</span> <span class="n">GND</span><span class="p">,</span> <span class="n">QID</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">speech_name_data</span><span class="p">]],</span>
+                                     <span class="n">columns</span><span class="o">=</span><span class="n">dataset_gold_columns</span><span class="p">)</span>
+            <span class="n">dataset_gold</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataset_gold</span><span class="p">,</span> <span class="n">data_temp</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="c1"># Überblicktabelle mit Metadaten füllen</span>
+        <span class="n">overview_datasets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">overview_datasets</span><span class="p">,</span>
+                                       <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="nb">id</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">protocol_number</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">speech_number</span><span class="p">]],</span>
+                                                    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;period&#39;</span><span class="p">,</span> <span class="s1">&#39;protocol_number&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;gold_count&#39;</span><span class="p">])],</span>
+                                      <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="datenvorbereitung">
+<h2>3.4.2 Datenvorbereitung<a class="headerlink" href="#datenvorbereitung" title="Link zu dieser Überschrift">#</a></h2>
+<p>Nachdem die Korpora geladen wurden, wurden sie für den Vergleich vorbereitet und formatiert. Die erste Anpassung besteht darin, im Vergleichskorpus und der Überblickstabelle die String-Datumsangaben in ein Datetime-Objekt umzuwandeln; in dem OP-Korpus sind diese bereits im passenden Format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Format both datasets date variable the same way</span>
+<span class="n">dataset_gold</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dataset_gold</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+<span class="n">overview_datasets</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">overview_datasets</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>An diesem Punkt sind noch alle der 900.000 Redebeiträge im OP-Korpus vorhanden, dieses werden gefiltert, sodass nur die Redebeiträge aus den annotierten Protokollen übrig sind; diese Filterung geschieht auf Basis des Datums. Da die 21. Sitzung der ersten Periode am gleichen Tag wie die im Goldstandard-Korpus enthaltene 20. Sitzung stattfand, wurde diese noch dezidiert ausgefiltert.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Redebeiträge ausfiltern, die nicht an Tagen der annotierten Protokolle gehalten wurden</span>
+<span class="n">dataset_open_discourse</span> <span class="o">=</span> <span class="n">dataset_open_discourse</span><span class="p">[</span><span class="n">dataset_open_discourse</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dataset_gold</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">unique</span><span class="p">())]</span>
+<span class="c1"># Hartcoded Lösung für Beiträge der Sitzung 1-21, die am gleichen Tag der Sitzung 1-20 stattfand</span>
+<span class="n">dataset_open_discourse</span> <span class="o">=</span> <span class="n">dataset_open_discourse</span><span class="p">[</span><span class="o">~</span><span class="n">dataset_open_discourse</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">21</span><span class="p">])]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Redevariablen setzen</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;op_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;id_count_difference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;id_eval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;fraction_eval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;postion_eval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">dataset_gold</span><span class="p">[</span><span class="s1">&#39;difference_length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;in_gold_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Erstellung leereS Dataframes für die OP- und Goldstandard-auswertung</span>
+<span class="n">data_op</span><span class="p">,</span> <span class="n">data_gold</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(),</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># Liste aller Perioden</span>
+<span class="n">periods</span> <span class="o">=</span> <span class="n">dataset_gold</span><span class="o">.</span><span class="n">period</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">periods</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aktualisiere Überblickstabelle</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">dataset_open_discourse</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">])[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;open_discourse_count&#39;</span><span class="p">})</span>
+<span class="n">overview_datasets</span> <span class="o">=</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">del</span><span class="p">(</span><span class="n">overview_datasets</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+<span class="n">overview_datasets</span><span class="p">[</span><span class="s1">&#39;speeches_difference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">gold_count</span> <span class="o">-</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">open_discourse_count</span>
+<span class="n">overview_datasets</span><span class="p">[</span><span class="s1">&#39;speeches_difference_rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">speeches_difference</span> <span class="o">/</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">gold_count</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>An dieser Stelle wird auch ein Dictionary definiert, welches die Auszeichnung der Fraktionen des Goldstandard-Korpus in die des OP-Korpus übersetzt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fractions_op_dict</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;not found&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="mi">0</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;AfD&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;BHE&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;BP&#39;</span><span class="p">],</span>
+                     <span class="mi">3</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Grüne&#39;</span><span class="p">,</span> <span class="s1">&#39;BÜNDNIS 90/DIE GRÜNEN&#39;</span><span class="p">,</span> <span class="s1">&#39;GRÜNE&#39;</span><span class="p">],</span> <span class="mi">4</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;CDU/CSU&#39;</span><span class="p">],</span> <span class="mi">5</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DA&#39;</span><span class="p">],</span>
+                     <span class="mi">6</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DIE LINKE.&#39;</span><span class="p">,</span> <span class="s1">&#39;DIE LINKE&#39;</span><span class="p">],</span> <span class="mi">7</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DP&#39;</span><span class="p">],</span> <span class="mi">8</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DP/DBP&#39;</span><span class="p">],</span> <span class="mi">9</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DP/FVP&#39;</span><span class="p">],</span> <span class="mi">10</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DPB&#39;</span><span class="p">],</span> <span class="mi">11</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DRP&#39;</span><span class="p">],</span>
+                     <span class="mi">12</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;DRP/NR&#39;</span><span class="p">],</span> <span class="mi">13</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;FDP&#39;</span><span class="p">],</span> <span class="mi">14</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;FU&#39;</span><span class="p">],</span> <span class="mi">15</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;FVP&#39;</span><span class="p">],</span> <span class="mi">16</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fraktionslos&#39;</span><span class="p">,</span> <span class="s1">&#39;fraktionslos&#39;</span><span class="p">],</span>
+                     <span class="mi">17</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;GB/BHE&#39;</span><span class="p">],</span> <span class="mi">18</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Gast&#39;</span><span class="p">],</span> <span class="mi">19</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;KO&#39;</span><span class="p">],</span> <span class="mi">20</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;KPD&#39;</span><span class="p">],</span> <span class="mi">21</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;NR&#39;</span><span class="p">],</span> <span class="mi">22</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;PDS&#39;</span><span class="p">,</span> <span class="s1">&#39;PDS/Linke Liste&#39;</span><span class="p">],</span>
+                     <span class="mi">23</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;SPD&#39;</span><span class="p">],</span> <span class="mi">24</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;SSW&#39;</span><span class="p">],</span> <span class="mi">25</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;WAV&#39;</span><span class="p">],</span> <span class="mi">26</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Z&#39;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="datenvergleich-kombinierung">
+<h2>3.4.3 Datenvergleich &amp; -kombinierung<a class="headerlink" href="#datenvergleich-kombinierung" title="Link zu dieser Überschrift">#</a></h2>
+<p>Die beiden Korpora werden mit einem Algorithmus auf Periodenebene miteinander verglichen. Als Input wird über die Gesamtheit der beiden Korpora iteriert, die Redebeiträge aus den Protokollen wiederum gefiltert und sortiert.</p>
+<p><img alt="Annotationsprozess in Visual Studio Code" src="_images/matching_process.png" />
+<em>Abbildung 3: Schematische Darstellung des Matching-Algorithmus.</em></p>
+<p><code class="docutils literal notranslate"><span class="pre">check_period()</span></code> ist die zentrale Funktion für den Vergleich der beiden Kopora auf Periodenebene. Als Input wird die Gesamtheit der beiden Korpora und die Periodennummer zur Filterung übergeben.</p>
+<p>Die Funktion iteriert über die, in diesem Fall zwei, Protokolle je Periode, dabei werden die Redebeiträge aus den Protokollen wiederum gefiltert und sortiert. Daneben wird die zahlenmäßig kleinste ID, die des ersten Beitrags, des OP-Korpus extrahiert: Da die ID im OP-Korpus vorlaufend ist, kann sie zur Sortierung genutzt werden, die dabei extrahierte <code class="docutils literal notranslate"><span class="pre">min_id</span></code> wird im nächsten Schritt benötigt.</p>
+<p>Auf der zweiten Ebene wurde über die Redebeiträge im Goldstandard-Korpus iteriert, um diese zu vergleichen. Diese wurden nicht mit allen Redebeiträgen des entsprechenden Protokollnummers aus dem OP-Korpus verglichen, sondern mit einer Auswahl in Frage kommender Redebeiträge, einem sich verschiebenden Redebeitragsfenster. Gerade sehr kurze Redebeiträge, beispielsweise in Fragerunden nach Erteilung des Rederechts durch den Präsidenten, können sich diese bis auf das Zeichen gleichen. Deshalb sind für den Vergleich nicht nur die sprechende Person und der Text wichtig, sondern auch die Position. Das Fenster formt sich um die <code class="docutils literal notranslate"><span class="pre">min_id</span></code>. Nach dem initialen Setzen auf den ersten Beitrag ist es die ID des letzten Matches. Das Fenster bildete sich also um diesen Beitrag, in diesem Fall ist das Fenster sechs Redebeiträge groß, für den aktuell untersuchten Redebeitrag wurden die drei vorherigen und die drei folgenden Redebeiträge des letzten Matchs untersucht. Dieses Fenster wurde durch iteratives Ausprobieren als Optimalwert gefunden.</p>
+<p>Eine Ausnahme bilden dabei Redebeiträge von Kanzlern, der Kanzlerin und des Bundespräsidenten: Aufgrund eines RegEx-Fehlers im OP-Code wurden Zwischenrufe von diesen fälschlich als Redebeiträge getaggt; dies betraf in der Stichprobe vor allem Helmut Kohl, der sich sehr aktiv mit Zwischenrufen an den Plenarsitzungen beteiligte. Um zu verhindern, dass Matches nicht geschehen, weil das Fenster aufgrund zu vieler Fehlerkennung von Zwischenrufen zu klein ist, wurde das Fenster bei Bedarf iterativ bis 12 vergrößert.</p>
+<p>Für jeden Redebeitrag wurde über das Fenster iteriert und die verschiedenen Vergleiche durchgeführt. Vor dem Vergleich wurden die Strings der beiden zu vergleichenden Reden bereinigt. Ein (vor der Bereinigung) 700 Zeichen langer Zeichen-String vom Anfang der Goldstandard-Rede wurde dann jeweils mit einem entsprechenden String der OP-Rede verglichen. Darauf basiert das Match; in einem weiteren Schritt wurde auch das Ende verglichen, um zu prüfen, ob die Rede vollständig ist.</p>
+<p>Der eigentliche Vergleich wurde mit dem einem Fuzzy-Algorithmus durchgeführt, der auf der Levenshtein-Distanz zur Messung des Unterschieds zweier Zeichenketten basiert. Diese bezeichnet die Zahl der geringsten notwendigen Änderungen von Zeichen (Einfügen, Löschen, Ersetzungen) zur Angleichung zweier Texte.<a class="reference external" href="#ref-1">[1]</a> Liegt der ermittelte Ähnlichkeitsscore über dem Schwellenwert, ist es ein Match. Die Levenshtein-Distanz wird beispielsweise auch für die Evaluation von OCR-Qualität genutzt. Die genutzte Implementierung <a class="reference external" href="https://towardsdatascience.com/fuzzy-string-matching-in-python-68f240d910fe">Fuzzywuzzy</a> besitzt dabei die Funktion <code class="docutils literal notranslate"><span class="pre">partial_ratio()</span></code>, die als Vergleichsgrundlage den kürzeren der beiden Strings nutzt, dies ist insofern wichtig, als dass die beiden zugrunde liegenden Redebeiträge hinsichtlich Layoutartefakten und der Kopfzeile unterschiedlich bereinigt wurden:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fuzz</span><span class="o">.</span><span class="n">ratio</span><span class="p">(</span><span class="s2">&quot;Berlin, Deutschland&quot;</span><span class="p">,</span><span class="s2">&quot;Berlin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>48
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fuzz</span><span class="o">.</span><span class="n">partial_ratio</span><span class="p">(</span><span class="s2">&quot;Berlin, Deutschland&quot;</span><span class="p">,</span><span class="s2">&quot;Berlin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+</pre></div>
+</div>
+</div>
+</div>
+<p>Der kürzere String ‘Berlin’ stimmt als Substring vollständig mit dem Vergleichsstring überein, eine andere Stadt würde den Score jedoch wieder verringern:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fuzz</span><span class="o">.</span><span class="n">partial_ratio</span><span class="p">(</span><span class="s2">&quot;Düsseldorf, Deutschland&quot;</span><span class="p">,</span><span class="s2">&quot;Berlin, Deutschland&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79
+</pre></div>
+</div>
+</div>
+</div>
+<p>Durch mehrere Iterationen hat sich in diesem Fall 75 als der passende Schwellwert, ab dem ein Match akzeptiert wird, gezeigt. Für das Ende des Strings liegt der Schwellwert dagegen bei 78.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fuzzy_threshold</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">fuzzy_threshold_end</span> <span class="o">=</span> <span class="mi">78</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Für besonders kurze Strings wurde eine Warnung ausgegeben, falls dieser zwar gematched wurde, aber sehr kurz ist und innerhalb des Fensters etwas weiter entfernt ist; durch den kurzen String gab es ein erhöhtes Risiko für Fehlmatches – gerade bei Moderationsphrasen.</p>
+<p>Im Fall eines positiven Matches wurde dieses in den Tabellen hinterlegt und evaluiert hinsichtlich der korrekten Redelänge/-repräsentation, dem:der Redner:in, der Fraktion/Gruppe.</p>
+<p>Zum Abschluss wurden die Daten in Form eines Parallelkorpus zurückgegeben, das die gematchten und jeweils fehlenden Redebeiträge enthält.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_period</span><span class="p">(</span><span class="n">period_number</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">data_gold</span><span class="p">):</span>
+    <span class="c1"># Filtern nach Periode</span>
+    <span class="n">protocols</span> <span class="o">=</span> <span class="n">data_gold</span><span class="p">[</span><span class="n">data_gold</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">period_number</span><span class="p">]</span><span class="o">.</span><span class="n">protocol_number</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    
+    <span class="c1"># Anlegen leerer Listen für die Datenrückgabe</span>
+    <span class="n">protocol_data_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">protocol_gold_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">protocol_number</span> <span class="ow">in</span> <span class="n">protocols</span><span class="p">:</span>
+        <span class="c1"># print(&#39;Processing: &#39; + str(period_number) + &#39; - &#39; + str(protocol_number))</span>
+
+        <span class="c1"># Goldstandard-Korpus: Filtern nach Protokoll und Sotieren</span>
+        <span class="n">speeches_gold</span> <span class="o">=</span> <span class="n">data_gold</span><span class="p">[(</span><span class="n">data_gold</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">period_number</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data_gold</span><span class="p">[</span><span class="s1">&#39;protocol_number&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">protocol_number</span><span class="p">)]</span>
+        <span class="n">speeches_gold</span> <span class="o">=</span> <span class="n">speeches_gold</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;speech_number&#39;</span><span class="p">])</span>
+
+        <span class="c1"># OP-Korpus: Filtern nach Protokoll und Sotieren</span>
+        <span class="n">speeches_open_discourse</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;electoralTerm&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">period_number</span><span class="p">)</span>
+                                         <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">protocol_number</span><span class="p">)]</span>
+        <span class="n">speeches_open_discourse</span> <span class="o">=</span> <span class="n">speeches_open_discourse</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+        
+        <span class="c1"># Setzen der Mindesid</span>
+        <span class="n">min_id</span> <span class="o">=</span> <span class="n">speeches_open_discourse</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">speech_gold</span> <span class="ow">in</span> <span class="n">speeches_gold</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="c1"># Analysefenster-Variablen</span>
+            <span class="n">speech_window</span> <span class="o">=</span> <span class="mi">6</span>
+            <span class="n">window_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c1"># Iterieren über das Fenster</span>
+            <span class="k">while</span> <span class="n">window_count</span> <span class="o">&lt;=</span> <span class="n">speech_window</span><span class="p">:</span>
+                <span class="c1"># OP-Vergleichsrede setzen</span>
+                <span class="n">try_to_match_id</span> <span class="o">=</span> <span class="n">min_id</span> <span class="o">-</span> <span class="n">speech_window</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">window_count</span>
+                <span class="n">window_count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">speech_open_discourse</span> <span class="o">=</span> <span class="n">speeches_open_discourse</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">speeches_open_discourse</span><span class="p">[</span><span class="s1">&#39;in_gold_dataset&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
+                                                                    <span class="o">&amp;</span> <span class="p">(</span><span class="n">speeches_open_discourse</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">==</span> <span class="n">try_to_match_id</span><span class="p">)]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+                <span class="c1"># Falls keine OP-Rede mit der ID vorhanden</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="c1"># Umformung der Rede zu einem Tuple</span>
+                <span class="n">speech_open_discourse</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+                <span class="c1"># Bereinigung der Strings</span>
+                <span class="n">clean_speech_start_gold</span><span class="p">,</span> <span class="n">shortened_start</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">speech_gold</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">700</span><span class="p">])</span>
+                <span class="n">clean_speech_start_gold</span> <span class="o">=</span> <span class="n">clean_speech_start_gold</span><span class="p">[:</span><span class="mi">200</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+                <span class="n">clean_speech_start_op</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">speechContent</span><span class="p">[:</span><span class="mi">700</span><span class="p">],</span> <span class="n">shortened</span> <span class="o">=</span> <span class="n">shortened_start</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">clean_speech_start_op</span> <span class="o">=</span> <span class="n">clean_speech_start_op</span><span class="o">.</span><span class="n">strip</span><span class="p">()[:</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_speech_start_gold</span><span class="p">)]</span>
+
+                <span class="c1"># Fuzzy Vergleich der Strings</span>
+                <span class="n">comparison_score</span> <span class="o">=</span> <span class="n">fuzz</span><span class="o">.</span><span class="n">partial_ratio</span><span class="p">(</span><span class="n">clean_speech_start_gold</span><span class="p">,</span> <span class="n">clean_speech_start_op</span><span class="p">)</span>
+
+                <span class="c1"># Loggen der Versuche</span>
+                <span class="n">log_loc</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> - </span><span class="si">{}</span><span class="s2">: Test: </span><span class="si">{}</span><span class="s2">, OP: </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">period_number</span><span class="p">,</span> <span class="n">protocol_number</span><span class="p">,</span>
+                                                             <span class="n">speech_gold</span><span class="o">.</span><span class="n">speech_number</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">log_loc</span><span class="p">,</span> <span class="s2">&quot;Try, Score: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comparison_score</span><span class="p">))</span>
+
+                <span class="c1"># Loggen möglicher Fehlmatches, gerade kurze Redebeiträge sind gefärdet</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">clean_text</span><span class="p">(</span><span class="n">speech_gold</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">50</span> <span class="ow">and</span> <span class="n">comparison_score</span> <span class="o">&gt;</span> <span class="n">fuzzy_threshold</span> <span class="ow">and</span> <span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">id</span> <span class="o">&gt;</span> <span class="n">min_id</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">log_loc</span> <span class="o">+</span> <span class="s2">&quot;Check needed wether Match is correct!&quot;</span><span class="p">)</span>
+                
+                <span class="c1"># Im Falle eines Matches, Loggen und Setzen der Variablen</span>
+                <span class="k">if</span> <span class="n">comparison_score</span> <span class="o">&gt;</span> <span class="n">fuzzy_threshold</span><span class="p">:</span>
+                    <span class="n">min_id</span> <span class="o">=</span> <span class="n">set_match</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speeches_open_discourse</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">,</span>
+                    <span class="n">min_id</span><span class="p">,</span> <span class="n">comparison_score</span><span class="p">,</span> <span class="n">log_loc</span><span class="p">)</span>
+                    <span class="n">evaluate_end</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">)</span>
+                    <span class="n">evaluate_speaker</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">)</span>
+                    <span class="n">evaluate_group</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">)</span>
+                    <span class="n">evaluate_length_difference</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+                <span class="c1"># Vergrößung des Untersuchungsfenster, falls der:die Redner:in Kanzler ist</span>
+                <span class="c1"># Grundlage hierfür sind fälschlich als Reden erkannte Zwischenrufe im OP-Korpus aufgrund eines Regex-Fehlers</span>
+                <span class="k">elif</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">positionShort</span> <span class="o">==</span> <span class="s2">&quot;Chancellor&quot;</span> <span class="ow">and</span> <span class="n">speech_window</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+                    <span class="n">speech_window</span> <span class="o">+=</span> <span class="mi">2</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> - </span><span class="si">{}</span><span class="s2">: Increase window size</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">period_number</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">protocol_number</span><span class="p">)))</span>
+
+        <span class="c1"># Daten anhängen</span>
+        <span class="n">protocol_data_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">speeches_open_discourse</span><span class="p">)</span>
+        <span class="n">protocol_gold_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">protocol_data_list</span><span class="p">,</span> <span class="n">protocol_gold_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">clean_text()</span></code> bereinigt die Input-Strings. Zuerst werden Zwischenrufe gefiltert, diese sind im OP-Korpus aus den Reden extrahiert und durch einen kurzen Platzhalter ersetzt. Je nachdem, ob ein String vom Beginn oder Ende des Redebeitrags als Input übergeben wird, unterscheidet sich die RegEx-Regel. Dies ist für den Fall, dass nur ein Teil des Zwischenrufs, der sich durch eine öffnende und eine schließende Klammer definiert wird, übergeben wurde.</p>
+<p>Bei kurzen Moderations-Redebeiträgen der Präsident:innen  unterscheiden sich diese teils nur durch den Namen des angesprochenen Abgeordneten. Dies kann zu Fehlmatches führen, die entsprechende Ansprache-Formel wird deshalb ausgefiltert, sodass nur der Name des:der Politiker:in übrig bleibt.</p>
+<p>Zuletzt werden Kopfzeilen gefiltert und Wörter am Zeilenende, die getrennt wurden, wieder zusammengesetzt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">shortened</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="c1"># Filterung von Zwischenrufen, unterschiedliche Muster je nachdem ob Beginn oder Ende</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">end</span><span class="p">:</span>
+        <span class="n">pattern_interjection</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\(.*?\)|\(.*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># pattern_interjection = re.compile(r&#39;\((?:[^()]*?|\(.{0,3}\))*?\)&#39;, re.MULTILINE | re.DOTALL)</span>
+        <span class="n">pattern_interjection</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\(.*?\)&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+
+    <span class="n">cleaned_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern_interjection</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+    
+    <span class="c1"># Kurze Moderationsbeiträge werden verkürzt auf den Namen, um Missmatches zu verhindern</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned_text</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">120</span> <span class="ow">or</span> <span class="n">shortened</span><span class="p">:</span>
+        <span class="n">pattern_word</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Das Wort hat (Herr |Frau |der |die )?(Abgeordnete)?&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+        <span class="n">cleaned_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern_word</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">cleaned_text</span><span class="p">)</span>
+        <span class="n">shortened</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Filterung von Kopfzeilen </span>
+    <span class="k">elif</span> <span class="s1">&#39;Bundestag&#39;</span> <span class="ow">in</span> <span class="n">cleaned_text</span><span class="p">:</span>
+        <span class="n">pattern_headline</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d{0,6}[^(\n\r]?Deutscher ? ?Bundestag[^(\n\r]{0,100})&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
+        <span class="n">cleaned_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern_headline</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">cleaned_text</span><span class="p">)</span>
+
+    <span class="c1"># Zusammensetung getrennter Wörter am Zeilenende</span>
+    <span class="n">cleaned_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;-(</span><span class="se">\\</span><span class="s2">n|\n)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">cleaned_text</span><span class="p">)</span>
+    <span class="n">cleaned_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s*(</span><span class="se">\\</span><span class="s2">n|\n)&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">cleaned_text</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cleaned_text</span><span class="p">,</span> <span class="n">shortened</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">set_match()</span></code> ergänzt in dem Goldstandard-Datensatz Informationen zu dem Match: die OP-ID des gematchen Rede, den Fuzzy-Score sowie die ID-count-difference. Letztere sind gute Indikatoren, um Fehlmatches oder Anomalien zu finden. Daneben wird auch in dem OP-Korpus vermerkt, dass die Rede gematched ist, um sicherzustellen, dass jede OP-Rede nur einem Goldstandard-Redebeitrag zugeordnet werden kann.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_match</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speeches_open_discourse</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">,</span>
+              <span class="n">min_id</span><span class="p">,</span> <span class="n">comparison_score</span><span class="p">,</span> <span class="n">log_loc</span><span class="p">):</span>
+    <span class="c1"># Log</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">log_loc</span><span class="p">,</span> <span class="s2">&quot;Success, Score: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comparison_score</span><span class="p">))</span>
+
+    <span class="c1"># Goldstandard-Daten mit Informationen vervollständigen</span>
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;op_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">id</span>
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;op_fuzz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">comparison_score</span>
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;id_count_difference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">id</span> <span class="o">-</span> <span class="n">min_id</span>
+
+    <span class="c1"># OP-Redebeitrag als gematched makieren</span>
+    <span class="n">speeches_open_discourse</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_open_discourse</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;in_gold_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Neue min_id zurückgeben</span>
+    <span class="k">return</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">id</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Funktion <code class="docutils literal notranslate"><span class="pre">evaluate_end()</span></code> vergleicht analog zu dem Beginn-String in der <code class="docutils literal notranslate"><span class="pre">check_period()</span></code>-Funktion das Ende der beiden gematchen Redebeitragsversionen, um zu untersuchen, ob dieses vollständig im OP-Korpus vorhanden ist. Die Informationen hierzu werden in den Goldstandard-Daten gespeichert.
+Da der OP-Algorithmus die Protokolle mit RegEx-Mustern wie analog einer Schere auseinanderschneidet, ist ein falsches Beitragsende ein sehr guter Indikator für einen folgenden fehlenden Beitrag: Dieser wurde schlicht nicht als Redebeitrag erkannt und ist Teil des vorherigen Beitrags.</p>
+<p>Bei genau zwei Redebeiträgen führen Zwischenrufe, welche Klammern enthalten, zu einer fehlerhaften RegEx-Filterung. Diese Problematik ließe sich zwar mit einem komplexeren Muster lösen, führt jedoch zu einer deutlich verschlechterten Performance, deshalb werden diese manuell getaggt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_end</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">):</span>
+    <span class="n">correct_scope_manual</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18088049</span><span class="p">,</span> <span class="mi">14150185</span><span class="p">]</span>
+    
+    <span class="c1"># Bereinigung der beiden zu vergleichenden Strings</span>
+    <span class="n">clean_speech_end_gold</span><span class="p">,</span> <span class="n">shortened_end</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">speech_gold</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">700</span><span class="p">:],</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">clean_speech_end_gold</span> <span class="o">=</span> <span class="n">clean_speech_end_gold</span><span class="p">[</span><span class="o">-</span><span class="mi">200</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">clean_speech_end_op</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">speechContent</span><span class="p">[</span><span class="o">-</span><span class="mi">700</span><span class="p">:],</span> <span class="kc">True</span><span class="p">,</span> <span class="n">shortened_end</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">clean_speech_end_op</span> <span class="o">=</span> <span class="n">clean_speech_end_op</span><span class="o">.</span><span class="n">strip</span><span class="p">()[</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">clean_speech_end_gold</span><span class="p">):]</span>
+
+    <span class="c1"># Vergleich der beiden Strings</span>
+    <span class="n">comparison_score_end</span> <span class="o">=</span> <span class="n">fuzz</span><span class="o">.</span><span class="n">partial_ratio</span><span class="p">(</span><span class="n">clean_speech_end_gold</span><span class="p">,</span> <span class="n">clean_speech_end_op</span><span class="p">)</span>
+
+    <span class="c1"># Ergänzung der Prüfung in den Goldstandard-Daten</span>
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;op_fuzz_end&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">comparison_score_end</span>
+    <span class="k">if</span> <span class="n">comparison_score_end</span> <span class="o">&gt;</span> <span class="n">fuzzy_threshold_end</span><span class="p">:</span>
+        <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">speech_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">correct_scope_manual</span><span class="p">:</span>
+            <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">evaluate_speaker()</span></code> wird einerseits untersucht, ob die Zuordnung oder Nichtzuordnung eines Redebeitrags richtig ist und welche Art von richtiger oder falscher Zuordnung hier vorliegt.</p>
+<p>Die Zuordnungs-Evaluation bezieht sich nur auf Politiker:innen, die in der OP-Politiker:innen-Tabelle enthalten sind. Darin fehlen Staatssekretär:innen, die kein Bundestagsmandat besitzen sowie Bundesratmitglieder. Für diese kann es in der Logik des OP-Korpus keine richtige Zuordnung geben, diese Logik wird für die Untersuchung übernommen. Entsprechende Redebeiträge werden also nur auf eine mögliche falsche Zuordnung untersucht.</p>
+<p>Ein Sonderfall bilden diejenigen Redner:innen, die zwar in dem Moment nicht als Abgeordnete sprechen, aber zu einem Zeitpunkt Abgeordnete waren oder sind. Diese erhalten im Goldstandard-Korpus immer auch ihre Bundestags-ID. So sind im Goldstandard-Korpus drei Redebeiträge von Oskar Lafontaine, zwei in der Rolle als Ministerpräsident des Saarlands, eine als Abgeordneter enthalten. Fälschlicherweise ist nur der Letzte im OP-Korpus Lafontaine zugeordnet. Gleiches gilt für Redebeiträge von Staatssekretären, die meist auch Abgeordnete sind, aber eben in der Rolle als Vertreter:innen der Bundesregierung sprechen. Werden diese nicht zugeordnet, wird dies ebenfalls als Fehler gewertet.</p>
+<p>Diese Zuordnung ist geboten, da zwar die Stammdaten als Datenquelle für die OP-Daten benannt wurden, daraus in der Dokumentation jedoch nicht der Schluss folgt, dass diese nur für Regierungsmitglieder und Abgeordnete gelte. Stattdessen gibt es die ID „-1“, die „missing information about a politician“ repräsentiert. Die Tabelle <code class="docutils literal notranslate"><span class="pre">politician</span></code> enthält also nicht funktionsbasiert Abgeordnete und Regierungsmitglieder, sondern ganz allgemein Politiker:innen. Es kann dementsprechend davon ausgegangen werden, dass Nutzer:innen, die nach Reden von Oskar Lafontaine mit der ID <code class="docutils literal notranslate"><span class="pre">11002715</span></code> suchen, alle Reden von Oskar Lafontaine erwarten, nicht nur die, die er als Abgeordneter gehalten hat.</p>
+<p>Der Vergleich selbst basiert entsprechend auf der ID der Abgeordneten aus den Stammdaten. Dabei gibt es noch einen Fallstrick: Die 15 Regierungsmitglieder in den <code class="docutils literal notranslate"><span class="pre">politician</span></code>-Daten mit eigens generierte IDs, die sich potenziell mit „richtigen“ IDs überschneiden. Dieser Sonderfall muss hier jedoch nicht betrachtet werden, da in den Goldstandard-Daten keine dieser 15 Personen einen Redebeitrag beigesteuert hat.</p>
+<p>Bei der Zuordnung gibt es verschiedene Fälle, die eintreten können, in der Reihenfolge des Auftauchens im Code:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ergebnis</p></th>
+<th class="head"><p>Bedeutung für OP-Redebeitrag</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">true_positive_match_match</span></code></p></td>
+<td><p>✅ Richtige Zuordnung</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">false_positive_match_match</span></code></p></td>
+<td><p>❌ Zuordnung zur falschen Person</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">false_negative_none_match</span></code></p></td>
+<td><p>❌ Zuordnung fehlt fälschlicherweise</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">false_positive_match_none</span></code></p></td>
+<td><p>❌ Zuordnung falsch, richtig ist keine Zuordnung</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">true_negative_none_none</span></code></p></td>
+<td><p>✅ Richtigerweise keine Zuordnung (trotz vorhandener QID im Goldstandard-Korpus; betrifft v.a. Staatssekretäre ohne Bundestagsmandat)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">check_needed</span></code></p></td>
+<td><p>❓ Prüfung notwendig</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sprecher:innen evaluieren</span>
+<span class="k">def</span> <span class="nf">evaluate_speaker</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">):</span>
+    <span class="c1"># Wenn in beiden Korpora ein Match vorhanden ist (op != -1 and test != &quot;&quot;)</span>
+    <span class="k">if</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">politicianId</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">politician_id</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="c1"># Herausfinden, ob ein true_positive oder false_positive Match vorliegt</span>
+        <span class="n">politician_id_eval</span> <span class="o">=</span> <span class="s2">&quot;true_positive_match_match&quot;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">politicianId</span><span class="p">)</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">politician_id</span> <span class="k">else</span> <span class="s2">&quot;false_positive_match_match&quot;</span>
+    <span class="c1"># Wenn in OP fälschlicherweise kein Match vorhanden ist (op = -1 und test != &quot;&quot;)</span>
+    <span class="k">elif</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">politicianId</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">politician_id</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">politician_id_eval</span> <span class="o">=</span> <span class="s2">&quot;false_negative_none_match&quot;</span>
+    <span class="c1"># Wenn fälschlicherweise ein Match vorhanden ist (op != -1 und test = &quot;&quot;)</span>
+    <span class="k">elif</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">politicianId</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">politician_id</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">politician_id_eval</span> <span class="o">=</span> <span class="s2">&quot;false_positive_match_none&quot;</span>
+    <span class="c1"># Wenn richtigerweise kein Match vorhanden ist (op = -1 und test = &quot;&quot;)</span>
+    <span class="k">elif</span> <span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">politicianId</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">politician_id</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">politician_id_eval</span> <span class="o">=</span> <span class="s2">&quot;true_negative_none_none&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">politician_id_eval</span> <span class="o">=</span> <span class="s2">&quot;check_needed&quot;</span>
+
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;id_eval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">politician_id_eval</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Fraktions-/Gruppenzugehörigkeit wird mit der Funktion <code class="docutils literal notranslate"><span class="pre">evaluate_group()</span></code> evaluiert: Hierbei wird überprüft, ob die Fraktion/Gruppe des:der Redner:in der des OP-Korpuses entspricht, mit dem Übersetzungsschritt durch das eingangs in diesem Kapitel definierte Dictionary <code class="docutils literal notranslate"><span class="pre">fractions_op_dict</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_group</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">group</span> <span class="ow">in</span> <span class="n">fractions_op_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">factionId</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="n">politician_fraction_eval</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">politician_fraction_eval</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;fraction_eval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">politician_fraction_eval</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">evaluate_length_difference()</span></code> wird ein einfacher Vergleich des Zeichenzahl-Verhältnisses der Zeichenzahlen des Redebeitrags in seiner OP- und Goldstandard-Korpus-Version durchgeführt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evaluate length difference</span>
+<span class="k">def</span> <span class="nf">evaluate_length_difference</span><span class="p">(</span><span class="n">speeches_gold</span><span class="p">,</span> <span class="n">speech_gold</span><span class="p">,</span> <span class="n">speech_open_discourse</span><span class="p">):</span>
+    <span class="n">politician_length_eval</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">speech_open_discourse</span><span class="o">.</span><span class="n">speechContent</span><span class="p">)</span> <span class="o">/</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">length</span>
+    <span class="n">speeches_gold</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">speeches_gold</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">speech_gold</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="s1">&#39;difference_length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">politician_length_eval</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die eigentliche Zeile Code, die den Vergleich der beiden Korpora durchführt, ist die folgende. Der Aufruf ist hierbei parallelisiert, um den zahlreichen Iterationen schnell durchführen zu können.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_output</span> <span class="o">=</span> <span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=</span><span class="mi">7</span><span class="p">)(</span><span class="n">delayed</span><span class="p">(</span><span class="n">check_period</span><span class="p">)(</span><span class="n">period</span><span class="p">,</span> <span class="n">dataset_open_discourse</span><span class="p">,</span> <span class="n">dataset_gold</span><span class="p">)</span> <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">periods</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:root:12 - 37: Test: 29, OP: 479496: Check needed wether Match is correct!
+WARNING:root:12 - 37: Test: 38, OP: 479508: Check needed wether Match is correct!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Warnmeldungen für besonders kurze gematchte Redebeiträge zeigen nach ihrer Überprüfung: Die Matches sind korrekt.</p>
+<p>Im Folgenden werden die Ergebnisse des Vergleichs wieder zusammengeführt, die ursprünglich Datenset-Variablen werden dabei mit den bearbeiteten Daten ersetzt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">data_output</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">protocol</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">period</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">data_op</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">period</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">idx</span><span class="p">],</span> <span class="n">data_op</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">data_gold</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">period</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">idx</span><span class="p">],</span> <span class="n">data_gold</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">dataset_gold</span><span class="p">,</span> <span class="n">dataset_open_discourse</span><span class="p">,</span> <span class="n">periods</span><span class="p">,</span> <span class="n">data_output</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="uberblickstabelle-erstellen">
+<h2>3.4.4 Überblickstabelle erstellen<a class="headerlink" href="#uberblickstabelle-erstellen" title="Link zu dieser Überschrift">#</a></h2>
+<p>Über die bisherigen Prozessschritte wurde die Überblickstabelle zu diesem Punkt bereits mit der Anzahl der Redebeiträge im Goldstandard- und OP-Korpus je Protokoll sowie deren Differenz gefüllt. In diesem Schritt werden nun verschiedenen Beobachtungen von der Redebeitragsebene auf die Protokollebene gezählt und zusammengefasst. Dazu wird die bestehende Tabelle um neue Spalten ergänzt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overview_datasets</span> <span class="o">=</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;wrong_total_rel&#39;</span><span class="p">,</span> <span class="s1">&#39;missing_rel&#39;</span><span class="p">,</span> <span class="s1">&#39;scope_rel&#39;</span><span class="p">,</span> <span class="s1">&#39;id_false_rel&#39;</span><span class="p">,</span><span class="s1">&#39;wrong_total&#39;</span><span class="p">,</span> 
+               <span class="s1">&#39;in_op_dataset&#39;</span><span class="p">,</span> <span class="s1">&#39;missing_in_op_dataset&#39;</span><span class="p">,</span> <span class="s1">&#39;mistakenly_recognised_speeches&#39;</span><span class="p">,</span> <span class="s1">&#39;correct_scope&#39;</span><span class="p">,</span> <span class="s1">&#39;wrong_scope&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;id_true_positive_match_match&#39;</span><span class="p">,</span> <span class="s1">&#39;id_false_positive_match_match&#39;</span><span class="p">,</span> <span class="s1">&#39;id_false_negative_none_match&#39;</span><span class="p">,</span> 
+               <span class="s1">&#39;id_false_positive_match_none&#39;</span><span class="p">,</span><span class="s1">&#39;id_true_negative_none_none&#39;</span><span class="p">]:</span>
+    <span class="n">overview_datasets</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mit der Funktion <code class="docutils literal notranslate"><span class="pre">set_overview_vars()</span></code> werden die verschiedenen Beobachtungen als absolute Zahlen gesammelt.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">set_overview_vars</span><span class="p">(</span><span class="n">overview</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">filtered_data_gold</span><span class="p">,</span> <span class="n">filtered_data_op</span><span class="p">):</span>
+    <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]])</span>
+    <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;not_in_op_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="o">~</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]])</span>
+    <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;mistakenly_recognised_speeches&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_op</span><span class="p">[</span><span class="o">~</span><span class="n">filtered_data_op</span><span class="p">[</span><span class="s1">&#39;in_gold_dataset&#39;</span><span class="p">]])</span>
+    <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]])</span>
+    <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;wrong_scope&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;correct_scope&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]])</span>
+
+    <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;true_positive_match_match&#39;</span><span class="p">,</span> <span class="s1">&#39;false_positive_match_match&#39;</span><span class="p">,</span> <span class="s1">&#39;false_negative_none_match&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;false_positive_match_none&#39;</span><span class="p">,</span> <span class="s1">&#39;true_negative_none_none&#39;</span><span class="p">]:</span>
+        <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s2">&quot;id_&quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;id_eval&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">result</span><span class="p">])</span>
+
+    <span class="c1"># Anzahl aller fehlerhaften Redebeiträge je Periode</span>
+    <span class="c1"># Nicht Summe aller Fehler, sondern Anzahl aller Redebeiträge die mindestens einen Fehler haben</span>
+    <span class="n">overview</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">count</span><span class="p">,</span> <span class="s1">&#39;wrong_total&#39;</span><span class="p">]</span> <span class="o">=</span> \
+        <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;id_eval&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;false_negative_none_match&#39;</span><span class="p">)</span> <span class="o">|</span>
+                               <span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;id_eval&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;false_positive_match_none&#39;</span><span class="p">)</span> <span class="o">|</span>
+                               <span class="p">(</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;id_eval&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;false_positive_match_match&#39;</span><span class="p">)</span> <span class="o">|</span>
+                               <span class="p">(</span><span class="o">~</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;correct_scope&#39;</span><span class="p">])</span> <span class="o">|</span>
+                               <span class="p">(</span><span class="o">~</span><span class="n">filtered_data_gold</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">])])</span> <span class="o">+</span> \
+        <span class="nb">len</span><span class="p">(</span><span class="n">filtered_data_op</span><span class="p">[</span><span class="o">~</span><span class="n">filtered_data_op</span><span class="p">[</span><span class="s1">&#39;in_gold_dataset&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Diese Funktion wird für jedes Protokoll aufgerufen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">protocol</span> <span class="ow">in</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">overview_datasets</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">period</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">protocol_number</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">set_overview_vars</span><span class="p">(</span><span class="n">overview_datasets</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">data_gold</span><span class="p">[</span><span class="n">data_gold</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">protocol</span><span class="o">.</span><span class="n">date</span><span class="p">],</span> <span class="n">data_op</span><span class="p">[</span><span class="n">data_op</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">protocol</span><span class="o">.</span><span class="n">date</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Zudem wird eine Kopie der Tabelle mit einer Zusatzzeile erstellt, die die Beobachtungen auf Korpusebene zusammenfasst:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overview_dataset_total</span> <span class="o">=</span> <span class="n">overview_datasets</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">overview_dataset_total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">overview_dataset_total</span><span class="p">,</span>
+                                    <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;description&#39;</span><span class="p">:[</span><span class="s1">&#39;total&#39;</span><span class="p">],</span> <span class="s1">&#39;gold_count&#39;</span><span class="p">:[</span><span class="nb">len</span><span class="p">(</span><span class="n">data_gold</span><span class="p">)],</span>
+                                                  <span class="s1">&#39;open_discourse_count&#39;</span><span class="p">:[</span><span class="nb">len</span><span class="p">(</span><span class="n">data_op</span><span class="p">)]})],</span>
+                                   <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">set_overview_vars</span><span class="p">(</span><span class="n">overview_dataset_total</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">overview_dataset_total</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">data_gold</span><span class="p">,</span> <span class="n">data_op</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Als letzter Schritt werden auf Basis der absoluten Zahlen noch die relativen Werte berechnet und die Reihenfolge umgestellt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transform_overview_table</span><span class="p">(</span><span class="n">overview</span><span class="p">):</span>
+    <span class="c1"># Relative Anteile berechnen</span>
+    <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;id_false_rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">overview</span><span class="p">[</span><span class="s1">&#39;id_false_negative_none_match&#39;</span><span class="p">]</span> <span class="o">+</span>
+                                <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;id_false_positive_match_match&#39;</span><span class="p">]</span> <span class="o">+</span>
+                                <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;id_false_positive_match_none&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">]</span>
+    <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;missing_rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;not_in_op_dataset&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;gold_count&#39;</span><span class="p">]</span>
+    <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;mistaken_rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;mistakenly_recognised_speeches&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;gold_count&#39;</span><span class="p">]</span>
+    <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;scope_rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;wrong_scope&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;gold_count&#39;</span><span class="p">]</span>
+    <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;wrong_total_rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;wrong_total&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">overview</span><span class="p">[</span><span class="s1">&#39;gold_count&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Spalten neu ordnen</span>
+    <span class="n">overview</span> <span class="o">=</span> <span class="n">overview</span><span class="p">[[</span><span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;period&#39;</span><span class="p">,</span> <span class="s1">&#39;protocol_number&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;gold_count&#39;</span><span class="p">,</span> <span class="s1">&#39;open_discourse_count&#39;</span><span class="p">,</span> <span class="s1">&#39;wrong_total_rel&#39;</span><span class="p">,</span> 
+                        <span class="s1">&#39;missing_rel&#39;</span><span class="p">,</span> <span class="s1">&#39;mistaken_rel&#39;</span><span class="p">,</span> <span class="s1">&#39;scope_rel&#39;</span><span class="p">,</span>  <span class="s1">&#39;id_false_rel&#39;</span><span class="p">,</span> <span class="s1">&#39;wrong_total&#39;</span><span class="p">,</span><span class="s1">&#39;in_op_dataset&#39;</span><span class="p">,</span> <span class="s1">&#39;not_in_op_dataset&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;mistakenly_recognised_speeches&#39;</span><span class="p">,</span> <span class="s1">&#39;correct_scope&#39;</span><span class="p">,</span> <span class="s1">&#39;wrong_scope&#39;</span><span class="p">,</span> <span class="s1">&#39;speeches_difference&#39;</span><span class="p">,</span> <span class="s1">&#39;speeches_difference_rel&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;id_true_positive_match_match&#39;</span><span class="p">,</span> <span class="s1">&#39;id_false_positive_match_match&#39;</span><span class="p">,</span> <span class="s1">&#39;id_false_negative_none_match&#39;</span><span class="p">,</span>
+                        <span class="s1">&#39;id_false_positive_match_none&#39;</span><span class="p">,</span> <span class="s1">&#39;id_true_negative_none_none&#39;</span><span class="p">]]</span>
+    
+    <span class="k">return</span> <span class="n">overview</span>
+        
+<span class="n">overview_datasets</span> <span class="o">=</span> <span class="n">transform_overview_table</span><span class="p">(</span><span class="n">overview_datasets</span><span class="p">)</span>
+<span class="n">overview_dataset_total</span> <span class="o">=</span> <span class="n">transform_overview_table</span><span class="p">(</span><span class="n">overview_dataset_total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Damit gibt es in der Tabelle <code class="docutils literal notranslate"><span class="pre">overview_datasets</span></code> die folgenden Spalten:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Spalte</p></th>
+<th class="head"><p>Erklärung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>Kurzbeschreibung</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">period</span></code></p></td>
+<td><p>Periode</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">protocol_number</span></code></p></td>
+<td><p>Protokollnummer</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></td>
+<td><p>Datum des Protokolls</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gold_count</span></code></p></td>
+<td><p>Anzahl von Redebeiträgen im Goldstandard-Korpus</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">open_discourse_count</span></code></p></td>
+<td><p>Anzahl von Redebeiträgen im OP-Korpus</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">wrong_total_rel</span></code></p></td>
+<td><p>❌ Rel. Anteil von Redebeiträgen mit mindestens einem Fehler</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">missing_rel</span></code></p></td>
+<td><p>❌ Rel. Anteil von im OP-Korpus fehlenden Redebeiträgen</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mistaken_rel</span></code></p></td>
+<td><p>❌ Rel. Anteil von fälschlicherweise erkannten Redebeiträgen (meist Zwischenrufe)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">scope_rel</span></code></p></td>
+<td><p>❌ Rel. Anteil von Redebeiträgen, deren Text teils falsch ist (unvollständig oder teils falsch zugeordneter Text), nur auf Basis in OP vorhandener Beiträge</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id_false_rel</span></code></p></td>
+<td><p>❌ Rel. Anteil von falsch oder nicht zugeordneter Redebeiträge</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">wrong_total</span></code></p></td>
+<td><p>❌ Zahl von Redebeiträgen mit mindestens einem Fehler</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">in_op_dataset</span></code></p></td>
+<td><p>✅ Zahl von Redebeiträgen aus dem OP-Korpus, die auch im Goldstandard-Korpus sind</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">not_in_op_dataset</span></code></p></td>
+<td><p>❌ Zahl von Redebeiträgen, die im OP-Korpus fehlen</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mistakenly_recognised_speeches</span></code></p></td>
+<td><p>❌ Zahl von Redebeiträgen im OP-Korpus, die keine eigenen Redebeiträge sind (meist Zwischenrufe)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">correct_scope</span></code></p></td>
+<td><p>✅ Zahl von Redebeiträgen, deren Text vollständig und richtig ist</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">wrong_scope</span></code></p></td>
+<td><p>❌ Zahl von Redebeiträgen, deren Text teils falsch ist (unvollständig oder teils falsch zugeordneter Text), nur auf Basis in OP vorhandener Beiträge</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">speeches_difference</span></code></p></td>
+<td><p>❌ Differenz aus Redebeitragsbetrag-Anzahl beider Korpora; ggf. irreführend z.B. durch fehlende in Kombination mit fälschlich erkannten Redebeiträgen</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">speeches_difference_rel</span></code></p></td>
+<td><p>❌ Relative Abweichung der Redebeitragsbetrag-Anzahl beider Korpora; ggf. irreführend</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">id_true_positive_match_match</span></code></p></td>
+<td><p>✅ Anzahl von Redebeiträgen, deren Redner:innen-Zuordnung richtig ist</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id_false_positive_match_match</span></code></p></td>
+<td><p>❌ Anzahl von Redebeiträgen, deren Redner:innen-Zuordnung die falsche Person matched</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">id_false_negative_none_match</span></code></p></td>
+<td><p>❌ Anzahl von Redebeiträgen, deren Redner:innen-Zuordnung bei denen fälschlicherweise die Zuordnung fehlt</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id_false_positive_match_none</span></code></p></td>
+<td><p>❌ Anzahl von Redebeiträgen, deren Redner:innen-Zuordnung die fälschlicherweise eine Zuordnung haben (richtig wäre keine Zuordnung)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">id_true_negative_none_none</span></code></p></td>
+<td><p>✅ Anzahl von Redebeiträgen, die richtigerweise keine Zuordnung Redner:innen-Zuordnung haben</p></td>
+</tr>
+<tr class="row-even"><td><p>󠀥</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Alle relativen Zahlen sind dabei auf Basis der absoluten Zahl der Redebeiträge je Protokoll im Goldstandard-Korpus gerechnet. Der Anteil fälschlich erkannter Redebeiträge ist eine Annäherung, da er auf das OP-Korpus gerechnet werden müsste.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">overview_dataset_total</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>description</th>
+      <th>period</th>
+      <th>protocol_number</th>
+      <th>date</th>
+      <th>gold_count</th>
+      <th>open_discourse_count</th>
+      <th>wrong_total_rel</th>
+      <th>missing_rel</th>
+      <th>mistaken_rel</th>
+      <th>scope_rel</th>
+      <th>id_false_rel</th>
+      <th>wrong_total</th>
+      <th>in_op_dataset</th>
+      <th>not_in_op_dataset</th>
+      <th>mistakenly_recognised_speeches</th>
+      <th>correct_scope</th>
+      <th>wrong_scope</th>
+      <th>speeches_difference</th>
+      <th>speeches_difference_rel</th>
+      <th>id_true_positive_match_match</th>
+      <th>id_false_positive_match_match</th>
+      <th>id_false_negative_none_match</th>
+      <th>id_false_positive_match_none</th>
+      <th>id_true_negative_none_none</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>01020</td>
+      <td>1</td>
+      <td>20</td>
+      <td>1949-12-02</td>
+      <td>74</td>
+      <td>93</td>
+      <td>0.32</td>
+      <td>0.01</td>
+      <td>0.27</td>
+      <td>0.01</td>
+      <td>0.03</td>
+      <td>24.00</td>
+      <td>73.00</td>
+      <td>1.00</td>
+      <td>20.00</td>
+      <td>72.00</td>
+      <td>1.00</td>
+      <td>-19</td>
+      <td>-0.26</td>
+      <td>71.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>01229</td>
+      <td>1</td>
+      <td>229</td>
+      <td>1952-09-11</td>
+      <td>131</td>
+      <td>123</td>
+      <td>0.14</td>
+      <td>0.06</td>
+      <td>0.00</td>
+      <td>0.06</td>
+      <td>0.02</td>
+      <td>18.00</td>
+      <td>123.00</td>
+      <td>8.00</td>
+      <td>0.00</td>
+      <td>115.00</td>
+      <td>8.00</td>
+      <td>8</td>
+      <td>0.06</td>
+      <td>121.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>02087</td>
+      <td>2</td>
+      <td>87</td>
+      <td>1955-06-15</td>
+      <td>201</td>
+      <td>189</td>
+      <td>0.12</td>
+      <td>0.06</td>
+      <td>0.00</td>
+      <td>0.06</td>
+      <td>0.00</td>
+      <td>24.00</td>
+      <td>189.00</td>
+      <td>12.00</td>
+      <td>0.00</td>
+      <td>177.00</td>
+      <td>12.00</td>
+      <td>12</td>
+      <td>0.06</td>
+      <td>187.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>02202</td>
+      <td>2</td>
+      <td>202</td>
+      <td>1957-04-05</td>
+      <td>12</td>
+      <td>10</td>
+      <td>0.33</td>
+      <td>0.17</td>
+      <td>0.00</td>
+      <td>0.17</td>
+      <td>0.00</td>
+      <td>4.00</td>
+      <td>10.00</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>8.00</td>
+      <td>2.00</td>
+      <td>2</td>
+      <td>0.17</td>
+      <td>10.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>03018</td>
+      <td>3</td>
+      <td>18</td>
+      <td>1958-03-20</td>
+      <td>115</td>
+      <td>114</td>
+      <td>0.09</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.04</td>
+      <td>0.00</td>
+      <td>10.00</td>
+      <td>112.00</td>
+      <td>3.00</td>
+      <td>2.00</td>
+      <td>107.00</td>
+      <td>5.00</td>
+      <td>1</td>
+      <td>0.01</td>
+      <td>112.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>03103</td>
+      <td>3</td>
+      <td>103</td>
+      <td>1960-02-18</td>
+      <td>68</td>
+      <td>67</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>67.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>67.00</td>
+      <td>0.00</td>
+      <td>1</td>
+      <td>0.01</td>
+      <td>67.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>04015</td>
+      <td>4</td>
+      <td>15</td>
+      <td>1962-02-16</td>
+      <td>91</td>
+      <td>90</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>90.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>89.00</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>0.01</td>
+      <td>75.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>15.00</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>04184</td>
+      <td>4</td>
+      <td>184</td>
+      <td>1965-05-19</td>
+      <td>339</td>
+      <td>329</td>
+      <td>0.08</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>28.00</td>
+      <td>329.00</td>
+      <td>10.00</td>
+      <td>0.00</td>
+      <td>319.00</td>
+      <td>10.00</td>
+      <td>10</td>
+      <td>0.03</td>
+      <td>259.00</td>
+      <td>0.00</td>
+      <td>8.00</td>
+      <td>0.00</td>
+      <td>62.00</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>05101</td>
+      <td>5</td>
+      <td>101</td>
+      <td>1967-04-12</td>
+      <td>356</td>
+      <td>342</td>
+      <td>0.11</td>
+      <td>0.04</td>
+      <td>0.00</td>
+      <td>0.04</td>
+      <td>0.03</td>
+      <td>38.00</td>
+      <td>342.00</td>
+      <td>14.00</td>
+      <td>0.00</td>
+      <td>328.00</td>
+      <td>14.00</td>
+      <td>14</td>
+      <td>0.04</td>
+      <td>332.00</td>
+      <td>0.00</td>
+      <td>10.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>05158</td>
+      <td>5</td>
+      <td>158</td>
+      <td>1968-03-11</td>
+      <td>181</td>
+      <td>152</td>
+      <td>0.32</td>
+      <td>0.16</td>
+      <td>0.00</td>
+      <td>0.16</td>
+      <td>0.00</td>
+      <td>58.00</td>
+      <td>152.00</td>
+      <td>29.00</td>
+      <td>0.00</td>
+      <td>123.00</td>
+      <td>29.00</td>
+      <td>29</td>
+      <td>0.16</td>
+      <td>149.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>3.00</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>06017</td>
+      <td>6</td>
+      <td>17</td>
+      <td>1969-12-04</td>
+      <td>178</td>
+      <td>158</td>
+      <td>0.24</td>
+      <td>0.11</td>
+      <td>0.00</td>
+      <td>0.11</td>
+      <td>0.01</td>
+      <td>42.00</td>
+      <td>158.00</td>
+      <td>20.00</td>
+      <td>0.00</td>
+      <td>138.00</td>
+      <td>20.00</td>
+      <td>20</td>
+      <td>0.11</td>
+      <td>156.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>06185</td>
+      <td>6</td>
+      <td>185</td>
+      <td>1972-05-04</td>
+      <td>166</td>
+      <td>122</td>
+      <td>0.52</td>
+      <td>0.27</td>
+      <td>0.00</td>
+      <td>0.26</td>
+      <td>0.00</td>
+      <td>87.00</td>
+      <td>122.00</td>
+      <td>44.00</td>
+      <td>0.00</td>
+      <td>79.00</td>
+      <td>43.00</td>
+      <td>44</td>
+      <td>0.27</td>
+      <td>120.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>07118</td>
+      <td>7</td>
+      <td>118</td>
+      <td>1974-09-25</td>
+      <td>234</td>
+      <td>233</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>233.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>232.00</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>0.00</td>
+      <td>233.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>07140</td>
+      <td>7</td>
+      <td>140</td>
+      <td>1975-01-15</td>
+      <td>238</td>
+      <td>232</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>12.00</td>
+      <td>232.00</td>
+      <td>6.00</td>
+      <td>0.00</td>
+      <td>226.00</td>
+      <td>6.00</td>
+      <td>6</td>
+      <td>0.03</td>
+      <td>232.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>08025</td>
+      <td>8</td>
+      <td>25</td>
+      <td>1977-05-05</td>
+      <td>387</td>
+      <td>380</td>
+      <td>0.06</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>23.00</td>
+      <td>378.00</td>
+      <td>9.00</td>
+      <td>2.00</td>
+      <td>367.00</td>
+      <td>11.00</td>
+      <td>7</td>
+      <td>0.02</td>
+      <td>368.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>9.00</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>08080</td>
+      <td>8</td>
+      <td>80</td>
+      <td>1978-03-15</td>
+      <td>247</td>
+      <td>223</td>
+      <td>0.22</td>
+      <td>0.10</td>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>0.03</td>
+      <td>54.00</td>
+      <td>223.00</td>
+      <td>24.00</td>
+      <td>0.00</td>
+      <td>199.00</td>
+      <td>24.00</td>
+      <td>24</td>
+      <td>0.10</td>
+      <td>217.00</td>
+      <td>0.00</td>
+      <td>6.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>09014</td>
+      <td>9</td>
+      <td>14</td>
+      <td>1981-01-22</td>
+      <td>316</td>
+      <td>305</td>
+      <td>0.25</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>0.03</td>
+      <td>0.20</td>
+      <td>80.00</td>
+      <td>305.00</td>
+      <td>11.00</td>
+      <td>0.00</td>
+      <td>296.00</td>
+      <td>9.00</td>
+      <td>11</td>
+      <td>0.03</td>
+      <td>241.00</td>
+      <td>0.00</td>
+      <td>60.00</td>
+      <td>0.00</td>
+      <td>4.00</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>09126</td>
+      <td>9</td>
+      <td>126</td>
+      <td>1982-11-10</td>
+      <td>219</td>
+      <td>221</td>
+      <td>0.05</td>
+      <td>0.01</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>12.00</td>
+      <td>217.00</td>
+      <td>2.00</td>
+      <td>4.00</td>
+      <td>214.00</td>
+      <td>3.00</td>
+      <td>-2</td>
+      <td>-0.01</td>
+      <td>214.00</td>
+      <td>0.00</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>10061</td>
+      <td>10</td>
+      <td>61</td>
+      <td>1984-03-29</td>
+      <td>405</td>
+      <td>402</td>
+      <td>0.17</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.15</td>
+      <td>68.00</td>
+      <td>402.00</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>399.00</td>
+      <td>3.00</td>
+      <td>3</td>
+      <td>0.01</td>
+      <td>333.00</td>
+      <td>0.00</td>
+      <td>62.00</td>
+      <td>0.00</td>
+      <td>7.00</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>10213</td>
+      <td>10</td>
+      <td>213</td>
+      <td>1986-04-24</td>
+      <td>324</td>
+      <td>321</td>
+      <td>0.03</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.02</td>
+      <td>0.00</td>
+      <td>11.00</td>
+      <td>320.00</td>
+      <td>4.00</td>
+      <td>1.00</td>
+      <td>315.00</td>
+      <td>5.00</td>
+      <td>3</td>
+      <td>0.01</td>
+      <td>319.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>11102</td>
+      <td>11</td>
+      <td>102</td>
+      <td>1988-10-26</td>
+      <td>316</td>
+      <td>316</td>
+      <td>0.03</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>9.00</td>
+      <td>314.00</td>
+      <td>2.00</td>
+      <td>2.00</td>
+      <td>312.00</td>
+      <td>2.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>311.00</td>
+      <td>0.00</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>11124</td>
+      <td>11</td>
+      <td>124</td>
+      <td>1989-02-15</td>
+      <td>392</td>
+      <td>392</td>
+      <td>0.10</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>41.00</td>
+      <td>392.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>392.00</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>351.00</td>
+      <td>0.00</td>
+      <td>41.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>12037</td>
+      <td>12</td>
+      <td>37</td>
+      <td>1991-09-04</td>
+      <td>115</td>
+      <td>127</td>
+      <td>0.18</td>
+      <td>0.01</td>
+      <td>0.11</td>
+      <td>0.06</td>
+      <td>0.00</td>
+      <td>21.00</td>
+      <td>114.00</td>
+      <td>1.00</td>
+      <td>13.00</td>
+      <td>107.00</td>
+      <td>7.00</td>
+      <td>-12</td>
+      <td>-0.10</td>
+      <td>114.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>12152</td>
+      <td>12</td>
+      <td>152</td>
+      <td>1993-04-22</td>
+      <td>305</td>
+      <td>302</td>
+      <td>0.07</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.05</td>
+      <td>22.00</td>
+      <td>302.00</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>299.00</td>
+      <td>3.00</td>
+      <td>3</td>
+      <td>0.01</td>
+      <td>286.00</td>
+      <td>0.00</td>
+      <td>16.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>13176</td>
+      <td>13</td>
+      <td>176</td>
+      <td>1997-05-16</td>
+      <td>37</td>
+      <td>36</td>
+      <td>0.05</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>36.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>35.00</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>0.03</td>
+      <td>36.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>13217</td>
+      <td>13</td>
+      <td>217</td>
+      <td>1998-02-06</td>
+      <td>111</td>
+      <td>109</td>
+      <td>0.04</td>
+      <td>0.02</td>
+      <td>0.00</td>
+      <td>0.02</td>
+      <td>0.00</td>
+      <td>4.00</td>
+      <td>109.00</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>107.00</td>
+      <td>2.00</td>
+      <td>2</td>
+      <td>0.02</td>
+      <td>109.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>14145</td>
+      <td>14</td>
+      <td>145</td>
+      <td>2001-01-24</td>
+      <td>339</td>
+      <td>324</td>
+      <td>0.16</td>
+      <td>0.04</td>
+      <td>0.00</td>
+      <td>0.04</td>
+      <td>0.08</td>
+      <td>54.00</td>
+      <td>324.00</td>
+      <td>15.00</td>
+      <td>0.00</td>
+      <td>311.00</td>
+      <td>13.00</td>
+      <td>15</td>
+      <td>0.04</td>
+      <td>298.00</td>
+      <td>0.00</td>
+      <td>26.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>14150</td>
+      <td>14</td>
+      <td>150</td>
+      <td>2001-02-09</td>
+      <td>188</td>
+      <td>184</td>
+      <td>0.03</td>
+      <td>0.02</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>6.00</td>
+      <td>184.00</td>
+      <td>4.00</td>
+      <td>0.00</td>
+      <td>182.00</td>
+      <td>2.00</td>
+      <td>4</td>
+      <td>0.02</td>
+      <td>184.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>15058</td>
+      <td>15</td>
+      <td>58</td>
+      <td>2003-09-09</td>
+      <td>170</td>
+      <td>169</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>3.00</td>
+      <td>169.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>168.00</td>
+      <td>1.00</td>
+      <td>1</td>
+      <td>0.01</td>
+      <td>168.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>15077</td>
+      <td>15</td>
+      <td>77</td>
+      <td>2003-11-25</td>
+      <td>82</td>
+      <td>82</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>82.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>82.00</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>82.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>16002</td>
+      <td>16</td>
+      <td>2</td>
+      <td>2005-11-08</td>
+      <td>25</td>
+      <td>25</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>25.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>25.00</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>25.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>16133</td>
+      <td>16</td>
+      <td>133</td>
+      <td>2007-12-13</td>
+      <td>266</td>
+      <td>267</td>
+      <td>0.03</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.02</td>
+      <td>9.00</td>
+      <td>265.00</td>
+      <td>1.00</td>
+      <td>2.00</td>
+      <td>263.00</td>
+      <td>2.00</td>
+      <td>-1</td>
+      <td>-0.00</td>
+      <td>261.00</td>
+      <td>0.00</td>
+      <td>4.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>17036</td>
+      <td>17</td>
+      <td>36</td>
+      <td>2010-04-21</td>
+      <td>276</td>
+      <td>276</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>276.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>276.00</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>276.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>17248</td>
+      <td>17</td>
+      <td>248</td>
+      <td>2013-06-25</td>
+      <td>41</td>
+      <td>38</td>
+      <td>0.15</td>
+      <td>0.07</td>
+      <td>0.00</td>
+      <td>0.07</td>
+      <td>0.00</td>
+      <td>6.00</td>
+      <td>38.00</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>35.00</td>
+      <td>3.00</td>
+      <td>3</td>
+      <td>0.07</td>
+      <td>38.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>18014</td>
+      <td>18</td>
+      <td>14</td>
+      <td>2014-02-13</td>
+      <td>277</td>
+      <td>277</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>277.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>277.00</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>277.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>18088</td>
+      <td>18</td>
+      <td>88</td>
+      <td>2015-02-26</td>
+      <td>324</td>
+      <td>327</td>
+      <td>0.02</td>
+      <td>0.00</td>
+      <td>0.01</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>6.00</td>
+      <td>324.00</td>
+      <td>0.00</td>
+      <td>3.00</td>
+      <td>321.00</td>
+      <td>3.00</td>
+      <td>-3</td>
+      <td>-0.01</td>
+      <td>324.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>total</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7546</td>
+      <td>7357</td>
+      <td>0.10</td>
+      <td>0.03</td>
+      <td>0.01</td>
+      <td>0.03</td>
+      <td>0.03</td>
+      <td>781.00</td>
+      <td>7308.00</td>
+      <td>238.00</td>
+      <td>49.00</td>
+      <td>7062.00</td>
+      <td>246.00</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6956.00</td>
+      <td>1.00</td>
+      <td>247.00</td>
+      <td>0.00</td>
+      <td>104.00</td>
+    </tr>
+  </tbody>
+</table></div></div>
+</div>
+<p>Ein erster Blick in die Zusammenfassungszeile in der Tabelle <code class="docutils literal notranslate"><span class="pre">overview_datasets</span></code> ergibt an dieser Stelle eine Annäherung an die Gesamtfehlerquote. 10 % der Redebeiträge in den untersuchten Protokollen weisen einen Fehler hinsichtlich ihrer Repräsentation im OP-Korpus auf. Sie zeigt zudem eine starke Varianz zwischen den Fehlerquoten der einzelnen Protokolle mit einer Bandbreite von 0 % bis 52 % fehlerhafter Redebeiträge. Diese werden im nächsten Kapitel ausführlich analysiert.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variablen für das nächste Kapitel speichern</span>
+<span class="o">%</span><span class="k">store</span> overview_datasets data_gold data_op
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stored &#39;overview_datasets&#39; (DataFrame)
+Stored &#39;data_gold&#39; (DataFrame)
+Stored &#39;data_op&#39; (DataFrame)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="ref-1"></a>[1] Diese wird beispielsweise auch in der Software Transkribus für die Berechnung der Zeichenfehlerrate (Character Error Rate – CER), dazu wird die Levenshtein-Distanz durch die Anzahl der Zeichen auf der Seite geteilt: CER = (i + s + d) / n</p>
+<p>Zeichenfehlerrate (CER), READ-COOP, o. D., <a class="reference external" href="https://readcoop.eu/de/glossary/character-error-rate-cer/">https://readcoop.eu/de/glossary/character-error-rate-cer/</a> (abgerufen: 27.04.2023).</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="3-3_korpus-erstellung.html" title="zurück Seite">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">zurück</p>
+            <p class="prev-next-title">3.3 Erstellung des Goldstandard-Korpus</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3-5_analyse.html" title="weiter Seite">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">3.5 Datenanalyse</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Ramisch<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

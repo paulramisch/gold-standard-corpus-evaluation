@@ -1,0 +1,1543 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse &#8212; Goldstandard-Korpus-Evaluation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2.2 Open Discourse" href="2-2_open-discourse.html" />
+    <link rel="prev" title="1 Einleitung" href="1_einleitung.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="de">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Goldstandard-Korpus-Evaluation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+<a class="reference internal" href="0_start.html">Goldstandard-Korpus-Evaluation/a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1_einleitung.html">
+   1 Einleitung
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#goldstandard-korpus-evaluation-als-methode-der-digital-history">1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History</a>
+    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+      <a class="reference internal" href="2_daten.html#plenarprotokolle-des-bundestags-als-open-data">2.1 Plenarprotokolle des Bundestags als Open Data</a>
+    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-2_open-discourse.html">
+     2.2	Open Discourse
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3_methode.html">
+   3 Methode: Goldstandard-Korpus-Evaluation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="3_methode.html#untersuchungskriterien">3.1 Untersuchungskriterien</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="3_methode.html#stichprobe">3.2 Stichprobe</a>
+    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-3_korpus-erstellung.html">
+     3.3 Erstellung des Goldstandard-Korpus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-4_matching.html">
+     3.4 Matching der Redebeiträge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-5_analyse.html">
+     3.5 Datenanalyse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-6_fazit.html">
+     3.6 Fazit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_epistemologische-konsequenzen.html">
+   4	Epistemologische Konsequenzen für die Geschichtswissenschaften
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Schluss.html">
+   5 Schluss
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_quellen-und-daten.html">
+   Quellen- &amp; Datenverzeichnis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_literatur.html">
+   Literaturverzeichnis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/2_daten.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/2_daten.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plenarprotokolle-des-bundestags-als-open-data">
+   2.1 Plenarprotokolle des Bundestags als Open Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plenarsitzungen-und-protokolle">
+     2.1.1 Plenarsitzungen und -Protokolle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-data">
+     2.1.2 Open Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#datei-struktur">
+       2.1.2.1 Datei-Struktur
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ocr-pdf-extraktion">
+       2.1.2.2 OCR &amp; PDF-Extraktion
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#allgemeine-datenqualitat">
+       2.1.2.3 Allgemeine Datenqualität
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2 Quellengrundlage & Daten: Bundestagsprotokolle & Open Discourse</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plenarprotokolle-des-bundestags-als-open-data">
+   2.1 Plenarprotokolle des Bundestags als Open Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plenarsitzungen-und-protokolle">
+     2.1.1 Plenarsitzungen und -Protokolle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-data">
+     2.1.2 Open Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#datei-struktur">
+       2.1.2.1 Datei-Struktur
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ocr-pdf-extraktion">
+       2.1.2.2 OCR &amp; PDF-Extraktion
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#allgemeine-datenqualitat">
+       2.1.2.3 Allgemeine Datenqualität
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="quellengrundlage-daten-bundestagsprotokolle-open-discourse">
+<h1>2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse<a class="headerlink" href="#quellengrundlage-daten-bundestagsprotokolle-open-discourse" title="Link zu dieser Überschrift">#</a></h1>
+<p>Im Folgenden werden die Plenarprotokolle, die der Bundestag als Open Data bereitstellt, sowie das Open-Discourse-Korpus vorgestellt und ersten quellenkritischen Untersuchungen unterzogen. Dabei liegt der Fokus sowohl auf der Entstehung als Quelle, als auch auf deren Digitalisierung und weiterer Verarbeitung. Zudem werden die Modellierung und Strukturierung der Daten untersucht, wobei auf die daraus resultierenden Schwierigkeiten eingegangen wird. Dies bildet die notwendige Vorbereitung für die Durchführung der Goldstandard-Korpus-Analyse.</p>
+<p><a id="2-1"></a></p>
+<section id="plenarprotokolle-des-bundestags-als-open-data">
+<h2>2.1 Plenarprotokolle des Bundestags als Open Data<a class="headerlink" href="#plenarprotokolle-des-bundestags-als-open-data" title="Link zu dieser Überschrift">#</a></h2>
+<p>Im Deutsche Bundestag kommen die demokratisch gewählten Abgeordneten zusammen, um Gesetze zu diskutieren und zu verabschieden. Dieser Prozess findet zu einem großen Teil in verschiedenen Unterausschüssen statt, die Abstimmungen und wichtigen Diskussionen passieren dagegen in den Plenarsitzungen. Aus diesem Grund sind die Protokolle eine äußerst wichtige Quelle für die Geschichte der Bundesrepublik.</p>
+<section id="plenarsitzungen-und-protokolle">
+<h3>2.1.1 Plenarsitzungen und -Protokolle<a class="headerlink" href="#plenarsitzungen-und-protokolle" title="Link zu dieser Überschrift">#</a></h3>
+<p>Die Verhandlungen des Deutschen Bundestags finden öffentlich statt, nur mit einer Zweidrittelmehrheit kann die Öffentlichkeit ausgeschlossen werden.<a class="reference external" href="#ref_1">[1]</a> Zu jeder Sitzung wird ein Plenarprotokoll erstellt.<a class="reference external" href="#ref_2">[2]</a> Diese Protokolle werden von dem hauseigenen stenografischen Dienst des Deutschen Bundestags angefertigt. Ein Protokoll „entspricht in der Regel nicht völlig dem Wortlaut einer Rede. Mit Blick auf die Schriftsprache findet eine gewisse sprachlich-stilistische Glättung des mündlich Gesprochenen statt bis hin zur Korrektur offensichtlicher Versprecher.“<a class="reference external" href="#ref_3">[3]</a> Nach einer Debatte haben die Sprecher:innen zwei Stunden Zeit, um die Niederschriften zu prüfen und Fehler vor der Veröffentlichung des Protokolls korrigieren zu lassen. Bereits veröffentlichte Fehler können allerdings auch in späteren Protokollen noch richtig gestellt werden.<a class="reference external" href="#ref_4">[4]</a></p>
+<p>Die grundsätzliche Struktur eines Plenarprotokolls hat sich seit 1949 nicht geändert und steht in einer direkten Tradition der Protokolle des Reichstags in der Weimarer Republik:</p>
+<ol class="simple">
+<li><p><strong>Inhaltsverzeichnis:</strong> Auflistung der Tagesordnungspunkte</p></li>
+<li><p><strong>Hauptteil</strong>: Redebeiträge</p></li>
+<li><p><strong>Anlagen zum Stenografischen Bericht:</strong> Die erste Anlage bildet die Anwesenheitsliste beziehungsweise die Liste entschuldigter Abgeordneter, weitere Anhänge sind beispielsweise schriftliche Antworten in Fragestunden.</p></li>
+</ol>
+<p>Im Bundestag dürfen dem Grundgesetz folgend nur Abgeordnete sowie Vertreter:innen der Bundesregierung und des Bundesrats sprechen. Sofern Gäste im Bundestag eine Rede halten, wie beispielsweise Wladimir Putin im September 2001, findet dies offiziell außerhalb der Plenarsitzung statt und ist inzwischen auch nicht mehr Teil der Plenarprotokolle.<a class="reference external" href="#ref_5">[5]</a> Obwohl es hierfür keine Rechtsgrundlage gab, sind in den Protokollen jedoch einige Beispiele für Reden ausländischer Gäste vorhanden, z. B. die des britischen Abgeordneten Arthur Woodburn 1951 oder des französischen Präsidenten François Mitterrand 1983 <a class="reference external" href="https://dserver.bundestag.de/btp/01/01163.pdf">(01163, S. 6603)</a> oder des französischen Präsidenten François Mitterrand 1983 <a class="reference external" href="https://dserver.bundestag.de/btp/09/09142.pdf">(09142, S. 8978)</a>.</p>
+<p>In dieser Arbeit bezeichnen die Begriffe Bundestagsprotokoll, Plenarprotokoll und Protokoll synonymhaft jeweils ein einzelnes Protokoll einer Plenarsitzung (oder Session) des Deutschen Bundestags. Hauptsächlich wird der Begriff Redebeitrag anstatt Rede verwendet, da auch die meist kurzen Moderationsbeiträge der Sitzungsleitung darin enthalten sind. Zwischenrufe sind keine Redebeiträge, sondern bilden eine eigene Kategorie. Diese sind erlaubt, als Redebeitrag zählt jedoch nur, wenn der:die Redner:in offiziell das Wort hat. Für den Verweis auf die einzelnen Protokolle wird die fünfstellige Nummerierung des Bundestags verwendet. Dabei kennzeichnen die ersten beiden Ziffern die (Legislatur-)Periode und die letzten drei Ziffern die Protokollnummer innerhalb der Periode. So steht beispielsweise die Referenznummer 01001 für die erste Sitzung der ersten Wahlperiode, 13145 für die 145. Sitzung in der 13. Periode.</p>
+</section>
+<section id="open-data">
+<h3>2.1.2 Open Data<a class="headerlink" href="#open-data" title="Link zu dieser Überschrift">#</a></h3>
+<p>Seit spätestens 2017 stellt der Bundestag auf einem Open-Data-Portal alle seit 1949 entstandenen Protokolle im PDF- und XML-Format bereit.<a class="reference external" href="#ref_6">[6]</a> Zu diesem Zweck hat der Bundestag bereits seit Januar 1996 eine eigene Website.<a class="reference external" href="#ref_7">[7]</a> In der <em>Wayback Machine</em> des Internet Archive findet sich der erste Crawl der Bundestagswebsite für den 19. Oktober 1996, zu diesem Zeitpunkt sind neun Protokolle (das erste für den 13. September 1996) online abrufbar.<a class="reference external" href="#ref_8">[8]</a> Seitdem wurden die Protokolle weiter ergänzt, seit Februar 2006 ließen sich Protokolle ab Juni 1975 (7. Periode) als PDF-Datei abrufen.<a class="reference external" href="#ref_9">[9]</a> Seit März 2013 ist ein PDF-Zugriff auf sämtliche Plenarprotokolle möglich.<a class="reference external" href="#ref_10">[10]</a> Vorausgegangen war die Verabschiedung des E-Government-Gesetzes, dass einerseits die Bereitstellung von Regierungs-Dokumenten und -Daten von öffentlichen Interesse in maschinenlesbarer Form vorgibt, wie auch deren uneingeschränkte Nutzung und Verwertung erlaubt.<a class="reference external" href="#ref_11">[11]</a> Der erste Snapshot im Internet Archive der heute verfügbaren Open-Data-Seite des Bundestages mit allen Protokollen im PDF- und XML-Format ist von Oktober 2017. Diese Seite wird fortlaufend um aktuelle Protokolle erweitert.</p>
+<p>An dieser Stelle ist ein Blick in die Meta-Daten der Dateien spannend, um mehr über deren Entstehung herauszufinden, hier an einer Stichprobe je zweier Protokolle aus den Perioden 1-19:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PyPDF2</span> <span class="kn">import</span> <span class="n">PdfReader</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Funktion um PDF-Metadaten auszulesen</span>
+<span class="k">def</span> <span class="nf">get_pdf_meta_data</span><span class="p">(</span><span class="n">minute</span><span class="p">):</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">PdfReader</span><span class="p">(</span><span class="s2">&quot;../data/evaluation/pdf/&quot;</span> <span class="o">+</span> <span class="n">minute</span> <span class="o">+</span> <span class="s2">&quot;.pdf&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">metadata</span>
+
+<span class="c1"># Erstellung der Tabelle mit den Protokoll-Metadaten</span>
+<span class="c1"># Zeitangaben in UTC</span>
+<span class="n">meta_data_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Protokoll&#39;</span><span class="p">,</span> <span class="s1">&#39;PDF erstellt&#39;</span><span class="p">,</span> <span class="s1">&#39;PDF zuletzt geändert&#39;</span><span class="p">,</span> <span class="s1">&#39;PDF Anwendung&#39;</span><span class="p">,</span> <span class="s1">&#39;PDF erstellt mit&#39;</span><span class="p">,</span> <span class="s1">&#39;XML zuletzt geändert&#39;</span><span class="p">]</span>
+<span class="n">df_meta_data</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">meta_data_columns</span><span class="p">)</span>
+
+<span class="c1"># Iteriere über die einzelnen Protokolle (eng. Minute) aus der Stichprobe</span>
+<span class="n">minute_sample</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;01020&quot;</span><span class="p">,</span> <span class="s2">&quot;01229&quot;</span><span class="p">,</span> <span class="s2">&quot;02087&quot;</span><span class="p">,</span> <span class="s2">&quot;02202&quot;</span><span class="p">,</span> <span class="s2">&quot;03018&quot;</span><span class="p">,</span> <span class="s2">&quot;03103&quot;</span><span class="p">,</span> <span class="s2">&quot;04015&quot;</span><span class="p">,</span> <span class="s2">&quot;04184&quot;</span><span class="p">,</span> <span class="s2">&quot;05101&quot;</span><span class="p">,</span> <span class="s2">&quot;05158&quot;</span><span class="p">,</span> 
+                 <span class="s2">&quot;06017&quot;</span><span class="p">,</span> <span class="s2">&quot;06185&quot;</span><span class="p">,</span> <span class="s2">&quot;07118&quot;</span><span class="p">,</span> <span class="s2">&quot;07140&quot;</span><span class="p">,</span> <span class="s2">&quot;08025&quot;</span><span class="p">,</span> <span class="s2">&quot;08080&quot;</span><span class="p">,</span> <span class="s2">&quot;09014&quot;</span><span class="p">,</span> <span class="s2">&quot;09126&quot;</span><span class="p">,</span> <span class="s2">&quot;10061&quot;</span><span class="p">,</span> <span class="s2">&quot;10213&quot;</span><span class="p">,</span> 
+                 <span class="s2">&quot;11102&quot;</span><span class="p">,</span> <span class="s2">&quot;11124&quot;</span><span class="p">,</span> <span class="s2">&quot;12037&quot;</span><span class="p">,</span> <span class="s2">&quot;12152&quot;</span><span class="p">,</span> <span class="s2">&quot;13176&quot;</span><span class="p">,</span> <span class="s2">&quot;13217&quot;</span><span class="p">,</span> <span class="s2">&quot;14145&quot;</span><span class="p">,</span> <span class="s2">&quot;14150&quot;</span><span class="p">,</span> <span class="s2">&quot;15058&quot;</span><span class="p">,</span> <span class="s2">&quot;15077&quot;</span><span class="p">,</span> 
+                 <span class="s2">&quot;16002&quot;</span><span class="p">,</span> <span class="s2">&quot;16133&quot;</span><span class="p">,</span> <span class="s2">&quot;17036&quot;</span><span class="p">,</span> <span class="s2">&quot;17248&quot;</span><span class="p">,</span> <span class="s2">&quot;18014&quot;</span><span class="p">,</span> <span class="s2">&quot;18088&quot;</span><span class="p">,</span> <span class="s2">&quot;19021&quot;</span><span class="p">,</span> <span class="s2">&quot;19180&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">minute</span> <span class="ow">in</span> <span class="n">minute_sample</span><span class="p">:</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">get_pdf_meta_data</span><span class="p">(</span><span class="n">minute</span><span class="p">)</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">minute</span><span class="p">,</span> 
+                              <span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="s2">&quot;/CreationDate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)[:</span><span class="mi">16</span><span class="p">],</span> <span class="s2">&quot;D:%Y%m</span><span class="si">%d</span><span class="s2">%H%M%S&quot;</span><span class="p">),</span>
+                              <span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="s2">&quot;/ModDate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)[:</span><span class="mi">16</span><span class="p">],</span> <span class="s2">&quot;D:%Y%m</span><span class="si">%d</span><span class="s2">%H%M%S&quot;</span><span class="p">),</span>
+                              <span class="n">metadata</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="s2">&quot;/Creator&quot;</span><span class="p">),</span>
+                              <span class="n">metadata</span><span class="o">.</span><span class="n">getText</span><span class="p">(</span><span class="s2">&quot;/Producer&quot;</span><span class="p">),</span>
+                              <span class="n">dt</span><span class="o">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getmtime</span><span class="p">(</span><span class="s2">&quot;../data/evaluation/raw/&quot;</span> <span class="o">+</span> <span class="n">minute</span> <span class="o">+</span> <span class="s2">&quot;.xml&quot;</span><span class="p">)))</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
+                             <span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="n">meta_data_columns</span><span class="p">)</span>
+    <span class="n">df_meta_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_meta_data</span><span class="p">,</span> <span class="n">metadata</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;div style=&#39;height: 500px; overflow:scroll-y&#39;&gt;&quot;</span><span class="o">+</span><span class="n">df_meta_data</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style='height: 500px; overflow:scroll-y'><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Protokoll</th>
+      <th>PDF erstellt</th>
+      <th>PDF zuletzt geändert</th>
+      <th>PDF Anwendung</th>
+      <th>PDF erstellt mit</th>
+      <th>XML zuletzt geändert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>01020</td>
+      <td>2012-02-09 20:41:01</td>
+      <td>2014-01-27 11:10:30</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:40:16</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>01229</td>
+      <td>2012-02-15 21:46:30</td>
+      <td>2012-07-25 07:56:08</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:40:30</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>02087</td>
+      <td>2012-01-30 10:27:27</td>
+      <td>2012-07-21 06:33:38</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:40:52</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>02202</td>
+      <td>2012-01-31 14:02:47</td>
+      <td>2012-07-21 06:54:26</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:41:00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>03018</td>
+      <td>2012-01-20 10:24:49</td>
+      <td>2012-07-18 20:39:41</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:41:04</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>03103</td>
+      <td>2012-01-23 15:38:17</td>
+      <td>2012-07-19 08:19:19</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:41:10</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>04015</td>
+      <td>2012-01-14 01:04:46</td>
+      <td>2012-07-18 09:46:20</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:41:24</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>04184</td>
+      <td>2012-01-13 14:33:40</td>
+      <td>2012-07-18 09:41:44</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:41:40</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>05101</td>
+      <td>2012-01-11 07:10:13</td>
+      <td>2012-07-16 13:22:42</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:42:08</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>05158</td>
+      <td>2011-12-20 08:35:59</td>
+      <td>2012-07-16 13:02:12</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:42:10</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>06017</td>
+      <td>2011-12-08 21:46:14</td>
+      <td>2012-07-13 09:55:49</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:42:32</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>06185</td>
+      <td>2011-12-08 12:53:25</td>
+      <td>2012-07-26 21:44:26</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:42:54</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>07118</td>
+      <td>2011-11-22 21:45:29</td>
+      <td>2012-07-10 10:22:07</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:43:32</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>07140</td>
+      <td>2011-11-15 12:28:44</td>
+      <td>2012-07-27 10:21:17</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:43:32</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>08025</td>
+      <td>2011-10-05 04:46:48</td>
+      <td>2012-07-09 09:16:28</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:44:00</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>08080</td>
+      <td>2011-10-11 21:38:48</td>
+      <td>2012-07-27 11:29:56</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:44:12</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>09014</td>
+      <td>2011-09-20 20:24:50</td>
+      <td>2012-07-05 07:33:10</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:44:36</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>09126</td>
+      <td>2011-09-22 20:27:04</td>
+      <td>2012-07-05 07:42:01</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:44:50</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>10061</td>
+      <td>2011-08-31 05:36:51</td>
+      <td>2012-06-20 08:27:22</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:45:18</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>10213</td>
+      <td>2011-09-06 11:04:41</td>
+      <td>2012-06-20 09:13:08</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:45:34</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>11102</td>
+      <td>2011-08-19 04:41:20</td>
+      <td>2012-06-19 10:35:02</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:46:34</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>11124</td>
+      <td>2011-08-23 05:40:20</td>
+      <td>2012-06-19 11:08:11</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:46:36</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>12037</td>
+      <td>2011-08-02 13:56:09</td>
+      <td>2012-05-11 14:09:14</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:46:58</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>12152</td>
+      <td>2011-07-27 20:54:00</td>
+      <td>2012-03-07 12:57:03</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:47:36</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>13176</td>
+      <td>2011-05-13 07:25:04</td>
+      <td>2012-03-08 09:28:04</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:49:08</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>13217</td>
+      <td>2011-05-26 00:48:36</td>
+      <td>2012-03-08 09:51:21</td>
+      <td>OmniPage CSDK 16</td>
+      <td>OmniPage 17</td>
+      <td>2015-07-09 07:49:20</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>14145</td>
+      <td>2001-01-25 05:58:48</td>
+      <td>2012-08-13 10:28:56</td>
+      <td>AdobePS5.dll Version 5.1</td>
+      <td>Acrobat Distiller 4.0 for Windows</td>
+      <td>2019-08-07 08:38:01</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>14150</td>
+      <td>2001-02-10 11:59:06</td>
+      <td>2012-08-13 10:29:55</td>
+      <td>AdobePS5.dll Version 5.1</td>
+      <td>Acrobat Distiller 4.0 for Windows</td>
+      <td>2019-08-07 08:38:01</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>15058</td>
+      <td>2003-09-10 04:46:48</td>
+      <td>2012-08-08 04:24:08</td>
+      <td>FrameMaker 6.0</td>
+      <td>Acrobat Distiller 5.0.5 (Windows)</td>
+      <td>2019-02-06 15:37:04</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>15077</td>
+      <td>2003-11-26 04:24:27</td>
+      <td>2012-08-08 04:24:12</td>
+      <td>FrameMaker 6.0</td>
+      <td>Acrobat Distiller 5.0.5 (Windows)</td>
+      <td>2019-02-06 15:37:05</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>16002</td>
+      <td>2005-11-08 21:22:21</td>
+      <td>2005-11-08 21:22:21</td>
+      <td>FrameMaker 6.0</td>
+      <td>Acrobat Distiller 5.0.5 (Windows)</td>
+      <td>2019-02-06 15:37:06</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>16133</td>
+      <td>2007-12-14 17:04:58</td>
+      <td>2007-12-14 17:20:34</td>
+      <td>FrameMaker 6.0</td>
+      <td>Acrobat Distiller 5.0.5 (Windows)</td>
+      <td>2019-02-06 15:37:22</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>17036</td>
+      <td>2010-05-12 09:00:24</td>
+      <td>2014-02-06 11:43:24</td>
+      <td>FrameMaker 7.1</td>
+      <td>Acrobat Distiller 6.0.1 (Windows)</td>
+      <td>2019-02-06 15:37:28</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>17248</td>
+      <td>2013-06-25 19:38:38</td>
+      <td>2014-02-06 13:38:55</td>
+      <td>FrameMaker 10.0.2</td>
+      <td>Acrobat Distiller 10.1.2 (Windows)</td>
+      <td>2019-02-06 15:37:46</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>18014</td>
+      <td>2014-02-14 01:02:23</td>
+      <td>2014-02-14 01:19:13</td>
+      <td>FrameMaker 10.0.2</td>
+      <td>Acrobat Distiller 10.1.2 (Windows)</td>
+      <td>2019-02-06 15:37:48</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>18088</td>
+      <td>2015-02-27 02:01:03</td>
+      <td>2015-02-27 02:12:11</td>
+      <td>FrameMaker 10.0.2</td>
+      <td>Acrobat Distiller 10.1.2 (Windows)</td>
+      <td>2019-02-06 15:37:58</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>19021</td>
+      <td>2018-03-16 18:13:53</td>
+      <td>2018-03-16 18:17:33</td>
+      <td>Adobe InDesign CC 13.0 (Windows)</td>
+      <td>Adobe PDF Library 15.0</td>
+      <td>2022-01-26 08:26:10</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>19180</td>
+      <td>2020-10-02 02:59:52</td>
+      <td>2020-10-02 07:58:07</td>
+      <td>Arbortext Advanced Print Publisher 11.2.5210/W</td>
+      <td>PDFlib+PDI 9.1.2p4 (C++/Win32)</td>
+      <td>2022-01-26 08:26:29</td>
+    </tr>
+  </tbody>
+</table></div></div></div>
+</div>
+<p>Bei den Protokollen der Perioden 1-13 liegt das Erstellungsdatum für die PDFs zwischen Mitte 2011 und Mitte 2012, die letzte Änderung in der Regel bis Mitte 2012, teils auch im Jahr 2014. Dabei wurden die Dateien sukzessive von der 13. Periode aus zurückgehend bearbeitet. Das hierfür benutzte Programm ist stets die Software OmniPage 17. Während für die PDFs die Zeitstempel-Meta-Daten in die Datei eingebettet sind, ist dies bei den XML-Dateien nicht der Fall. Dementsprechend ist diese Information mit Vorsicht zu handhaben, da sie beispielsweise durch einen Kopier- oder Downloadvorgang neu gesetzt werden kann.</p>
+<p>Die Protokolle ab der 14. Periode liegen hinsichtlich ihres Erstellungsdatums nah am ursprünglichen Tag der Sitzung, wobei häufig Bearbeitungen vorgenommen wurden; interessant ist auch das Fortschreiten der benutzten Tools beispielsweise durch die verschiedenen Adobe Distiller Versionen von 4.0 bis 10.1.2.</p>
+<section id="datei-struktur">
+<h4>2.1.2.1 Datei-Struktur<a class="headerlink" href="#datei-struktur" title="Link zu dieser Überschrift">#</a></h4>
+<p>Die Bereitstellung der Daten im XML-Format bedeutet nur sehr eingeschränkt eine zusätzliche Datenqualität: Für Protokolle bis 2017 enthalten diese, abgesehen von einigen Meta-Informationen, den technisch komplett unstrukturierten Text. Die Dokumente besitzen damit keinerlei technische Abgrenzungen in die verschiedenen Bestandteile wie Inhaltsverzeichnis, Hauptteil, Anhang oder die einzelnen Tagesordnungspunkte und Reden. So ähneln alle XML-Dokumente der Perioden 1 - 18, diesem Ausschnitt des 3. Protokolls der ersten Periode <a class="reference external" href="https://dserver.bundestag.de/btp/01/01003.pdf">(01003)</a>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE DOKUMENT SYSTEM &quot;BUNDESTAGSDOKUMENTE.dtd&quot;&gt;</span>
+<span class="nt">&lt;DOKUMENT&gt;</span>
+  <span class="nt">&lt;WAHLPERIODE&gt;</span>1<span class="nt">&lt;/WAHLPERIODE&gt;</span>
+  <span class="nt">&lt;DOKUMENTART&gt;</span>PLENARPROTOKOLL<span class="nt">&lt;/DOKUMENTART&gt;</span>
+  <span class="nt">&lt;NR&gt;</span>01/3<span class="nt">&lt;/NR&gt;</span>
+  <span class="nt">&lt;DATUM&gt;</span>15.09.1949<span class="nt">&lt;/DATUM&gt;</span>
+  <span class="nt">&lt;TITEL&gt;</span>Plenarprotokoll vom 15.09.1949<span class="nt">&lt;/TITEL&gt;</span>
+  <span class="nt">&lt;TEXT&gt;</span>Deutscher Bundestag — 3. Sitzung. Bonn, Donnerstag, den 15. September 1949	13
+3. Sitzung.
+Bonn, Donnerstag, den 15. September 1949. Mitteilungen:
+Geschäftliches 	 13B, 14A
+Schreiben des Bundespräsidenten, betreffend Verzicht auf seinen Sitz als
+Abgeordneter im Bundestag . . . 	 13B
+Eintritt der Frau Abgeordneten Hütter
+in den Bundestag 	 13B
+Bildung der Gruppe „Nationale Rechte&quot;
+im Bundestag 	 13B
+Wahl des Bundeskanzlers 	 13C
+Dr. Adenauer nimmt die Wahl als Bundeskanzler an 	 14C
+Nächste Sitzung 	 14C
+Die Sitzung wird um 11 Uhr 6 Minuten durch den Präsidenten Dr. Köhler eröffnet.
+Präsident Dr. Köhler: Meine Damen und Herren! Ich eröffne die 3. Sitzung des Deutschen Bundestags.
+Die Tagesordnung liegt Ihnen vor. Wir treten in die Tagesordnung ein. Punkt 1:
+Mitteilungen.
+</pre></div>
+</div>
+<p>Seit 2017, respektive Periode 19, werden die Plenarprotokolle im XML-Format mit einer eigens entwickelten Dokumenttypdefinition (DTP) angelegt. Für jeden Sitzungstag liegt weiterhin eine XML-Datei vor. Die verschiedenen Arten von Redebeiträgen sind in diesem Format nun voneinander abgegrenzt und mit den Metadaten des:der Redner:in versehen. Wie diese Struktur definiert ist, lässt sich in der als Open Data bereitgestellten Dokumentation dieser Plenarprotokoll-DTD nachlesen.<a class="reference external" href="#ref_13">[13]</a> Die DTD unterscheidet sich dabei von der in der in den Geisteswissenschaften und Archiven verbreiteten DTD der Text Encoding Initiative (TEI).</p>
+<p>Die ersten 25 Zeilen der ersten Sitzung in der 19. Periode sehen etwas anders aus als die früherer Perioden:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;?xml-stylesheet href=&quot;dbtplenarprotokoll.css&quot; type=&quot;text/css&quot; charset=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE dbtplenarprotokoll SYSTEM &quot;dbtplenarprotokoll.dtd&quot;&gt;</span>
+<span class="nt">&lt;dbtplenarprotokoll</span> <span class="na">herstellung=</span><span class="s">&quot;Satz: Satzweiss.com Print, Web, Software GmbH, Mainzer Straße 116, 66121 Saarbrücken, www.satzweiss.com, Druck: Printsystem GmbH, Schafwäsche 1-3, 71296 Heimsheim, www.printsystem.de&quot;</span> <span class="na">sitzung-datum=</span><span class="s">&quot;24.10.2017&quot;</span> <span class="na">sitzung-ende-uhrzeit=</span><span class="s">&quot;17:03&quot;</span> <span class="na">sitzung-naechste-datum=</span><span class="s">&quot;22.11.2017&quot;</span> <span class="na">sitzung-nr=</span><span class="s">&quot;1&quot;</span> <span class="na">sitzung-start-uhrzeit=</span><span class="s">&quot;11:00&quot;</span> <span class="na">start-seitennr=</span><span class="s">&quot;1&quot;</span> <span class="na">vertrieb=</span><span class="s">&quot;Bundesanzeiger Verlagsgesellschaft mbH, Postfach 1 0 05 34, 50445 Köln, Telefon (02 21) 97 66 83 40, Fax (02 21) 97 66 83 44, www.betrifft-gesetze.de&quot;</span> <span class="na">wahlperiode=</span><span class="s">&quot;19&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;vorspann&gt;</span>
+    <span class="nt">&lt;kopfdaten&gt;</span>
+      <span class="nt">&lt;plenarprotokoll-nummer&gt;</span>Plenarprotokoll <span class="nt">&lt;wahlperiode&gt;</span>19<span class="nt">&lt;/wahlperiode&gt;</span>/<span class="nt">&lt;sitzungsnr&gt;</span>1<span class="nt">&lt;/sitzungsnr&gt;&lt;/plenarprotokoll-nummer&gt;</span>
+      <span class="nt">&lt;herausgeber&gt;</span>Deutscher Bundestag<span class="nt">&lt;/herausgeber&gt;</span>
+      <span class="nt">&lt;berichtart&gt;</span>Stenografischer Bericht<span class="nt">&lt;/berichtart&gt;</span>
+      <span class="nt">&lt;sitzungstitel&gt;&lt;sitzungsnr&gt;</span>1<span class="nt">&lt;/sitzungsnr&gt;</span>. Sitzung<span class="nt">&lt;/sitzungstitel&gt;</span>
+      <span class="nt">&lt;veranstaltungsdaten&gt;&lt;ort&gt;</span>Berlin<span class="nt">&lt;/ort&gt;</span>, <span class="nt">&lt;datum</span> <span class="na">date=</span><span class="s">&quot;24.10.2017&quot;</span><span class="nt">&gt;</span>Dienstag, den 24. Oktober 2017<span class="nt">&lt;/datum&gt;&lt;/veranstaltungsdaten&gt;</span>
+    <span class="nt">&lt;/kopfdaten&gt;</span>
+    <span class="nt">&lt;inhaltsverzeichnis&gt;</span>
+      <span class="nt">&lt;ivz-titel&gt;</span>Inhalt:<span class="nt">&lt;/ivz-titel&gt;</span>
+      <span class="nt">&lt;ivz-eintrag&gt;</span>
+        <span class="nt">&lt;ivz-eintrag-inhalt&gt;&lt;redner</span> <span class="na">id=</span><span class="s">&quot;11002190&quot;</span><span class="nt">&gt;&lt;name&gt;&lt;vorname&gt;</span>Alterspräsident Dr. Hermann<span class="nt">&lt;/vorname&gt;&lt;nachname&gt;</span>Otto Solms<span class="nt">&lt;/nachname&gt;&lt;rolle&gt;&lt;rolle_lang&gt;</span>Alterspräsident<span class="nt">&lt;/rolle_lang&gt;&lt;rolle_kurz&gt;</span>Alterspräsident<span class="nt">&lt;/rolle_kurz&gt;&lt;/rolle&gt;&lt;/name&gt;&lt;/redner&gt;</span>Alterspräsident Dr. Hermann Otto Solms<span class="nt">&lt;/ivz-eintrag-inhalt&gt;</span>
+        <span class="nt">&lt;xref</span> <span class="na">div=</span><span class="s">&quot;A&quot;</span> <span class="na">pnr=</span><span class="s">&quot;1&quot;</span> <span class="na">ref-type=</span><span class="s">&quot;rede&quot;</span> <span class="na">rid=</span><span class="s">&quot;ID19100100&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;S1&quot;</span> <span class="na">typ=</span><span class="s">&quot;druckseitennummer&quot;</span><span class="nt">&gt;&lt;seite&gt;</span>1<span class="nt">&lt;/seite&gt;</span> <span class="nt">&lt;seitenbereich&gt;</span>A<span class="nt">&lt;/seitenbereich&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/xref&gt;</span>
+      <span class="nt">&lt;/ivz-eintrag&gt;</span>
+      <span class="nt">&lt;ivz-block&gt;</span>
+        <span class="nt">&lt;ivz-block-titel&gt;</span>Tagesordnungspunkt 1:<span class="nt">&lt;/ivz-block-titel&gt;</span>
+        <span class="nt">&lt;ivz-eintrag&gt;</span>
+          <span class="nt">&lt;ivz-eintrag-inhalt&gt;</span>Eröffnung der Sitzung durch den Alterspräsidenten Drucksache 19/2 <span class="nt">&lt;/ivz-eintrag-inhalt&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;S1&quot;</span> <span class="na">typ=</span><span class="s">&quot;druckseitennummer&quot;</span><span class="nt">&gt;&lt;seite&gt;</span>1<span class="nt">&lt;/seite&gt;</span> <span class="nt">&lt;seitenbereich&gt;</span>C<span class="nt">&lt;/seitenbereich&gt;&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>Dabei hat jede Rede eine eigene ID, der einleitende Redner ist mit Meta-Informationen versehen, hier illustriert an den ersten drei XML-Zeilen der Rede von Carsten Schneider in der gleichen Sitzung:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;rede</span> <span class="na">id=</span><span class="s">&quot;ID19100300&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">klasse=</span><span class="s">&quot;redner&quot;</span><span class="nt">&gt;&lt;redner</span> <span class="na">id=</span><span class="s">&quot;11003218&quot;</span><span class="nt">&gt;&lt;name&gt;&lt;vorname&gt;</span>Carsten<span class="nt">&lt;/vorname&gt;&lt;nachname&gt;</span>Schneider<span class="nt">&lt;/nachname&gt;&lt;fraktion&gt;</span>SPD<span class="nt">&lt;/fraktion&gt;&lt;ortszusatz&gt;</span>(Erfurt)<span class="nt">&lt;/ortszusatz&gt;&lt;/name&gt;&lt;/redner&gt;</span>Carsten Schneider (Erfurt) (SPD):<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">klasse=</span><span class="s">&quot;J_1&quot;</span><span class="nt">&gt;</span>Sehr geehrter Herr Präsident! Sehr geehrte Kolleginnen und Kollegen! Mit der heutigen Konstituierung nimmt der Deutsche Bundestag zum 19. Mal seine Arbeit auf. Er ist die wichtigste Institution im Parlamentarismus in Deutschland, und er ist zugleich die Herzkammer unserer Demokratie; denn nur wir Abgeordneten sind vom Volk gewählt und damit unmittelbar legitimiert.<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>Genau diese Informationen fehlen in den Protokollen bis 2017 und machen es in dieser Form unmöglich, die Reden hinsichtlich bestimmter Personen oder Fraktionen statistisch zu untersuchen: Abgesehen von grundsätzlichen Meta-Daten im XML-Header wie das Datum und die Nummer der Sitzung, liegen nur unstrukturierte Texte vor. Einzelne Redebeiträge lassen sich nicht durch die technische Struktur der Datei erkennen und es lässt sich nicht automatisiert verarbeiten, wer was gesagt hat. Für Menschen, die den Fließtext lesen, ist dies kein Problem; jede Rede beginnt mit Namen, Titel, Partei und Funktion der sprechenden Person. Automatisierte Analysen gelangen dadurch jedoch schnell an ihre Grenzen. So ließe sich zwar nach Schlagwörtern suchen, aber nicht nach Person, Partei, Funktion oder Eigenschaften der Personen (z. B. Alter, Beruf, Geschlecht, Wohnort) filtern.</p>
+</section>
+<section id="ocr-pdf-extraktion">
+<h4>2.1.2.2 OCR &amp; PDF-Extraktion<a class="headerlink" href="#ocr-pdf-extraktion" title="Link zu dieser Überschrift">#</a></h4>
+<p>Neben dem bereits beschriebenen Unterschied zwischen den Perioden hinsichtlich ihrer XML-Auszeichnung variieren die Protokolle bis 2017 zusätzlich angesichts ihres Ausgangsmaterials. Zwar sind alle Rohtexte aus PDF-Dokumenten extrahiert, für die erste Periode 1949 bis zum Ende der 13. Periode im Herbst 1998 basieren diese PDF-Dokumente jedoch auf Scans. Seit der 14. Periode liegen hierfür born-digital PDF-Dokumente zugrunde.</p>
+<p>Dies führt zu einem entscheidenden Unterschied: Die früheren Protokolle sind mithilfe von automatischer Texterkennung (OCR) auf Basis der Scans entstanden. Leider ist der Entstehungsprozess der XML-Dateien und damit auch das OCR nicht öffentlich dokumentiert worden, trotzdem lassen sich aus den bestehenden Daten Rückschlüsse auf die Vorgehensweise ziehen. Die Dokumenteigenschaften der Scan-PDFs weisen als Erstellungssoftware das OCR-Programm OmniPage 17 aus.</p>
+<p>Das 2009 erschienene OmniPage 17 konnte einerseits bestehende Bild- und Scandateien importieren oder direkt scannen und automatisiert mit OCR- und Layouterkennung verarbeiten. Die offizielle Feature-Liste des Herstellers erklärt selbstbewusst „OmniPage delivers unprecedented accuracy at a level greater than 99% for over 120 different languages.“<a class="reference external" href="#ref_13">[13]</a> In der Bedienungsanleitung der Software zeigen sich umfangreiche Funktionen, von automatisierten OCR-Scans bis hin zu umfangreichen Korrekturfunktionen bei unklaren Stellen in den OCR-Texten. Neben vorhandenen Wörterbüchern lässt sich auch ein eigenes Wörterbuch ergänzen, um die Erkennung zu verbessern.<a class="reference external" href="#ref_14">[14]</a> Eine unabhängige und vergleichbare Evaluation der OCR-Qualität von OmniPage gibt es leider nicht.<a class="reference external" href="#ref_15">[15]</a> Hinzu kommt, dass ohne die vorliegende Dokumentation des Entstehungskontextes, beispielsweise ob eine Korrektur stattgefunden hat, solche Leistungszahlen wenig aussagekräftig wären.</p>
+<p>Es gibt starke Hinweise darauf, dass ein eigenes Wörterbuch mit den Namen der Abgeordneten ergänzt wurde. Der später in dieser Arbeit erläuterte Zuordnungsprozess von Reden zu den Abgeordneten auf Basis der OCR gescannten Namensangabe hat nur wenige Probleme, dennoch gibt es einige Fehlerkennungen und auch Sonderfälle, die auf dieses Wörterbuch-Vorgehen zurückzuführen ist: So wird der Name des Abgeordneten <em>Kißlinger</em> in der Stichprobe an einer Stelle fälschlich als <em>Kißiinger</em> erkannt (<a class="reference external" href="https://dserver.bundestag.de/btp/10/10213.pdf">(10213, S. 16408)</a>). In den Stammdaten wird der Abgeordnete als <em>Karl Kisslinger</em> geführt, die Version <em>Kißlinger</em> war offenbar nicht in dem Wörterbuch enthalten. Bei den 65 weiteren Abgeordneten mit einem Eszett im Namen gab es in der Stichprobe keine derartigen Schwierigkeiten. Die häufigsten OCR-Fehler betreffen die Unterscheidung zwischen den Buchstaben i und l, beispielsweise wird <em>Dr. Spöri (SPD)</em> <a class="reference external" href="https://dserver.bundestag.de/btp/10/10213.pdf">(10213, S. 16305)</a>, fälschlich als <em>Spörl</em> erkannt, der Name eines Abgeordneten der CSU; im gleichen Dokument <a class="reference external" href="https://dserver.bundestag.de/btp/10/10213.pdf">(10213, S. 16424)</a> erhielt der CDU-Abgeordnete <em>Broll</em> den neuen Nachnamen <em>Broil</em> im OCR-Text.</p>
+<p>Auch die Unterscheidung zwischen Umlauten und deren korrespondierenden Vokalen ist ein Fehlerfeld, beispielsweise bei Staatssekretär <em>Bölling</em>, der einmal als <em>Boiling</em> <a class="reference external" href="https://dserver.bundestag.de/btp/08/08025.pdf">(08025, S. 1704)</a> und <em>Balling</em> erkannt wird <a class="reference external" href="https://dserver.bundestag.de/btp/08/08025.pdf">(08025, S. 1705)</a>. Der Staatssekretär <em>Hopf</em> fällt ebenfalls einem Wort aus dem englischen Wortschatz zum Opfer und erhält im OCR-Text den Namen der nordamerikanischen indigenen Gruppe der <em>Hopi</em> <a class="reference external" href="https://dserver.bundestag.de/btp/04/04015.pdf">(04105, S. 446)</a>. Der Staatssekretär Schütz wird bei seinen neun Redebeiträgen als Schutz erkannt <a class="reference external" href="https://dserver.bundestag.de/btp/05/05101.pdf">(05101, S. 4683ff.)</a>. Das sich die Beobachtungen von OCR-Fehlern hier auf Staatssekretäre fokussieren, ist kein Zufall, da diese nicht in den Abgeordneten-Stammdaten des Bundestags enthalten sind, sofern sie nicht gleichzeitig Abgeordnete sind.</p>
+<p>Analog zu der zuverlässigen Erkennung von Namen, die in dem Zusatz-Wörterbuch enthalten sind, ist auch die allgemeine Textqualität recht hoch. Während im weiteren Verlauf dieser Arbeit zwar die Namenserkennung systematisch untersucht wird, wird der Text selbst nicht entsprechend bearbeitet. Dabei dürften innerhalb der Redebeiträge vor allem Namen von Personen, Unternehmen, Organisationen und Orten nicht immer richtig erkannt werden aufgrund der dargelegten Wörterbuchthematik. Dies hat beispielsweise für Untersuchungen, die ausschließlich nach Erwähnungen dieser Begriffe suchen wie auch für Anwendungen, in denen Named-Entity-Recognition-Techniken zum Einsatz kommen sollen, Auswirkungen.</p>
+<p>In der Stichprobe funktioniert die Layouterkennung allgemein sehr gut, die Dokumente sind in der Regel zweispaltig formatiert, allerdings gibt es auch Probleme. So wurde in Protokoll 14145 die zentrierte Überschrift über der Eröffnung der Sitzung durch Vizepräsident Dr. Solms fälschlich der rechten Spalte zugeordnet und findet sich damit im Fließtext der Rede von Kurt Bodewig. Da diese Überschrift ansonsten ein guter Marker ist, um das Inhaltsverzeichnis von dem Hauptteil abzugrenzen, hat dies potenziell direkten Einfluss auf die daraus generierten Daten, da beispielsweise die ersten Redebeiträge abgeschnitten werden können.</p>
+</section>
+<section id="allgemeine-datenqualitat">
+<h4>2.1.2.3 Allgemeine Datenqualität<a class="headerlink" href="#allgemeine-datenqualitat" title="Link zu dieser Überschrift">#</a></h4>
+<p>Um eine gute Datenqualität sicherzustellen, müssen auch die Meta-Daten stimmen und es dürfen keine Dubletten, in diesem Fall also doppelte Protokolle, in den Daten vorhanden sein. Die Meta-Daten in den vorliegenden XML-Dateien sind dabei nicht besonders umfangreich: die Wahlperiode, die Sitzungsnummer, das Sitzungsdatum und der Sitzungstitel – wobei Letzterer aus dem Sitzungsdatum generiert ist. Bei den Wahlperioden und den Sitzungsnummern gab es in der Untersuchung keine Auffälligkeiten, bei diesen scheinen keine Fehler vorzuliegen.</p>
+<p>Zur Untersuchung der Datumsangabe und Dubletten sowie um Anomalien zu finden, kann die Gesamtheit der Datumsangaben automatisiert miteinander verglichen werden. Hierzu wird mit dem folgenden Code eine Tabelle aller Protokolle aus den Roh-XML-Dateien erstellt:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="c1"># Erstelle einer Übersichtstabelle</span>
+<span class="n">minutes_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">,</span><span class="s1">&#39;nr&#39;</span><span class="p">,</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="s1">&#39;len&#39;</span><span class="p">,</span> <span class="s1">&#39;date_anomaly&#39;</span><span class="p">,</span> <span class="s1">&#39;datum_duplicate&#39;</span><span class="p">]</span>
+<span class="n">minutes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">minutes_columns</span><span class="p">)</span>
+
+<span class="c1"># Iteriere über alle Perioden</span>
+<span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">):</span>
+    <span class="n">period_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">period</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;../data/raw&#39;</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">period_string</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">))])</span>     
+    
+    <span class="c1"># Iteriere über alle Protokolle innerhalb einer Periode</span>
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">number_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">period_string</span> <span class="o">+</span> <span class="n">number_string</span> <span class="o">+</span> <span class="s1">&#39;.xml&#39;</span>
+        
+        <span class="c1"># Füge Informationen zu dem DataFrame hinzu</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+            <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;DATUM&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">.%m.%Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+            <span class="n">len_xml</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;TEXT&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            
+            <span class="n">minutes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">minutes</span><span class="p">,</span> 
+                              <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">period</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">len_xml</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="n">minutes_columns</span><span class="p">)</span> <span class="p">],</span> 
+                             <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Diese Tabelle aller Protokolle wird dann hinsichtlich Datums-Anomalien und -Dubletten untersucht:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Startvariable setzen</span>
+<span class="n">date</span> <span class="o">=</span> <span class="n">minutes</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Iteriere über alle Protokolle</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">minute</span> <span class="ow">in</span> <span class="n">minutes</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="c1"># Untersuche alle Protokolle außer dem Ersten und Letzten</span>
+    <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">minutes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">date_previous</span> <span class="o">=</span> <span class="n">date</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">minute</span><span class="o">.</span><span class="n">date</span>
+        <span class="n">date_next</span> <span class="o">=</span> <span class="n">minutes</span><span class="o">.</span><span class="n">iloc</span><span class="p">[[</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+               
+        <span class="k">if</span> <span class="n">date</span> <span class="o">&lt;</span> <span class="n">date_previous</span> <span class="ow">or</span> <span class="n">date</span> <span class="o">&gt;</span> <span class="n">date_next</span><span class="p">:</span>
+            <span class="n">minutes</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;date_anomaly&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="n">date</span> <span class="o">==</span> <span class="n">date_previous</span> <span class="ow">or</span> <span class="n">date</span> <span class="o">==</span> <span class="n">date_next</span><span class="p">:</span>
+            <span class="n">minutes</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;datum_duplicate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Tabelle nach Anomalien filtern</span>
+<span class="n">minutes_anomaly_filtered</span> <span class="o">=</span> <span class="n">minutes</span><span class="p">[</span><span class="n">minutes</span><span class="p">[</span><span class="s1">&#39;date_anomaly&#39;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">minutes_anomaly_filtered</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>period</th>
+      <th>nr</th>
+      <th>date</th>
+      <th>len</th>
+      <th>date_anomaly</th>
+      <th>datum_duplicate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>193</th>
+      <td>1</td>
+      <td>194</td>
+      <td>1952-02-20</td>
+      <td>258922</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>1</td>
+      <td>195</td>
+      <td>1951-02-21</td>
+      <td>312238</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>456</th>
+      <td>2</td>
+      <td>175</td>
+      <td>1956-11-30</td>
+      <td>246221</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>457</th>
+      <td>2</td>
+      <td>176</td>
+      <td>1956-11-05</td>
+      <td>378133</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2954</th>
+      <td>14</td>
+      <td>20</td>
+      <td>1999-02-23</td>
+      <td>583483</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2955</th>
+      <td>14</td>
+      <td>21</td>
+      <td>1999-02-14</td>
+      <td>688475</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3215</th>
+      <td>15</td>
+      <td>28</td>
+      <td>2003-12-20</td>
+      <td>521920</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3216</th>
+      <td>15</td>
+      <td>29</td>
+      <td>2003-02-21</td>
+      <td>269037</td>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table></div></div>
+</div>
+<p>Eine Anomalie definiert sich hierbei dadurch, dass ein Protokoll entweder vor dem Datum des vorherigen oder nach dem Datum des darauffolgenden Protokolls liegt. Beides darf durch die Logik der Sitzungen, die jeweils zeitlich chronologisch folgen, nicht vorkommen. Dadurch konnten acht Protokolle mit Anomalien identifiziert werden. Bei diesen acht Protokollen handelt es sich jeweils um Paare, von denen je nur eines der beiden wirklich eine Anomalie ist, da ein falsches Datum durch den im Code angelegten Vergleich immer auch eine zweite Datei betrifft. Nach einem Blick in die Rohdaten zeigt sich, dass vier Protokolle ein falsches Datum in den Meta-Daten enthalten:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nummer</p></th>
+<th class="head"><p>Angebendes Datum</p></th>
+<th class="head"><p>Korrektes Datum</p></th>
+<th class="head"><p>Abweichung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://dserver.bundestag.de/btp/01/01195.pdf">01195</a></p></td>
+<td><p>21.02.1952</p></td>
+<td><p>21.02.1951</p></td>
+<td><p>1 Jahr</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://dserver.bundestag.de/btp/02/02176.pdf">02176</a></p></td>
+<td><p>05.12.1956</p></td>
+<td><p>05.11.1956</p></td>
+<td><p>1 Monat</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://dserver.bundestag.de/btp/14/14021.pdf">14021</a></p></td>
+<td><p>24.02.1999</p></td>
+<td><p>14.02.1999</p></td>
+<td><p>10 Tage</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://dserver.bundestag.de/btp/15/15028.pdf">15028</a></p></td>
+<td><p>20.02.2003</p></td>
+<td><p>20.12.2003</p></td>
+<td><p>10 Monate</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hinsichtlich der Dubletten wird es schwieriger, diese lassen sich nicht allein durch das Datum des Tages identifizieren:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes_duplicates_filtered</span> <span class="o">=</span> <span class="n">minutes</span><span class="p">[</span><span class="n">minutes</span><span class="p">[</span><span class="s1">&#39;datum_duplicate&#39;</span><span class="p">]</span><span class="o">==</span><span class="kc">True</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anzahl von Sitzung, die am gleichen Tag wie eine andere Sitzung stattfand (die Zahl zählt beide): &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">minutes_duplicates_filtered</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl von Sitzung, die am gleichen Tag wie eine andere Sitzung stattfand (die Zahl zählt beide):  90
+</pre></div>
+</div>
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>period</th>
+      <th>nr</th>
+      <th>date</th>
+      <th>len</th>
+      <th>date_anomaly</th>
+      <th>datum_duplicate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>3</td>
+      <td>1949-09-15</td>
+      <td>6521</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>4</td>
+      <td>1949-09-15</td>
+      <td>17267</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>1</td>
+      <td>20</td>
+      <td>1949-12-02</td>
+      <td>144998</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>1</td>
+      <td>21</td>
+      <td>1949-12-02</td>
+      <td>143193</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>1</td>
+      <td>24</td>
+      <td>1949-12-16</td>
+      <td>139918</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table></div></div>
+</div>
+<p>Es gibt neunzig Protokolle für Sitzungen, die an Tagen mit mehr als einer Sitzung stattfanden. Ein Blick auf die Zahl der in der Datei enthaltenen Zeichen zeigt, dass eben nicht alle Dubletten sind, sondern sich einige lediglich den Tag mit einer weiteren Sitzung teilen. Die Sitzungen <a class="reference external" href="https://dserver.bundestag.de/btp/01/01021.pdf">01020</a> und <a class="reference external" href="https://dserver.bundestag.de/btp/01/01020.pdf">01021</a> sind dagegen tatsächlich Duplikate. Trotz der abweichenden Zeichenzahl und obwohl sie offenbar auf den gleichen Scans basieren, fehlen in Nr. 21 lediglich die Kopfzeilen, ansonsten sind beide identisch. Sie sind identisch, weil die Sitzungen zusammengehören: Die Überschrift in der gedruckten Version lautet „20. und 21. Sitzung“, der Grund in diesem Fall war eine fehlende Beschlussfähigkeit und eine darauffolgende Einberufung einer neuen Sitzung wenige Minuten später. In den XML-Dateien wurde in diesen Fällen – analog zu den PDF-Dateien – jeweils das komplette Dokument beider Sitzungen eingefügt.</p>
+<p>Um weiter herauszufinden, welche Sitzungen als Duplikate vorliegen, lässt sich die Liste filtern:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;len_duplicate&#39;</span><span class="p">,</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">])</span>
+<span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;nr_duplicate&#39;</span><span class="p">,</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;nr&#39;</span><span class="p">])</span>
+
+<span class="c1"># Groupieren nach Tag und Berechnung der relativen Abweichung</span>
+<span class="n">minutes_duplicates_filtered</span> <span class="o">=</span> <span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;period&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;nr&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;nr_duplicate&#39;</span><span class="p">:</span> <span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;len&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;len_duplicate&#39;</span><span class="p">:</span> <span class="s1">&#39;last&#39;</span><span class="p">})</span>
+<span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;diff&#39;</span><span class="p">,</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;len_duplicate&#39;</span><span class="p">])</span>
+
+<span class="c1"># Filtern nach Abweichung</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mf">0.025</span>
+<span class="n">minutes_duplicates_filtered</span> <span class="o">=</span> <span class="n">minutes_duplicates_filtered</span><span class="p">[(</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">threshold</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;diff&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">threshold</span><span class="p">)]</span>
+<span class="n">minutes_duplicates_filtered</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>period</th>
+      <th>nr</th>
+      <th>nr_duplicate</th>
+      <th>date</th>
+      <th>len</th>
+      <th>len_duplicate</th>
+      <th>diff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>20</td>
+      <td>21</td>
+      <td>1949-12-02</td>
+      <td>144998</td>
+      <td>143193</td>
+      <td>1.012605</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>41</td>
+      <td>42</td>
+      <td>1950-02-24</td>
+      <td>219451</td>
+      <td>216375</td>
+      <td>1.014216</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>75</td>
+      <td>76</td>
+      <td>1950-07-14</td>
+      <td>323715</td>
+      <td>320151</td>
+      <td>1.011132</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>149</td>
+      <td>150</td>
+      <td>1951-06-08</td>
+      <td>260737</td>
+      <td>257737</td>
+      <td>1.01164</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>223</td>
+      <td>224</td>
+      <td>1952-07-16</td>
+      <td>638199</td>
+      <td>627758</td>
+      <td>1.016632</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>280</td>
+      <td>281</td>
+      <td>1953-07-03</td>
+      <td>893683</td>
+      <td>877757</td>
+      <td>1.018144</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2</td>
+      <td>219</td>
+      <td>220</td>
+      <td>1957-06-29</td>
+      <td>295928</td>
+      <td>290819</td>
+      <td>1.017568</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2</td>
+      <td>225</td>
+      <td>226</td>
+      <td>1957-07-06</td>
+      <td>173908</td>
+      <td>171244</td>
+      <td>1.015557</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>3</td>
+      <td>97</td>
+      <td>98</td>
+      <td>1960-01-27</td>
+      <td>297161</td>
+      <td>297345</td>
+      <td>0.999381</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>4</td>
+      <td>66</td>
+      <td>67</td>
+      <td>1963-03-15</td>
+      <td>187034</td>
+      <td>187034</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>4</td>
+      <td>87</td>
+      <td>88</td>
+      <td>1963-10-16</td>
+      <td>43093</td>
+      <td>43093</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>4</td>
+      <td>112</td>
+      <td>113</td>
+      <td>1964-02-07</td>
+      <td>231231</td>
+      <td>231267</td>
+      <td>0.999844</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>5</td>
+      <td>47</td>
+      <td>48</td>
+      <td>1966-06-16</td>
+      <td>344899</td>
+      <td>344899</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5</td>
+      <td>232</td>
+      <td>233</td>
+      <td>1969-05-09</td>
+      <td>318999</td>
+      <td>318999</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Die iterativ gefundene Maximalabweichung von 2,5 % hinsichtlich der Zeichenzahl zweier Dokumente führt zu einer Liste von 14 Tagen und damit 28 Protokollen, die doppelt vorhanden sind. Für all diese 14 Tage und 28 Protokolle kann mit einem  Blick in die Rohdaten verifiziert werden, dass diese tatsächlich Dubletten sind.</p>
+<p>Die Dubletten sind für Close-Reading-Anwendungen kein Problem, da sich beim Lesen direkt erschließt, wo die neue Sitzung beginnt und auch eine genaue Abgrenzung in die eine oder die andere Nummer wohl zweitrangig ist. Als Rohdaten für eine automatisierte Verarbeitung ist hierbei jedoch Vorsicht geboten. Bei insgesamt 4106 Protokolle bis Ende 2017, haben diese 28 Protokolle nur einen geringen Anteil, in der ersten Periode betreffen sie aber immerhin über 4 % der Protokolle.</p>
+<p>Ein schmales Fehlerfeld betrifft zudem Protokolle für Debatten, die über mehr als einen Tag andauern. Während ein Überziehen bis nach Mitternacht, eine Praxis, die nach der zweiten Periode nur noch vereinzelt vorkommt, meist nur durch die entsprechende Schlussuhrzeit erkennbar ist, wurde in einigen wenigen Fällen der zweite Tag in den Titel aufgenommen, dadurch wurden folgende drei Protokolle mit einem falschen Datum versehen:<a class="reference external" href="#ref_16">[16]</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dserver.bundestag.de/btp/01/01018.pdf">01018</a>: 24.11.1949 (anstatt 25.11.1949, Ende: 25.11. 6.23 Uhr)</p></li>
+<li><p><a class="reference external" href="https://dserver.bundestag.de/btp/03/03158.pdf">03158</a>: 04.05.1961 (anstatt 05.05.1961, Ende: 05.05. 0.19 Uhr)</p></li>
+<li><p><a class="reference external" href="https://dserver.bundestag.de/btp/03/03164.pdf">03164</a>: 28.06.1961 (anstatt 29.06.1961, Ende: 29.06. 0.07 Uhr.)</p></li>
+</ul>
+<p>Ein weiteres fehlerhaftes Datum findet sich für das Protokoll 07208, hier wurde der 11.12.1975 eingetragen, die Sitzung fand jedoch einen Tag davor, am 10.12.1975 statt. Diese falsche Datierung wurde auch im Zuge der Prüfung von doppelt vorkommenden Daten erkannt, da die Sitzung 07209 tatsächlich am 11.12.1975 stattfand. Alle 90 Protokolle, die dort Erwähnung fanden, wurden entsprechend geprüft. Das bedeutet jedoch auch, dass wahrscheinlich noch weitere unentdeckte fehlerbehaftete Datumsangaben in dem Korpus vorkommen, die sich in dem Plausibilitätsbereich zwischen der vorherigen und darauffolgenden Sitzung bewegen. Die hier gefundenen acht von 4106 Protokolle liegen im Promillebereich und dürften für breitere Untersuchungen kein größeres Problem darstellen. Trotzdem führen sie dazu, dass an die tausend Redebeiträge mit einem falschen Datum versehen sind.</p>
+<p>Daneben gibt es kleinere Tipp- und Formfehler, die nur einzelne Redebeiträge betreffen. In der Stichprobe finden sich beispielsweise zwei Parteienfehler, so wurde Konrad Porzner der nicht existenten Partei SDP anstatt der SPD zugeordnet <a class="reference external" href="https://dserver.bundestag.de/btp/04/04184.pdf">(04184, S. 9260)</a>. Schwerwiegender ist, dass Klaus W. Lippold der SPD zugeordnet wurde, obwohl er CDU-Abgeordneter war <a class="reference external" href="https://dserver.bundestag.de/btp/12/12152.pdf">(12152, S. 13019)</a>. In den 36 Protokollen gibt es auch eine interessante Zahl von Tippfehlern im Präsidententitel:</p>
+<ul class="simple">
+<li><p>„Vizeräsident Dr. Dehler:“ <a class="reference external" href="https://dserver.bundestag.de/btp/04/04184.pdf">(04184, S. 9244)</a></p></li>
+<li><p>„Vizepräsidennt Frau Dr. Probst:“ <a class="reference external" href="https://dserver.bundestag.de/btp/05/05101.pdf">(05101, S. 4701)</a></p></li>
+<li><p>„Viezepräsident Wurbs:“ <a class="reference external" href="https://dserver.bundestag.de/btp/09/09014.pdf">(09014, S. 458)</a></p></li>
+<li><p>„Vizpräsident Frau Renger:“ <a class="reference external" href="https://dserver.bundestag.de/btp/10/10213.pdf">(10213, S. 16414)</a></p></li>
+</ul>
+<p>Seltene Formfehler sind für die automatisierte Weiterverarbeitung zu beachten. So gibt es klare Regeln, wann eckige und wann runde Klammern genutzt werden: Bei Redebeiträgen steht die Partei in runden Klammern, bei Zwischenrufen in eckigen Klammern. In mehreren Instanzen werden jedoch eckige Klammern fälschlich bei Redebeiträgen genutzt. Insgesamt lassen sich diese Form- und Tippfehler bei den Namen und Titeln innerhalb der Stichprobe zwar an zwei Händen abzählen, führen bei einer reinen regelbasierten automatisierten Verarbeitung jedoch mit hoher Wahrscheinlichkeit zu Erkennungsfehler dieser einzelnen Redebeiträge. In den folgenden Kapiteln wird darauf ausführlicher eingegangen werden.</p>
+<p>Ein weiterer Fehler, der einmal aufgefallen ist, ist eine fehlende Seite; diese fehlt bereits in dem zugrundliegenden PDF-Dokument <a class="reference external" href="https://dserver.bundestag.de/btp/14/14192.pdf">(14192: S. 18818)</a>. Es ist plausibel, dass dieser Fehler häufiger vorkommt, in der Stichprobe ist dies allerdings nicht der Fall. Dies könnte systematisch untersucht werden indem die Seitenzahl aller Seiten extrahiert und jeweils ein Vergleich mit der vorherigen durchgeführt wird; in dieser Arbeit wird dem jedoch nicht weiter nachgegangen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variablen für das nächste Kapitel speichern</span>
+<span class="o">%</span><span class="k">store</span> minutes minutes_duplicates_filtered
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stored &#39;minutes&#39; (DataFrame)
+Stored &#39;minutes_duplicates_filtered&#39; (DataFrame)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><a id="ref_1"></a>[1] Grundgesetz für die Bundesrepublik Deutschland, Artikel 42 Abs. 1.</p>
+<p><a id="ref_2"></a>[2] §116 Abs. 1, Geschäftsordnung des Deutschen Bundestages, o. D., <a class="reference external" href="https://www.bundestag.de/parlament/aufgaben/rechtsgrundlagen/go_btg">https://www.bundestag.de/parlament/aufgaben/rechtsgrundlagen/go_btg</a> (abgerufen: 13.10.2021).</p>
+<p><a id="ref_3"></a>[3] Heike Schweitzer, AW: Fragen zu Plenarprotokollen, 14.10.2021.</p>
+<p><a id="ref_4"></a>[4] § 117 Abs. 1 in der Geschäftsordnung des Deutschen Bundestages (s. Anm. 2).</p>
+<p><a id="ref_5"></a>[5] Deutscher Bundestag - Gastredner, Deutscher Bundestag, o. D., <a class="reference external" href="https://www.bundestag.de/services/glossar/glossar/G/gastredner-857066">https://www.bundestag.de/services/glossar/glossar/G/gastredner-857066</a> (abgerufen: 26.06.2023).</p>
+<p><a id="ref_6"></a>[6] Der erste Eintrag im Internet Archive für die Open-Data-Seite ist von März 2017, zu diesem Zeitpunkt noch mit dem Titel „Offene Daten“:
+Deutscher Bundestag - Offene Daten, 27.10.2017, <a class="reference external" href="https://web.archive.org/web/20171027122855/http://www.bundestag.de/service/opendata">https://web.archive.org/web/20171027122855/http://www.bundestag.de/service/opendata</a> (abgerufen: 05.05.2023).
+Zum aktuellen Zeitpunkt ist das Webarchiv des Bundestags nur bis 2016 freigeschaltet, eine genaue zeitliche Einordnung der Veröffentlich dadurch nicht möglich, vgl. Deutscher Bundestag - Webarchiv, o. D., <a class="reference external" href="https://webarchiv.bundestag.de/">https://webarchiv.bundestag.de/</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_7"></a>[7] Volker Müller, Deutscher Bundestag - 20 Jahre Deutscher Bundestag im Internet, Deutscher Bundestag, o. D., <a class="reference external" href="https://www.bundestag.de/webarchiv/textarchiv/2016/kw04-20-jahre-bundestag-im-internet-403918">https://www.bundestag.de/webarchiv/textarchiv/2016/kw04-20-jahre-bundestag-im-internet-403918</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_8"></a>[8] Deutscher Bundestag - Plenarprotokolle Übersicht, Wayback Machine, 19.10.1996, <a class="reference external" href="https://web.archive.org/web/19961019120016/http://www.bundestag.de/aktuell/113.htm">https://web.archive.org/web/19961019120016/http://www.bundestag.de/aktuell/113.htm</a> (abgerufen: 26.06.2023).</p>
+<p><a id="ref_9"></a>[9] Deutscher Bundestag - Dokumentenserver PARFORS, Wayback Machine, 06.02.2006, <a class="reference external" href="https://web.archive.org/web/20060206121510/http://dip.bundestag.de/parfors/parfors.htm">https://web.archive.org/web/20060206121510/http://dip.bundestag.de/parfors/parfors.htm</a> (abgerufen: 26.06.2023).</p>
+<p><a id="ref_10"></a>[10] Drucksachen und Plenarprotokolle des Bundestages - 1949 bis 2005, Wayback Machine, 20.03.2013, <a class="reference external" href="https://web.archive.org/web/20130320135845/http://pdok.bundestag.de/">https://web.archive.org/web/20130320135845/http://pdok.bundestag.de/</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_11"></a>[11] § 12a EGovG - Einzelnorm, o. D., S. 12, <a class="reference external" href="https://www.gesetze-im-internet.de/egovg/__12a.html">https://www.gesetze-im-internet.de/egovg/__12a.html</a> (abgerufen: 26.06.2023).</p>
+<p><a id="ref_12"></a>[12] Bundestags-Plenar-Protokolle im XML-Format: Aufbau der Strukturdefinition – DTD, Deutscher Bundestag, 07.02.2022, <a class="reference external" href="https://www.bundestag.de/resource/blob/577234/4c8091d8650fe417016bb48e604e3eaf/dbtplenarprotokoll_kommentiert-data.pdf">https://www.bundestag.de/resource/blob/577234/4c8091d8650fe417016bb48e604e3eaf/dbtplenarprotokoll_kommentiert-data.pdf</a>.</p>
+<p><a id="ref_13"></a>[13] Nuance - standard - Convert scanned paper and digital documents into editable files - OmniPage 17 Standard, Wayback Machine, 18.03.2011, <a class="reference external" href="https://web.archive.org/web/20110318193528/http://www.nuance.com/for-business/by-product/omnipage/standard/index.htm">https://web.archive.org/web/20110318193528/http://www.nuance.com/for-business/by-product/omnipage/standard/index.htm</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_14"></a>[14] Der ursprüngliche Hersteller Nuance hat 2019 OmniPage an Kofax Inc. verkauft, die originale Anleitung lässt sich leider auch nicht über das Internet Archive finden, sondern nur über diese Drittseite.
+OmniPage 17 User’s Guide - Nuance, <a class="reference external" href="http://yumpu.com">yumpu.com</a>, o. D., <a class="reference external" href="https://www.yumpu.com/en/document/read/3266704/omnipage-17-users-guide-nuance">https://www.yumpu.com/en/document/read/3266704/omnipage-17-users-guide-nuance</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_15"></a>[15] Martin Volk, Torsten Marek, Rico Sennrich, Reducing OCR errors by combining two OCR systems in, s.n., 16.08.2010, <a class="reference external" href="https://doi.org/10.5167/UZH-35259">https://doi.org/10.5167/UZH-35259</a>.
+In diesem Paper wird OmniPage-OCR-Output hinsichtlich Ausgangsmaterial aus dem 19. und 20. Jahrhundert evaluiert, dieses ist jedoch multilingual und OmniPage ist vor allem im Bereich französischer Texterkennung fehlerbehaftet (S. 5).</p>
+<p><a id="ref_16"></a>[16] Um diese zu finden, lassen sich per Regex die Dateien nach <code class="docutils literal notranslate"><span class="pre">Bonn,</span> <span class="pre">den</span> <span class="pre">[\d]{1,2}.</span> <span class="pre">und</span></code> durchsuchen; das geht in Python, aber auch beispielsweise bei geöffnetem Ordner in Visual Studio Code.</p>
+</section>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1_einleitung.html" title="zurück Seite">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">zurück</p>
+            <p class="prev-next-title">1 Einleitung</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2-2_open-discourse.html" title="weiter Seite">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">2.2	Open Discourse</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Ramisch<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

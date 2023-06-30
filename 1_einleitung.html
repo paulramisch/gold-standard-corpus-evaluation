@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1 Einleitung &#8212; Goldstandard-Korpus-Evaluation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse" href="2_daten.html" />
+    <link rel="prev" title="Goldstandard-Korpus-Evaluation als Methode digitaler Quellenkritik in den Geschichtswissenschaften am Beispiel des Open-Discourse-Korpus der Bundestagsprotokolle" href="0_start.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="de">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Goldstandard-Korpus-Evaluation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+<a class="reference internal" href="0_start.html">Goldstandard-Korpus-Evaluation/a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   1 Einleitung
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#goldstandard-korpus-evaluation-als-methode-der-digital-history">1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History</a>
+    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2_daten.html">
+   2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+      <a class="reference internal" href="2_daten.html#plenarprotokolle-des-bundestags-als-open-data">2.1 Plenarprotokolle des Bundestags als Open Data</a>
+    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2-2_open-discourse.html">
+     2.2	Open Discourse
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3_methode.html">
+   3 Methode: Goldstandard-Korpus-Evaluation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="3_methode.html#untersuchungskriterien">3.1 Untersuchungskriterien</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="3_methode.html#stichprobe">3.2 Stichprobe</a>
+    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-3_korpus-erstellung.html">
+     3.3 Erstellung des Goldstandard-Korpus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-4_matching.html">
+     3.4 Matching der Redebeiträge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-5_analyse.html">
+     3.5 Datenanalyse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-6_fazit.html">
+     3.6 Fazit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_epistemologische-konsequenzen.html">
+   4	Epistemologische Konsequenzen für die Geschichtswissenschaften
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Schluss.html">
+   5 Schluss
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_quellen-und-daten.html">
+   Quellen- &amp; Datenverzeichnis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_literatur.html">
+   Literaturverzeichnis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/1_einleitung.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/1_einleitung.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">
+   1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goldstandard-korpus-evaluation-als-methode-der-digital-history">
+   1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>1 Einleitung</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">
+   1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goldstandard-korpus-evaluation-als-methode-der-digital-history">
+   1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="einleitung">
+<h1>1 Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">#</a></h1>
+<p>Die Zahl großer digitaler historischer Textkorpora hat in den vergangenen Jahren stark zugenommen und ermöglicht eine Vielzahl innovativer Untersuchungen. Gleichzeitig bringen diese Datenmengen Herausforderungen für die Quellen- und Datenkritik mit sich, da bisher keine adäquaten Methoden hierfür existieren. In dieser Arbeit wird am Beispiel des Open-Discourse-Korpus die Goldstandard-Korpus-Evaluation als Methode für die digitale Quellenkritik entwickelt.</p>
+<p>Das Open-Discourse-Korpus ist ein umfangreicher Datensatz aller Redebeiträge der Sitzungen des Deutschen Bundestags seit der Gründung 1949 bis ins Jahr 2021. Für die Forschung zur bundesdeutschen Politikgeschichte ist das im Jahr 2020 veröffentlichte <a class="reference external" href="https://opendiscourse.de/">Open-Discourse-Projekt</a> eine vielversprechende Quelle.<a class="reference external" href="#ref-1">[1]</a> Im Deutschen Bundestag kommen die demokratisch gewählten Abgeordneten zusammen, um Gesetze zu diskutieren und zu verabschieden. Dadurch sind die Protokolle der Plenarsitzungen eine wichtige Quelle für die Geschichte der Bundesrepublik. Open Discourse ermöglicht mit einem Web-Interface ein einfaches Durchsuchen und Filtern aller rund 900.000 Bundestags-Redebeiträge seit 1949 nach Redeinhalt, Sprecher:in, Fraktion und Funktion. Das zugrunde liegende Korpus eröffnet vielfältige Analysemöglichkeiten über das Interface hinaus. Dieses wurde automatisiert auf Basis der Protokoll-Dokumente erstellt, die der Bundestag als Open Data veröffentlicht hat.<a class="reference external" href="#ref-2">[2]</a></p>
+<p>Dadurch wird die Recherche des Quellenmaterials vereinfacht, insbesondere die Erfassung und Berarbeitung großer Datenmengen. Das Projekt ermöglicht aber auch neue Untersuchungen im Bereich des distant reading. Es ließe sich untersuchen, welche Themen zu welchem Zeitpunkt diskutiert wurden, oder ob strukturelle Unterschiede zwischen verschiedenen Gruppen von Politiker:innen je nach Partei und Fraktion, Alter, Geschlecht und Herkunft bestanden. Für die Geschichtswissenschaften ist die Vielschichtigkeit der  Daten von großem Nutzen: denn genauso lässt sich feststellen wie sich Diskurse verändern und Begriffe und Sprache gewandelt haben oder wie die parlamentarische Arbeit sich entwickelt hat – alles in unterschiedlicher Granularität nach Zeitpunkt, Gruppe oder auch einzelner Person.</p>
+<p>Für die Geschichtswissenschaften stellen sich dabei nicht allein Fragen nach neuen Methoden für die Auswertung, sie stehen außerdem vor Herausforderungen im Kontext der Quellenkritik. Digitalisierte Quellen sind Metaquellen, die nicht nur hinsichtlich ihrer historischen Authentizität, also der Wahrhaftigkeit der historischen Darstellung, überprüft werden müssen, sondern beispielsweise auch anhand ihrer <em>semantischen Korrektheit</em>, also ob der reale und modellierte Sachverhalt identisch sind.<a class="reference external" href="#ref-3">[3]</a> Große automatisiert verarbeitete Quell-Datensätze, die zudem häufig außerhalb der Disziplin erzeugt wurden, haben jedoch Konsequenzen, die in der bisherigen Forschung nur bedingt betrachtet wurden. Für die Untersuchung solcher Textkorpora gibt es bisher kaum Methoden oder Studien, die eine Quellenkritik vornehmen oder ein entsprechendes Vorgehen formulieren. Gleichzeitig werden digitale Ansätze nicht nur durch die stetig wachsende Menge digitaler Quellen wichtiger, ihre Nutzung wird in der Forschung teils sogar unvermeidlich.<a class="reference external" href="#ref-4">[4]</a></p>
+<p>Die vorliegende Arbeit entwickelt eine Methode, um große digitale Quellen-Korpora quellenkritisch zu bearbeiten, und führt diese anhand des Open-Discourse-Korpus als Fallstudie durch. Dabei soll beantwortet werden, ob sich dieser Datensatz für historische Analysen eignet und untersucht werden, welche Problemstellungen dabei vorliegen. Die notwendigen methodischen Überlegungen und Ergebnisse werden zudem hinsichtlich ihrer Konsequenzen für den Erkenntnisprozess von Historiker:innen und hinsichtlich der Arbeit mit großen Datensätzen als Quellen reflektiert.</p>
+<p>Ein allgemeiner Ansatz zur Evaluation automatisierter Datenverarbeitungssysteme und -modelle besteht in dem Vergleich ihrer Ausgabe- mit den Erwartungswerten. Ein solcher Erwartungswert in Form des Goldstandard-Korpus bildet hier die Grundlage der quellenkritischen Untersuchung. Diese wird an einer Stichprobe durchgeführt, um sie mit realistischem Aufwand durchführen zu können. Insgesamt 7542 Redebeiträge in 36 Protokollen wurden dabei manuell annotiert und kontrolliert automatisiert mit Zusatzinformationen angereichert. Die Analyse beschränkt sich auf die in dem Korpus enthaltenen Legislaturperioden 1-18 (1949-2017); seit 2017 werden Protokolle strukturiert im XML-Format veröffentlicht.</p>
+<p><a id="1-1"></a></p>
+<section id="digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">
+<h2>1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle<a class="headerlink" href="#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle" title="Link zu dieser Überschrift">#</a></h2>
+<p>Johann Gustav Droysen definierte 1867 als Aufgabe der Quellenkritik herauszufinden, wie das vorliegende Material zu „Willensakten steht, von denen es zeugt“. Sie befasst sich mit der Authentizität einer Quelle, der Entwicklung von früheren zu späteren Formen des Materials und hinterfragt die Gültigkeit von Information und Quelle sowie die Richtigkeit der Information. Zur Quellenkritik gehört auch die kritische Analyse der Ereignisse und Entwicklungen selbst, die in der Quelle dargestellt werden und in welchem historischen Kontext diese und der Autor selbst standen.<a class="reference external" href="#ref-5">[5]</a> Dabei ist das Ergebnis der Quellenkritik nur die Grundlage für die eigentliche historische Interpretation: „Das Ergebniss der Kritik ist nicht ‚die eigentliche historische Thatsache‘, sondern dass das Material fertig gemacht ist, aus dem das geistige Gegenbild derselben zu gewinnen ist.“<a class="reference external" href="#ref-6">[6]</a> Auch heute liegt nach Achim Landwehr ein Quellenglauben vor, der diese als Beweisstücke sieht, während der Zusammenhang eben nicht kausal ist. Die Kunst der Quellenkritik ist es herauszuarbeiten, wie die mediale Repräsentation wirklich mit der historischen Wirklichkeit zusammenhängt.<a class="reference external" href="#ref-7">[7]</a></p>
+<p>Peter Haber erklärte 2011, dass eine digitale Quellenkritik noch fehle und kombinierte Droysens Begriffe der klassischen Quellenkritik mit den Erfordernissen digitaler Dokumente.<a class="reference external" href="#ref-8">[8]</a> Eva Pfanzelter formuliert die These, dass die Grundsätze der klassischen Quellenkritik sich durch eine „Erweiterung der Untersuchungsparameter durchaus [auf] digitale Forschungsressourcen anwenden“ ließen.<a class="reference external" href="#ref-9">[9]</a> Dabei werden die Begriffe der äußeren und inneren Quellenkritik auf digitale Materialien angewendet.<a class="reference external" href="#ref-10">[10]</a> Dem widerspricht Pascal Föhr, anstatt „einzelne, einer inneren und äußeren Quellenkritik zugeordnete Fragen“ zu stellen, sollten iterativ eine Reihe von Fragekomplexen zur Klärung der Authentizität, Integrität und Persistenz bearbeitet werden.<a class="reference external" href="#ref-11">[11]</a> Für ihn verändern digitale Quellen die Art und die Rolle der Quellenkritik im Erkenntnisprozess so stark, dass dies eine neue Arbeitsweise erfordert. In seiner Dissertation Historische Quellenkritik im digitalen Zeitalter liefert er hierzu viele wichtige Impulse, Begriffe und Handlungsempfehlungen und füllt damit eine vorhandene Leerstelle.<a class="reference external" href="#ref-12">[12]</a></p>
+<p>Zwei wichtige Abgrenzungs-Kategorien, die Föhr einführt sind die historische Authentizität, also, die Relation zwischen der Darstellung und der historischen Begebenheit, sowie die informationstechnische Authentizität, also die Richtigkeit der Bits und der Modellierung.<a class="reference external" href="#ref-13">[13]</a> Zu letzter gehört auch die „semantische Korrektheit“ also, dass realer und modellierter Sachverhalt identisch sind.<a class="reference external" href="#ref-14">[14]</a></p>
+<p>Dabei gibt es nicht die eine digitale Quelle, sondern viele verschiedene, häufig multimediale Quellenarten.<a class="reference external" href="#ref-15">[15]</a> Eine wichtige Unterscheidung basiert auf ihrer Entstehung, so sind digitalisierte Quellen vormals analoge Quellen, die zum Beispiel durch Scannen digitalisiert wurden. Born-digital Quellen sind originär digital entstanden, beispielsweise Textdokumente, Webseiten oder digitale Fotos und Videos. Digital reborn bezeichnet Material beider genannter Gruppen, wenn dieses durch einen Archivierungsprozess verändert worden ist, beispielsweise defekte Links in archivierten Webseiten. Dazwischen gibt es auch Sonderfälle wie gedruckte und wieder gescannte Dokumente, ursprünglich born-digital, nun aber digitalisiert.<a class="reference external" href="#ref-16">[16]</a></p>
+<p>Die bestehenden Ansätze der Quellenkritik beziehen sich meist auf einzelne Quellendokumente, für große (Quell-)Datensätze wie digitale Textkorpora fehlen diese. Eines der Hauptversprechen der Digital History ist es allerdings, mit großen Mengen an Daten arbeiten zu können. Dafür müssen wir diese sorgfältig quellenkritisch bearbeiten, dem <em>Distant Reading</em> muss ein <em>Distant Source Criticism</em> zur Seite gestellt werden. Große automatisiert verarbeitete Datensätze müssen hinsichtlich expliziter und impliziter Annahmen bei der Modellierung und Verarbeitung dekonstruiert werden und auf ihre Eignung für die Forschungsfrage hin untersucht werden. Neben dieser Untersuchung muss jedoch auch die Qualität der Verarbeitung selbst im Fokus stehen. Dafür gibt es bisher kaum Ansätze und Methoden.</p>
+<p>Die <em>digitale Quellenkritik</em> benennt hier eine Quellenkritik mit dem Fokus auf die Kritik digitaler Daten. Je nach Definition kann eine Datenkritik die Entstehung der Daten, also deren Übergang von der Quelle beziehungsweise deren Extraktion hin zu den Daten, also eine Art digitaler Provenienz, beinhalten. Die digitale Quellenkritik enthält all dies, aber auch eine Untersuchung der Relation zwischen der Handlung (der Rede) und dem Protokoll. Dies ließe sich zwar ebenfalls unter dem Begriff der Datenkritik oder historischer Datenkritik fassen, die Geschichtswissenschaften haben jedoch nicht nur eigene Fachtraditionen, die sich in dem Begriff der Quellenkritik spiegeln, sondern darin wiederum auch eigene Perspektiven. Diese beinhaltet viel mehr als das ergänzende Adjektiv <em>historisch</em> in <em>historische Datenkritik</em>. Komplexe Fragen hinsichtlich der Relation zwischen Ereignis, Darstellung und deren Ambiguität sind untrennbar Teil der Quellenkritik, während (historische) Datenkritik dies nicht enthält. Stattdessen besteht vielmehr eine Unschärfe darin, was das Adjektiv historisch in diesem Kontext bedeutet; eine Kritik historischer Daten, also eine Datenkritik der informationstechnischen Authentizität, die hier auf historische Daten angewendet wird, oder aber eine historisch-prozesshafte Datenkritik, die klassisch quellenkritische Fragen an Daten stellt – oder stattdessen sogar beides. Das Adjektiv <em>digital</em> in <em>digitale Quellenkritik</em> bezieht sich dagegen klar auf die Materialität, es erfordert zwar in Teilschritten besondere Methoden und Blickwinkel, aber in ihrem eigentlichen Zweck der Kritik der Quelle unterscheidet sie sich nicht. So könnte das <em>digital</em> auch einfach weggelassen werden.</p>
+<p>Das Open-Discourse-Korpus (OP-Korpus) ist dabei ein interessantes Studienobjekt, da es das Ausgangsmaterial bearbeitet und die Redebeiträge in Tabellenform bringt. Dabei stellen sich klassische Fragen hinsichtlich der Entstehung als Text (z. B. „Wie wurde protokolliert“) und der Materialität der zugrunde liegenden Dokumente (digitalisiert vs. born-digital). An Letztere schließen sich Fragen nach der Entstehung als Dokumente in PDF- und XML-Form über Scan-Qualität, Optical-Character-Recognition (OCR) und Textextraktion unter Berücksichtigung des Layouts an. Als digitales Korpus spielen auch Vollständigkeit und mögliche Duplikate eine Rolle. All dies ist Teil der Quellenkritik des OP-Korpus. An diesem Punkt muss die Repräsentation dieser Quellen im OP-Korpus methodisch untersucht werden. Dabei stellen sich Fragen der semantischen Modellierung wie auch der Qualität. Die semantische Korrektheit behandelt hier, wie Redebeiträge und Politiker:innen in dem Datensatz wiedergegeben sind und welche implizite Annahmen über die Natur des Parlaments und der unterschiedlichen Akteur:innen dabei stattfinden. Die Qualität der Daten wird dadurch definiert, wie gut die automatisierte Verarbeitung tatsächlich den Teilaspekt der Redebeiträge der ursprünglichen Dokumente repräsentiert. Diese beiden Fragen nach der semantischen Korrektheit und der Qualität werden mit der Goldstandard-Korpus-Evaluation beantwortet.</p>
+<p><a id="1-2"></a></p>
+</section>
+<section id="goldstandard-korpus-evaluation-als-methode-der-digital-history">
+<h2>1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History<a class="headerlink" href="#goldstandard-korpus-evaluation-als-methode-der-digital-history" title="Link zu dieser Überschrift">#</a></h2>
+<p>Die Nutzung eines Goldstandard-Korpus kann die Lücke im Werkzeugkasten digitaler Quellenkritik in Bezug auf große Quellen-Datensätze füllen. Ein Goldstandard-Korpus bezeichnet im Natural-Language-Processing-Kontext und der Korpus-Linguistik eine manuell annotierte, ‚perfekte‘ Textsammlung, die zudem teils von mehreren Expert:innen unabhängig gesichtet wurde und als Referenz einer perfekten Textrepräsentation dient.<a class="reference external" href="#ref-17">[17]</a> Annotation bedeutet das Taggen von Dokumenten, Sätzen oder Wörtern mit einer Auswahl vordefinierter Kategorien; dabei werden Daten mit strukturierten Informationen angereichert – in diesem Fall den Kategorien, die in dem zu untersuchen Korpus betrachtet werden sollen.<a class="reference external" href="#ref-18">[18]</a> Eine jüngere Entwicklung ist auch die Nutzung von Silberstandard-Korpora, die automatisiert erstellt werden und bewusst nicht perfekt sind, hierzu zählt entsprechend auch das OP-Korpus.<a class="reference external" href="#ref-19">[19]</a> Beide Korpora-Arten können für sich bereits das Ziel sein, beispielsweise sind sie für das Training lernender Systeme und Algorithmen wichtig. Für Evaluationszwecke wird das Goldstandard-Korpus automatisiert mit dem Output eines Systems verglichen, um dessen Leistung zu messen. Darüber hinaus wurde diese Methode bereits in mehreren Studien zur Messung der Relation von OCR-Qualität und deren Implikationen für nachgelagerte Aufgaben wie Information Retrieval, Autor:innenschaftsanalyse, Named-Entity-Recognition und Topic-Modelling angewandt.<a class="reference external" href="#ref-20">[20]</a></p>
+<p>Dieser Prozess lässt sich als Goldstandard-Korpus-Evaluation für die Geschichtswissenschaften adaptieren. Dazu wird eine Stichprobe des Untersuchungsgegenstands genommen. Bestehende Untersuchungen spiegeln die untersuchten Korpora komplett, diese sollen dann beispielhaft für ähnliche Textsammlungen oder OCR-Nutzungen stehen. Weiterhin ist hier nun die automatisierte Annotation und Erkennung der Struktur der Untersuchungsgegenstand, nicht das OCR, wie es der häufigste Anwendungsfall eines Goldstandard-Korpus darstellt. Deshalb folgt auf den automatisierten Vergleich nicht nur ein Blick auf die Zahlen, sondern eine tiefgreifende Analyse der Ergebnisse.</p>
+<p>Die Messung der Abweichung eines Datensatzes von einem definierten perfekten Ergebnis, einer <em>Ground Truth</em>, ist dabei auch für die Geschichtswissenschaften keine Neuheit.<a class="reference external" href="#ref-21">[21]</a> Stattdessen stellt sie eine Evolution solcher Ansätze dar, die hilft, komplexe strukturierte Datenmengen zu untersuchen, u. a. durch das Matching mit den Vergleichsdaten und die Nutzung einer Stichprobe. Weiterhin erfordert die Überprüfung des OP-Korpus, der einen Silberstandard-Korpus darstellt, einen Goldstandard-Korpus.</p>
+<p>Das Matching der sich entsprechenden Elemente beider Korpora, hier der Redebeiträge, ist ein essenzieller Schritt, um Unterschiede ausfindig zu machen. In bereits bestehenden Studien der Implikation von OCR-Qualität auf Downstream-Untersuchungen wurde ein Matching beispielsweise bereits auf Ebene einzelner Wortbestandteile (Token) durchgeführt, indem deren Ähnlichkeit verglichen wird.<a class="reference external" href="#ref-22">[22]</a> Die Komplexität liegt dabei im Detail, da sich die Texte durch abweichende Bearbeitungen (z. B. Cleaning-Schritte) oder – das ist in dieser Arbeit nicht der Fall – durch unterschiedliche Ausgangsmaterialien unterscheiden können. Je nach Untersuchung erfordert dies die Entwicklung eines eigenen Algorithmus.</p>
+<p>Nach dem Abschluss des Matchings liegt ein Parallelkorpus vor, das nicht nur hinsichtlich der Fehlerquote, sondern auch hinsichtlich der Fehlerursachen analysiert wird. Auf diese Art sollen strukturelle Fehler, die deutlich problematischer sind als zufällig verteilte Fehler („noise“) gefunden werden. Allgemein sollen die Fehlerursachen identifiziert werden, um es bei Bedarf zu ermöglichen, die Daten für den Verwendungszweck zu verbessern.</p>
+<hr class="docutils" />
+<p><a id="ref-1"></a>[1] Das letzte Korpus-Update gab es am 4. Juni 2023 (Version 4), die Arbeit basiert auf der Version vom 25. April 2021 (Version 3).<br />
+Florian Richter, Philipp Koch, Oliver Franke, u. a., Open Discourse, Harvard Dataverse, 04.06.2023, <a class="reference external" href="https://doi.org/10.7910/DVN/FIKIBO">https://doi.org/10.7910/DVN/FIKIBO</a>.</p>
+<p><a id="ref-2"></a>[2] Deutscher Bundestag - Open Data, Deutscher Bundestag, o. D., <a class="reference external" href="https://www.bundestag.de/services/opendata">https://www.bundestag.de/services/opendata</a> (abgerufen: 05.05.2023).</p>
+<p><a id="ref-3"></a>[3] Andreas Fickers, Update für die Hermeneutik. Geschichtswissenschaft auf dem Weg zur digitalen Forensik?, in: Zeithistorische Forschungen–Studies in Contemporary History 17/1, ZZF–Centre for Contemporary History: Zeithistorische Forschungen, 2020, S. 109.<br />
+Pascal Föhr, Historische Quellenkritik im digitalen Zeitalter (E-humanities), Glückstadt 2019, Deutsche Nationalbibliothek, <a class="reference external" href="http://edoc.unibas.ch/diss/DissB_12621">http://edoc.unibas.ch/diss/DissB_12621</a>.</p>
+<p><a id="ref-4"></a>[4] Torsten Hiltmann, Jan Keupp, Melanie Althage, u. a., Digital Methods in Practice, in: Geschichte und Gesellschaft 47/1, Vandenhoeck &amp; Ruprecht, (10.06.2021), <a class="reference external" href="https://doi.org/10.13109/gege.2021.47.1.122">https://doi.org/10.13109/gege.2021.47.1.122</a>, S. 152.</p>
+<p><a id="ref-5"></a>[5] Hering Katharina, Provenance Meets Source Criticism Journal of Digital Humanities, in: Journal of Digital Humanities 3/2, 2014, <a class="reference external" href="https://journalofdigitalhumanities.org/3-2/provenance-meets-source-criticism/">https://journalofdigitalhumanities.org/3-2/provenance-meets-source-criticism/</a> (abgerufen: 06.04.2023).</p>
+<p><a id="ref-6"></a>[6] Droysen Johann Gustav, Grundriss der Historik, Leipzig 1868, Deutsches Textarchiv, <a class="reference external" href="https://www.deutschestextarchiv.de/book/view/droysen_historik_1868/?hl=Urtheil%3Bp=27">https://www.deutschestextarchiv.de/book/view/droysen_historik_1868/?hl=Urtheil;p=27</a> (abgerufen: 28.06.2023), S. 18f.</p>
+<p><a id="ref-7"></a>[7] Landwehr in Andreas Fickers, Authenticity: Historical Data Integrity and the Layered Materiality of Digital Objects, in: Gabriele Balbi, Nelson Ribeiro, Valérie Schafer, u. a. (Hrsg.), Digital Roots. Historicizing Media and Communication Concepts of the Digital Age, Bd. 4, Berlin, Boston 20211 (Studies in Digital History and Hermeneutics), <a class="reference external" href="https://doi.org/10.1515/9783110740202-017">https://doi.org/10.1515/9783110740202-017</a>, S. 301.</p>
+<p><a id="ref-8"></a>[8] Eva Pfanzelter, Die historische Quellenkritik und das Digitale, in: Archiv und Wirtschaft 48/1, 2015, <a class="reference external" href="https://diglib.uibk.ac.at/ulbtirolfodok/download/pdf/866898?originalFilename=true">https://diglib.uibk.ac.at/ulbtirolfodok/download/pdf/866898?originalFilename=true</a>, S. 5.</p>
+<p><a id="ref-9"></a>[9] Ebd.</p>
+<p><a id="ref-10"></a>[10] Ebd., S. 14.</p>
+<p><a id="ref-11"></a>[11] Historische Quellenkritik im digitalen Zeitalter, S. 185.</p>
+<p><a id="ref-12"></a>[12] Ebd., S. 8.</p>
+<p><a id="ref-13"></a>[13] Ebd., S. 186.</p>
+<p><a id="ref-14"></a>[14] Update für die Hermeneutik. Geschichtswissenschaft auf dem Weg zur digitalen Forensik?, S. 163.</p>
+<p><a id="ref-15"></a>[15] Die historische Quellenkritik und das Digitale, S. 6.</p>
+<p><a id="ref-16"></a>[16] Ebd., S. 7.</p>
+<p><a id="ref-17"></a>[17] Lars Wissler, Mohammed Almashraee, Dagmar Monett, u. a., The Gold Standard in Corpus Annotation, in: Proceedings of the 5th IEEE Germany Students Conference 2014, ResearchGate 2014, <a class="reference external" href="https://doi.org/10.13140/2.1.4316.3523">https://doi.org/10.13140/2.1.4316.3523</a>, S. 2.</p>
+<p><a id="ref-18"></a>[18] Ebd., S. 1.</p>
+<p><a id="ref-19"></a>[19] Ebd., S. 1, 3.</p>
+<p><a id="ref-20"></a>[20] D. van Strien, K. Beelen, M. C. Ardanuy, u. a., Assessing the impact of OCR quality on downstream NLP tasks, in: Proceedings of the 12th International Conference on Agents and Artificial Intelligence, 2020, <a class="reference external" href="https://doi.org/10.5220/0009169004840496">https://doi.org/10.5220/0009169004840496</a>, S. 2.</p>
+<p><a id="ref-21"></a>[21] Digital Methods in Practice, S. 146.</p>
+<p><a id="ref-22"></a>[22] Assessing the impact of OCR quality on downstream NLP tasks, S. 4.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="0_start.html" title="zurück Seite">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">zurück</p>
+            <p class="prev-next-title">Goldstandard-Korpus-Evaluation als Methode digitaler Quellenkritik in den Geschichtswissenschaften am Beispiel des Open-Discourse-Korpus der Bundestagsprotokolle</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_daten.html" title="weiter Seite">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Ramisch<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
