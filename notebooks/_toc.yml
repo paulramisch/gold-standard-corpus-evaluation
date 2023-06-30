@@ -1,0 +1,31 @@
+format: jb-book
+root: 0_start.ipynb
+title: Goldstandard-Korpus-Evaluation
+
+chapters:
+- file: 1_einleitung.ipynb
+  sections:
+  - url: https://paulramisch.github.io/gold-standard-corpus-evaluation/1_einleitung.html#1-1
+    title: 1.1 Untersuchungskriterien
+  - url: https://paulramisch.github.io/gold-standard-corpus-evaluation/1_einleitung.html#1-2
+    title: 1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History
+
+- file: 2_daten.ipynb
+  sections:
+  - url: https://paulramisch.github.io/gold-standard-corpus-evaluation/2_daten.ipynb#2-1
+    title: 2.1 Plenarprotokolle des Bundestags als Open Data
+  - file: 2-2_open-discourse.ipynb
+- file: 3_methode.ipynb
+  sections:
+  - url: https://paulramisch.github.io/gold-standard-corpus-evaluation/3_methode.ipynb#3-1
+    title: 3.1 Untersuchungskriterien
+  - url: https://paulramisch.github.io/gold-standard-corpus-evaluation/3_methode.ipynb#3-2
+    title: 3.2 Erstellung des Goldstandard-Korpus
+  - file: 3-3_korpus-erstellung.ipynb
+  - file: 3-4_matching.ipynb
+  - file: 3-5_analyse.ipynb
+  - file: 3-6_fazit.ipynb
+- file: 4_epistemologische-konsequenzen.ipynb
+- file: 5_Schluss.ipynb
+- file: 6_quellen-und-daten.ipynb
+- file: 7_literatur.ipynb

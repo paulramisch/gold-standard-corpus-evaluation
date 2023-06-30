@@ -1,0 +1,17 @@
+# Book settings
+title                       : Goldstandard-Korpus-Evaluation
+author                      : Paul Ramisch
+# Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+# Auto-exclude files not in the toc
+only_build_toc_files        : true
+
+# Execution settings
+execute:
+  execute_notebooks         : cache  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  timeout                   : 250    # The maximum time (in seconds) each notebook cell is allowed to run.
+
+sphinx:
+  config:
+    html_show_copyright: false
+    language: de

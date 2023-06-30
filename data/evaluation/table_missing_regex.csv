@@ -1,0 +1,23 @@
+id;position_group;problem_field;description;period;observations
+0;Bundesrat;Regex;Fehlendes Regex-Muster;;16
+1;Bundesregierung;Regex;Großbuchstabe zu Beginn;;59
+2;Bundesregierung;Regex;Parlamentarischer ausgeschrieben;;49
+3;Bundesregierung;Regex;Zuviele Absätze;;11
+4;Bundesregierung;OCR;"Fehlerkennungen ""Parl. Staatssektretär""";;-
+5;Bundesregierung;OCR;Fehlerkennung Satzzeichen, kaum zu quantifizieren;3, 8, 10;-
+6;Bundesregierung;Regex;Wehrbeauftragter;;1
+7;Bundesregierung;Regex;Beifall/Bermerkungen;;1
+8;Abgeordnete;Regex;Berichterstatter:in / Antragsteller:in;;18
+9;Abgeordnete;Regex;Großbuchstabe zu Beginn;;8
+10;Abgeordnete;Regex;Fehlende DP [FVO]-Fraktion;;1
+11;Abgeordnete;Cleaning;Entfernung Unterbrechungs-Trennstriche;;1
+12;Abgeordnete;Layout-Extraktion;Absätze nicht mitextrahiert;;3
+13;Abgeordnete;OCR;Fehlerkennungen, v.a. Klammern;4, 6;2
+14;Abgeordnete;Cleaning;Verarbeitung von Layoutartefakten;;1
+15;Abgeordnete;Tippfehler;Vergessene Klammern;;2
+16;Abgeordnete;Formfehler;Falsche Klammern;;1
+17;Abgeordnete;Formfehler;Fehlende Fraktion;;1
+18;Sitzungsleitung;Regex;Großbuchstabe zu Beginn;;12
+19;Sitzungsleitung;OCR & Tippfehler;Fehlerkennung;;12
+20;Sitzungsleitung;Regex;Beifall/Bermerkungen;;1
+21;Allgemein;Regex;Beifall/Bermerkungen;;-

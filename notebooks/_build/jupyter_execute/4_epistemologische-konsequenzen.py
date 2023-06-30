@@ -1,0 +1,76 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # 4	Epistemologische Konsequenzen für die Geschichtswissenschaften
+# 
+# Der von Roy Rosenzweig 2003 erkannte Übergang des *age of scarcity* hin zum *age of abundance* online verfügbarer Zeugnisse ist ein Baustein vieler Reflexionen über die Zukunft der Geschichtswissenschaft.[[1]](#ref-1) Die Lösung dazu ist Teil des Problems: „Unabdingbar wird eine technische Unterstützung jedenfalls angesichts der Data Driven History, also der Analyse unüberschaubarer Datenmengen.“[[2]](#ref-2)
+# 
+# Ein Blick auf das zugrunde liegende Digitalitätskonzept im Kontext geschichtswissenschaftlicher Quellen offenbart eine *mediale Digitalität*, die sich auf die Repräsentation der Quelle beschränkt. Dabei werden analoge Gebrauchslogiken auf das neue Medium übertragen. Dagegen stehen die Möglichkeiten der *konzeptionellen Digitalität*, die sich nicht auf die Repräsentation beschränkt, sondern die darin enthaltenen Informationen extrahiert und mit digitalen Werkzeugen weiterverarbeitet und analysiert.[[3]](#ref-3)
+# 
+# Dabei ist Big Data, in diesem Fall sind große Mengen digitaler oder digitalisierter Quellen gemeint, häufig nicht nur „unüberschaubar“ im quantitativen Sinne, sondern auch qualitativ – wenn eine innere Datenstruktur fehlt. Sie sind zwar *big*, aber nicht *smart*, dies ist jedoch wichtig für sinnvolle quantitative Methoden, hierfür wird *big smart data* notwendig.[[4]](#ref-4) Für die Erstellung solcher *big smart data*, wird entweder automatisierte Annotation oder Crowdsourcing benötigt.[[5]](#ref-5)  Gerade im Bereich der Automatisierung ist noch viel Forschung nötig; etablierte Methoden lassen sich dann aber auf große Mengen von Quellen skalieren.[[6]](#ref-6)
+# 
+# Pascal Föhr grenzt für digitale Quellen die historische und informationstechnische Authentizität voneinander ab. Erstere untersucht die klassischen Fragen nach der Wahrhaftigkeit des Inhalts und deren Echtheit, also die Relation zwischen Darstellung und Faktizität.[[7]](#ref-7) Die informationstechnische Authentizität dagegen beschäftigt sich mit der Medialität, also u. a. den Daten auf Bit-Ebene und Fragen der Modellierung. Für die Arbeit mit digitalen Quellen ist die Reflexion über die Modellierung und die damit verbundene „semantische Korrektheit“, also die Übereinstimmung des realen mit dem modellierten Sachverhalt ein zentraler Aspekt:[[8]](#ref-8) Ein Digitalisat stellt kein Faksimile dar, sondern extrahiert ausgewählte Eigenschaften und überträgt sie in ein Modell.[[9]](#ref-9) 
+# 
+# Bei der Untersuchung der Authentizität großer Datenbestände, die durch eine Reihe automatisierter Verarbeitungsschritte gegangen sind und eine starke Abstraktion des ursprünglichen Quellenmaterials gesehen haben, verwässert die Trennlinie zwischen den Kategorien historischer und informationstechnischer Authentizität. Im OP-Korpus führt beispielsweise die Nicht-Erkennung von Redebeiträgen dazu, dass die Inhalte von Redebeiträgen den falschen Redner:innen zugeordnet werden – der vorherigen sprechenden Person. Damit ist die fehlerhafte Abstraktion nicht mehr nur semantisch inkorrekt oder falsch modelliert (wie es in dem OP-Korpus auf die unterkomplexe Modellierung von Politiker:innen zutrifft), sondern stellt auch in ihrer Faktizität und Wahrhaftigkeit den ursprünglichen Gegenstand falsch dar. Hier ändert sich nicht nur die Medialität der Originalquelle, im Prozess der Verarbeitung und Abstraktion in den Bereich der konzeptionellen Digitalität haben weitreichende Fehler Eingang gefunden, die Daten sind nicht authentisch. Es entsteht eine Zugangsstörung, die Darstellung der historischen Authentizität der Original-Quelle wird beeinträchtigt.
+# 
+# Hier zeigt sich deutlich, dass es die Notwendigkeit gibt, sich mit Fragen der Quellenkritik großer Quell-Datensätze auseinanderzusetzen, dem *Distant Reading* muss ein *Distant Source Criticism* zur Seite gestellt werden.  Hierzu müssen ein Verständnis und Vokabular für die Evaluation von Methoden wie auch der Evaluation als Teil der Quellenkritik entwickelt werden. Es gilt Konzepte wie Goldstandard-Korpus, Ground-Truth und Stichproben-Analysen in den Werkzeugkasten zu integrieren und an die Anforderungen der Geschichtswissenschaften anzupassen.
+# 
+# Für unterschiedliche Methoden sind unterschiedliche Überprüfungen notwendig, da je nachdem „[…] auch der Fehlertyp (Satzzeichen sind für topic modeling Algorithmen etwa unerheblich) oder die Art eines Fehlers (die Verwechslung von Stab-s mit „f“ führt im close reading zu keiner/wenig Verwirrung) ins Gewicht [fällt].“  Im Kontext der Quellenkritik ließen sich dadurch Fragen der richtigen Repräsentation und Modellierung bearbeiten, die sich unter dem Begriff der Authentizität fassen lassen.[[10]](#ref-10)
+# 
+# Tobias Hodel schreibt, dass „offen [bleibt], inwiefern durch die Quantifizierung von Fehlern Aussagen zur Leistungsfähigkeit eines Erkennmodells gemacht werden können.“[[11]](#ref-11) Diese hingen stattdessen von dem Fehlertyp und den weiteren Verarbeitungsschritten ab, deshalb müssten über „quantifizierende Fehlerquoten hinaus Angaben zur Fehleranfälligkeit eines Modells“[[12]](#ref-12)  gemacht werden. Es ist derzeit noch zu wenig über die Konsequenzen von Modell-Fehlern auf weitere Untersuchungen bekannt. Erste solcher Studien, die dabei helfen, Orientierungslinien zu entwickeln, gibt es hinsichtlich der OCR-Qualität.[[13]](#ref-13) Denn das eigentliche Problem ist nicht, dass die Daten falsch sind oder ihren Sinn verlieren, sondern dass sie interpretierbar bleiben, während sie signifikant von dem abweichen, was saubere Daten ergäben.[[14]](#ref-14)
+# 
+# Der Umgang mit Ambiguität ist hinsichtlich der Quellen-Authentizität wie auch der inhaltlichen Repräsentation ein klassischer Bestandteil des historischen Erkenntnisprozesses. Die Arbeit mit dem Goldstandard-Korpus hilft dabei, diese Ambiguität messbar zu machen.[[15]](#ref-15) Nun liegt es an der Digital History, Leitlinien der Interpretation gemessener Ambiguität zu entwickeln, ähnlich wie es in der klassischen Quellenkritik bereits heute der Fall ist. Dies wird dadurch erschwert, dass für jeden Quellensatz unterschiedliche Untersuchungskriterien entwickelt werden müssen. Dabei werden Thesen darüber aufgestellt, welche Fehler existieren – nur so können diese gemessen werden.
+# 
+# Das Aufstellen von Thesen zu existierenden Fehlern erfordert iterative und interdisziplinäre Prozesse. Durch einen iterativen Prozess mit kontinuierlicher Reflexion und Anpassung wird es möglich, sich den zu messenden Fehlergruppen anzunähern und sie gradueller hinsichtlich ihrer Ursprünge und Konsequenzen darzustellen. Die Iteration der Evaluation führt zu einem besseren Verständnis und stellt schlussendlich eine Entsprechung des hermeneutischen Zirkels dar.[[16]](#ref-16) Eine interdisziplinäre Arbeitsweise ist dabei von zentraler Bedeutung, um ein umfassendes Verständnis der verwendeten Methoden und deren epistemologischen Implikationen zu gewährleisten.
+# 
+# Methoden nachzuvollziehen, zu untersuchen und testen – sie also zu evaluieren, ordnet sich nahtlos in die historische Arbeitsweise ein, da die Nachvollziehbarkeit und das Verständnis neuer Methoden und Modelle „ein hermeneutischer Prozess [ist], der, wie bereits von Gadamer gefordert, eine Auseinandersetzung mit (eigenen) Urteilen und insbesondere Vorurteilen miteinschließt.“[[17]](#ref-17)
+# 
+# Aus diesen epistemologischen Überlegungen und der Analyse des Open-Discourse-Korpus lassen sich einige konkrete Handlungsempfehlungen ableiten, die für die Erstellung, aber auch die Nutzung solcher Korpora eine Rolle spielen. Hinsichtlich der Modellierung müssen tiefgreifende Untersuchungen der passenden Darstellung gemacht werden, um die Komplexität des Dargestellten richtig zu erfassen. Dies gilt einerseits konkret innerhalb des Korpus, wie im OP-Korpus die Unterkomplexität der Darstellung von Politiker:innen, aber auch hinsichtlich der Daten selbst: Sollen beispielsweise die Ursprungsdokumente mit Inhaltsverzeichnis und Anhang digitalisiert werden, beispielsweise als TEI-XML-Dateien oder nur die Redebeiträge daraus extrahiert und in eine Datenbank übertragen werden? Weiterhin sollten die Datensätze auch immer mithilfe von Uniform Ressource Identifier (URI) mit anderen Daten verbindbar sein, hier beispielsweise durch die Verbindung von Politiker:innen mit der Gemeinsame Normdatei (GND) oder Wikidatas Q identifier (QID).
+# 
+# Diese Arbeit zeigt auch, wie wichtig die Nachvollziehbarkeit der Datensatzerstellung ist. Wichtige Architektur- und Modellierungs-Entscheidungen hinsichtlich Erstellung sind nicht dokumentiert und somit nicht nachvollziehbar, dies sollte jedoch der Fall sein. Die Veröffentlichung des Codes als Open Source ermöglicht es, Fehlerquellen zu finden und gegebenenfalls zu verbessern – dies ist bei dem OP-Korpus gegeben. Gerade in Hinblick auf abstrahierte Datensätze, die nicht mehr das Dokument, sondern dessen Inhalte modellieren, ist die Nachvollziehbarkeit ihrer Herkunft wichtig. Dies kann beispielsweise durch einen Bezug auf das Dokument und die Seitenzahl oder Zeilennummer geschehen, um die Provenienz der einzelnen Elemente innerhalb eines Datensatzes untersuchbar zu machen und die Ursprungsquelle bei Bedarf finden zu können.
+# 
+# Weiterhin zeigt sich die Relevanz einer konstanten Qualitätskontrolle im Erstellungsprozess, beispielsweise durch eine Goldstandard-Korpus-Evaluation. Wobei hierfür ein separater Goldstandard-Korpus benötigt wird, als das für eine Endprüfung, um zu verhindern, dass nur mögliche Probleme aus der Stichprobe behoben werden. Außerdem sollte im Prozess der Raum für händische Nacharbeit – idealweise durch Systeme wie Git nachvollziehbar gemacht – gegeben sein, da mit automatisierten Systemen kaum alle Sonderfälle erfasst werden können.
+
+# ***
+# <a id="ref-1"></a>[1] vgl. Andreas Fickers, What the D does to history: Das digitale Zeitalter als neues historisches Zeitregime?, in: Digital History, 2022, https://doi.org/10.1515/9783110757101-003, S. 49. 
+# 
+# <a id="ref-2"></a>[2] Eva Pfanzelter, Die historische Quellenkritik und das Digitale, in: Archiv und Wirtschaft 48/1, (2015), S. 14.
+# 
+# <a id="ref-3"></a>[3] Torsten Hiltmann, Vom Medienwandel zum Methodenwandel: Die fortschreitende Digitalisierung und ihre Konsequenzen für die Geschichtswissenschaften in historischer Perspektive, in: Karoline Dominika Döring, Stefan Haas, Mareike König, u. a. (Hrsg.), Digital History, 2022, https://doi.org/10.1515/9783110757101-002, S. 35.
+# 
+# <a id="ref-4"></a>[4] Christof Schöch, Big? Smart? Clean? Messy? Data in the Humanities, in: Journal of Digital Humanities 2/3, (2013), S. 11.
+# 
+# <a id="ref-5"></a>[5] Bruno J. Strasser, Paul N. Edwards, Big Data Is the Answer … But What Is the Question?, in: Osiris 32/1, The University of Chicago Press, (2017), journals.uchicago.edu (Atypon), https://doi.org/10.1086/694223, S. 10.
+# 
+# <a id="ref-6"></a>[6] Torsten Hiltmann, Jan Keupp, Melanie Althage, u. a., Digital Methods in Practice, in: Geschichte und Gesellschaft 47/1, Vandenhoeck & Ruprecht, (10.06.2021), https://doi.org/10.13109/gege.2021.47.1.122, S. 154.
+# 
+# <a id="ref-7"></a>[7] Pascal Föhr, Historische Quellenkritik im digitalen Zeitalter (E-humanities), Glückstadt 20191, Deutsche Nationalbibliothek, http://edoc.unibas.ch/diss/DissB_12621, S. 190.  
+# Andreas Fickers, Update für die Hermeneutik. Geschichtswissenschaft auf dem Weg zur digitalen Forensik?, in: Zeithistorische Forschungen–Studies in Contemporary History 17/1, ZZF–Centre for Contemporary History: Zeithistorische Forschungen, (2020), S. 163.
+# 
+# <a id="ref-8"></a>[8] Update für die Hermeneutik. Geschichtswissenschaft auf dem Weg zur digitalen Forensik?, S. 163.
+# 
+# <a id="ref-9"></a>[9] Vom Medienwandel zum Methodenwandel, S. 20.
+# 
+# <a id="ref-10"></a>[10] Tobias Hodel, Die Maschine und die Geschichtswissenschaft: Der Einfluss von deep learning auf eine Disziplin, in: Digital History, 2022, https://doi.org/10.1515/9783110757101-004, S. 72.
+# 
+# <a id="ref-11"></a>[11] Ebd.
+# 
+# <a id="ref-12"></a>[12] Ebd.
+# 
+# <a id="ref-13"></a>[13]  Dies bezieht sich in der Literatur auf Topic Modelling Modelle, kann aber verallgemeinert werden:  
+# D. van Strien, K. Beelen, M. C. Ardanuy, u. a., Assessing the impact of OCR quality on downstream NLP tasks, in: Proceedings of the 12th International Conference on Agents and Artificial Intelligence, 2020, https://doi.org/10.5220/0009169004840496.
+# 
+# <a id="ref-14"></a>[14] Ebd., S. 9.
+# 
+# <a id="ref-15"></a>[15] Lars Wissler, Mohammed Almashraee, Dagmar Monett, u. a., The Gold Standard in Corpus Annotation, in: Proceedings of the 5th IEEE Germany Students Conference 2014,  ResearchGate 2014, DOI: https://doi.org/10.13140/2.1.4316.3523, S. 2.
+# 
+# <a id="ref-16"></a>[16] Digital Methods in Practice, S. 153f.
+# 
+# <a id="ref-17"></a>[17] Die Maschine und die Geschichtswissenschaft, S. 70.
+# 
+
+# In[ ]:
+
+
+
+

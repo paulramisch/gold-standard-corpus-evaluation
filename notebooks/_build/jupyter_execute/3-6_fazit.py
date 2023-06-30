@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# ## 3.6 Fazit
+# 
+# Die Evaluation des Open-Discourse-Korpus für die Perioden 1-18 ergibt ein ernüchterndes Bild. Die Ressource ist sehr spannend und hat großes Potenzial, dennoch ist sie in dieser Form für viele Untersuchungen generell nur eingeschränkt zu empfehlen. Es gibt unterschiedliche Fehlerquellen, die sich so summieren, dass rund 10 % der Redebeiträge einen oder mehrere schwerwiegende Fehler beinhalten. Hinzu kommt die große Problematik, dass sich diese Fehler nicht zufällig über die Gesamtheit verteilen („noise“), sondern starke strukturelle Probleme und Cluster aufweisen:[[1]](#ref-1)
+# 
+# Untersuchungen, die den Bundesrat im Bundestag betreffen sind unmöglich, da diese Redebeiträge fast komplett fehlen.
+# 
+# Untersuchungen hinsichtlich der Bundesregierung treffen auf große Schwierigkeiten, da 10 % der Redebeiträge komplett fehlen und 15 % nicht zugeordnet worden sind, insgesamt liegt eine Fehlerquote von 25 % vor. Mit mindestens 12.000 Redebeiträgen fehlt ein Gros der Beiträge von Staatssekretär:innen der Periode 5 und 6 (1965-1972) komplett. Gleiches gilt für über 3500 Redebeiträge von Staatssekretär:innen mit einem Kleinbuchstaben zu Beginn des Nachnamens (z. B. Staatssekretär im Verteidigungsministerium Karl-Günther von Hase). Zudem sind über 10.000 Redebeiträge von Staatsminister:innen, die den Titel des:der Staatsminister:in des Auswärtigen Amtes sowie des Bundeskanzleramtes (seit den 70er-Jahren) tragen, nicht den entsprechenden Abgeordneten zugeordnet. Hinzu kommt eine Reihe zahlenmäßig weniger schwerer Fehler.
+# 
+# Fehlende Beiträge sind für Sprecher:innen mit reinem Bundestagsmandat allgemein kein gewichtiges Problem (< 1,5 %). Auch in diesem Fall sind die Fehler jedoch stark geclustert: In den ersten beiden Perioden fehlen insgesamt fast 3000 Redebeiträge von Abgeordneten in der Rolle als Berichterstatter:in und Antragsteller:in. Hinzu kommen die Nichterkennung von Redebeiträgen von Abgeordneten mit Kleinbuchstaben zu Beginn des Nachnamens, was zu über 800 fehlenden Redebeiträgen führt sowie strukturelle Zuordnungsfehler für Menschen, deren Nachnamen aus mehreren Wörtern bestehen – beides Probleme, die in hohen Maß Beiträge von Redner:innen mit Nachnamen ehemaliger Adelsgeschlechter betreffen.
+# 
+# Die Redebeiträge der Sitzungsleitung haben den gleichen strukturellen Mangel; Kleinbuchstaben zu Beginn des Nachnamens führen zur Nichterkennung. So fehlen beispielsweise 10.000 Redebeiträge des Bundestagspräsidenten Kai-Uwe von Hassel (1969-1972).
+# 
+# Echte Fehlzuordnungen von Redebeiträgen zur falschen Person sind dagegen kein signifikantes Problem: nur ein einziger der 7542 Redebeiträge in der Stichprobe ist hiervon betroffen. Die 3,3 % fehlerhafte Zuordnung sind vor allem fehlende Zuordnungen, v.a. von Staatssekretärs-Redebeiträgen zu den entsprechenden Politiker:innen.
+# 
+# Dennoch gibt es ein Zuordnungsproblem bei Redetexten, welches komplexer ist als eine reine Redebeitragsfehlzuordnung: Aufgrund der Logik des Zerschneidens der Protokolle in die Redebeiträge bedeutet jeder fehlende Schnitt – also jede Nichterkennung, dass Redebeitrags-Text dem:der vorherigen Redner:in zugeordnet wurde. Die 233 der 7542 nicht-erkannten Redebeiträge in der Stichprobe führen also zu der doppelten Fehlerzahl.
+# 
+# Ein ähnliches, wenn auch selteneres Problem sind Fehlerkennungen. Dies betrifft 46 Einträge im OP-Stichproben-Korpus die eigentlich keine Redebeiträge sind. Zusammen mit den Nichterkennungen führen diese dazu, dass 3,2 % der Redebeiträge einen fehlerhaften Umfang aufweisen. Von den fälschlichen Erkennungen sind zwar weniger als 1 Prozent des Gesamtkorpus betroffen, jedoch stechen hier bestimmte Personen besonders hervor: Fast 60 % der Redebeiträge von Helmut Kohl basieren auf Zwischenrufen von ihm und dem Rest der dabei unterbrochenen Rede. Das betrifft in geringerem Umfang alle Bundeskanzler:innen.
+# 
+# Neben diesen Extraktions- und Zuordnungsfehlern gibt es auch ganze Protokolle, die betroffen sind: Die allererste Sitzung des Bundestags (01001) am 7. September 1949 fehlt im OP-Korpus. Insgesamt fehlen 12 Protokolle vollständig, zehn davon aus der ersten Periode, zwei aus der zweiten. Weitere 12 Protokolle, ebenfalls alle in Periode 1 und 2, sind doppelt im OP-Korpus vorhanden.
+# 
+# Es gibt eine klare Verbesserung der Datenqualität, die bereits vor der Umstellung der Datengrundlage 1997 von OCR-bearbeiteten Scans hin zu born-digital PDF-Dateien zu erkennen ist. Jedoch bleiben auch viele der strukturellen Fehlerquellen erhalten. In der Stichprobe erreicht zwar kein Protokoll nach 1990 eine Fehlerquote von annähernd 51 % (06185 und 02087: 33 %, 09014: 25 %), aber Protokolle wie 17248 mit 15 % oder 14145 mit 16 % sind zu häufig um reine Ausreißer zu sein.
+# 
+# Die zugrundliegenden Probleme sind nur sehr bedingt auf OCR-Fehler zurückzuführen, hierdurch lassen sich höchstens 10 % aller Fehler erklären – und diese wären gleichmäßig verteilt. Stattdessen gibt es unzählige Spezialfälle, die betrachtet werden müssen und historisch weiter zurückreichend auch zahlenmäßig mehr werden. Hinzu kommen hausgemachte Fehler, die durch zu frühe oder fehlerhafte Cleaning-Schritte entstehen.
+# 
+# Manche der Fehler sind – wahrscheinlich zumeist unerkannte – Kollateralschäden im Entwicklungsprozess; vieles sicherlich nicht leicht zu lösen. All dies ist jedoch undokumentiert. Das ist auch die eigentlich größte Problematik an diesem Korpus: All die Fehler sind für die Nutzer:innen unbekannt, lediglich die Vollständigkeitsangabe von 99,7 % aller Protokolle wird gegeben, wie auch die Angabe, das 1 % der ID-Zuordnungen scheitern – beides in einem Twitter-Thread, ohne dass sie in dem Pre-Print-Paper Erwähnung finden.
+# 
+# Diesen Problemen liegen methodische und epistemologische Schwächen zugrunde. Für die Extraktion der Redebeiträge wurden Muster definiert, die den Beginn einer Rede finden sollten. Diese Heuristiken auf Basis von RegEx waren in ihrer Definition jedoch zu begrenzt, wodurch die Protokolldokumente nicht richtig aufgeteilt worden sind. Gleichzeitig wurde die Komplexität nicht erkannt: Akteur:innen sind eindimensional in ihrer Modellierung und können nicht unterschiedliche Rollen gleichzeitig einnehmen, wie beispielsweise Abgeordnete und Staatssekretär:innen, obwohl das eigentlich nötig wäre.
+# 
+# Das Open-Discourse-Projekt hat zwar viel Arbeit geleistet und ein Open-Source-Projekt aufgebaut, das sehr viel Potenzial hat. Das Problem sind jedoch viele kleine Fehler, die sich zusammenaddieren und schlussendlich zu einem Korpus führen, der eine Fehlerquote von 10 % hat, wobei die Fehler nicht gleichmäßig verteilt sind. Daraus resultiert, dass das Korpus in dieser Form für viele wissenschaftliche Untersuchungen, die auf automatisierte statistische und computerlinguistische Verfahren bauen, unzureichend ist. Durch die fehlende Dokumentation sind sie potenziell sogar kontraproduktiv für Untersuchungen, sofern diese die Daten in guten Glauben genutzt werden.
+# 
+# Für rein explorative Untersuchungen und Close-Reading-Anwendungen, bei denen das Korpus die Rolle eines Findmittels einnimmt, kann dies in dem Bewusstsein der bestehenden Problematiken bequem genutzt werden. Hierbei ist jedoch zu empfehlen, nach der Suche nicht den extrahierten Text, sondern die verlinkte PDF-Version zu nutzen. Dort können Redefehlerkennungen schnell erkannt werden, wichtiger noch, es ermöglicht auch Zwischenrufe im Redefluss zu lesen – ein Feature, das die Open-Discourse-Website derzeit nicht unterstützt.
+
+# ***
+# <a id="ref-1"></a>[1] Das Problem ist, dass die Fehler nicht zufällig sind, nicht „noise“, sondern strukturell. Die Arbeit mit „noise“ ist im Bereich des Textminings und der Korpuslinguistik sehr üblich.  
+# Carolyn Strange, Daniel McNamara, Josh Wodak, u. a., Mining for the Meanings of a Murder: The Impact of OCR Quality on the Use of Digitized Historical Newspapers, in: Digital Humanities Quarterly 8/1, (2014), http://www.digitalhumanities.org/dhq/vol/8/1/000168/000168.html, S. 6f.
+
+# In[ ]:
+
+
+
+

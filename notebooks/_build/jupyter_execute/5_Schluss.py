@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # 5 Schluss
+# Das Open-Discourse-Korpus illustriert eindringlich die Potenziale, Notwendigkeiten und Gefahren digitaler Quell-Datensätze. Es wäre leicht, die verschiedenen Fehlergruppen nur auf die konkreten methodisch-handwerklichen Probleme in der Definition von Erkennungsmustern zu reduzieren. Die Kombination vieler unterschiedlicher Fehlergruppen führt zu großen strukturellen Problemen und weist auf epistemologische Fehlannahmen hin. Die Komplexität der Rollenverteilung im Deutschen Bundestag wie auch der Sitzungen wurde nicht erkannt, die Modellierung bleibt hier eindimensional. Weiterhin stimmen die Angaben hinsichtlich der Qualität nicht, eine adäquate Qualitätskontrolle wurde versäumt.
+# 
+# Mit einer Fehlerquote von 10 Prozent innerhalb des Gesamtkorpus und von 25 Prozent für Beiträge von Bundesregierungsmitgliedern eignet sich dieser Quell-Datensatz kaum für die historische Forschung. Dieses Beispiel zeigt, wie wichtig es ist, die Beschränkungen und potenziellen Verzerrungen automatisiert verarbeiteter Quellendatensätze und ihrer Modellierung zu berücksichtigen und mithilfe interdisziplinärer Ansätze zu untersuchen.
+# 
+# Die hier vorgeschlagene Goldstandard-Korpus-Evaluation stellt eine Methode dar, neuen Herausforderungen für die Quellenkritik durch große Datensätze zu begegnen. Sie erfordert die Entwicklung von Fragen und Kategorien der Untersuchung, die in die Annotation einer Stichprobe des Untersuchungsgegenstands und die darauffolgende Messung und Analyse der Fehlercluster fließen. Damit ist die Methode weder eine einfache noch eine universelle Lösung, ermöglicht jedoch neue, quellenkritische Zugänge zu großen digitalen Quellensammlungen. Die Anwendung zur Untersuchung der automatisierten Extraktionen oder Strukturierung von Dokumenten ist dabei nur ein Anwendungsfall und kann für unterschiedliche Szenarien angepasst werden. 
+# 
+# Zukünftige Forschung und Reflexionen müssen sich vermehrt mit Methoden der automatisierten Evaluation für die ganze Bandbreite digitaler Untersuchungen beschäftigen, dem Distant Reading muss ein Distant Source Criticism zur Seite gestellt werden. Dies ist zwingend in Hinblick auf riesige Datenmengen und die zunehmende quantitative sowie qualitative automatisierte Bearbeitung von Quellen, denn in Zukunft werden sicherlich auch „(Be-)Wertungsentscheide manuell unterstützt oder gar autonom getroffen werden.“[[1]](#ref-1) Dabei ordnen sich diese neuen Methoden und Entwicklungen trotzdem in die Tradition historischer Quellenkritik ein, welche die Reflexion über die eigenen Urteile und Vorteile erfordert. 
+
+# *** 
+# <a name="ref_1"></a> [1] Tobias Hodel, Die Maschine und die Geschichtswissenschaft: Der Einfluss von deep learning auf eine Disziplin, in: Digital History, 2022, https://doi.org/10.1515/9783110757101-004, S. 66.

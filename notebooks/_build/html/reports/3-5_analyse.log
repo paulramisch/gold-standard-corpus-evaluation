@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/paul/opt/miniconda3/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/paul/opt/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+print("Anzahl der fehlenden Redebeiträge des Bundesrats:", table_missing_regex.at[0, 'estimate'])
+plot_missing([1], matrix=[2,2], size=[20,10])
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m/var/folders/y0/f53fkf_d6s38rgm45nh4tbcw0000gn/T/ipykernel_45804/2568538365.py[0m in [0;36m<cell line: 2>[0;34m()[0m
+[1;32m      1[0m [0mprint[0m[0;34m([0m[0;34m"Anzahl der fehlenden Redebeiträge des Bundesrats:"[0m[0;34m,[0m [0mtable_missing_regex[0m[0;34m.[0m[0mat[0m[0;34m[[0m[0;36m0[0m[0;34m,[0m [0;34m'estimate'[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mplot_missing[0m[0;34m([0m[0;34m[[0m[0;36m1[0m[0;34m][0m[0;34m,[0m [0mmatrix[0m[0;34m=[0m[0;34m[[0m[0;36m2[0m[0;34m,[0m[0;36m2[0m[0;34m][0m[0;34m,[0m [0msize[0m[0;34m=[0m[0;34m[[0m[0;36m20[0m[0;34m,[0m[0;36m10[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/var/folders/y0/f53fkf_d6s38rgm45nh4tbcw0000gn/T/ipykernel_45804/3756032027.py[0m in [0;36mplot_missing[0;34m(index, matrix, size, summary)[0m
+[1;32m     10[0m [0;34m[0m[0m
+[1;32m     11[0m     [0mplot_missing_regex[0m [0;34m=[0m [0mtable_missing_regex[0m[0;34m[[0m[0;34m~[0m[0mnp[0m[0;34m.[0m[0misnan[0m[0;34m([0m[0mtable_missing_regex[0m[0;34m.[0m[0mestimate[0m[0;34m)[0m[0;34m][0m[0;34m.[0m[0mcopy[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 12[0;31m     [0mplot_missing_regex[0m [0;34m=[0m [0mplot_missing_regex[0m [0;32mif[0m [0mindex[0m [0;32mis[0m [0;32mNone[0m [0;32melse[0m [0mplot_missing_regex[0m[0;34m.[0m[0mloc[0m[0;34m[[0m[0mindex[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     13[0m     [0mplot_missing_regex[0m[0;34m[[0m[0;34m"Titel"[0m[0;34m][0m [0;34m=[0m [0mplot_missing_regex[0m[0;34m[[0m[0;34m"position_group"[0m[0;34m][0m [0;34m+[0m [0;34m": "[0m [0;34m+[0m [0mplot_missing_regex[0m[0;34m[[0m[0;34m"description"[0m[0;34m][0m [0;34m+[0m [0;34m" ("[0m [0;34m+[0m [0mplot_missing_regex[0m[0;34m[[0m[0;34m"problem_field"[0m[0;34m][0m [0;34m+[0m [0;34m")"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     14[0m [0;34m[0m[0m
+
+[0;32m~/opt/miniconda3/lib/python3.9/site-packages/pandas/core/indexing.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m    965[0m [0;34m[0m[0m
+[1;32m    966[0m             [0mmaybe_callable[0m [0;34m=[0m [0mcom[0m[0;34m.[0m[0mapply_if_callable[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mobj[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 967[0;31m             [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_getitem_axis[0m[0;34m([0m[0mmaybe_callable[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0maxis[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    968[0m [0;34m[0m[0m
+[1;32m    969[0m     [0;32mdef[0m [0m_is_scalar_access[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mkey[0m[0;34m:[0m [0mtuple[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/miniconda3/lib/python3.9/site-packages/pandas/core/indexing.py[0m in [0;36m_getitem_axis[0;34m(self, key, axis)[0m
+[1;32m   1189[0m                     [0;32mraise[0m [0mValueError[0m[0;34m([0m[0;34m"Cannot index with multidimensional key"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1190[0m [0;34m[0m[0m
+[0;32m-> 1191[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_getitem_iterable[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0maxis[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1192[0m [0;34m[0m[0m
+[1;32m   1193[0m             [0;31m# nested tuple slicing[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/miniconda3/lib/python3.9/site-packages/pandas/core/indexing.py[0m in [0;36m_getitem_iterable[0;34m(self, key, axis)[0m
+[1;32m   1130[0m [0;34m[0m[0m
+[1;32m   1131[0m         [0;31m# A collection of keys[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1132[0;31m         [0mkeyarr[0m[0;34m,[0m [0mindexer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_get_listlike_indexer[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0maxis[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1133[0m         return self.obj._reindex_with_indexers(
+[1;32m   1134[0m             [0;34m{[0m[0maxis[0m[0;34m:[0m [0;34m[[0m[0mkeyarr[0m[0;34m,[0m [0mindexer[0m[0;34m][0m[0;34m}[0m[0;34m,[0m [0mcopy[0m[0;34m=[0m[0;32mTrue[0m[0;34m,[0m [0mallow_dups[0m[0;34m=[0m[0;32mTrue[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/miniconda3/lib/python3.9/site-packages/pandas/core/indexing.py[0m in [0;36m_get_listlike_indexer[0;34m(self, key, axis)[0m
+[1;32m   1325[0m         [0maxis_name[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mobj[0m[0;34m.[0m[0m_get_axis_name[0m[0;34m([0m[0maxis[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1326[0m [0;34m[0m[0m
+[0;32m-> 1327[0;31m         [0mkeyarr[0m[0;34m,[0m [0mindexer[0m [0;34m=[0m [0max[0m[0;34m.[0m[0m_get_indexer_strict[0m[0;34m([0m[0mkey[0m[0;34m,[0m [0maxis_name[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1328[0m [0;34m[0m[0m
+[1;32m   1329[0m         [0;32mreturn[0m [0mkeyarr[0m[0;34m,[0m [0mindexer[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/miniconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py[0m in [0;36m_get_indexer_strict[0;34m(self, key, axis_name)[0m
+[1;32m   5780[0m             [0mkeyarr[0m[0;34m,[0m [0mindexer[0m[0;34m,[0m [0mnew_indexer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_reindex_non_unique[0m[0;34m([0m[0mkeyarr[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   5781[0m [0;34m[0m[0m
+[0;32m-> 5782[0;31m         [0mself[0m[0;34m.[0m[0m_raise_if_missing[0m[0;34m([0m[0mkeyarr[0m[0;34m,[0m [0mindexer[0m[0;34m,[0m [0maxis_name[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   5783[0m [0;34m[0m[0m
+[1;32m   5784[0m         [0mkeyarr[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mtake[0m[0;34m([0m[0mindexer[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/miniconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py[0m in [0;36m_raise_if_missing[0;34m(self, key, indexer, axis_name)[0m
+[1;32m   5840[0m                 [0;32mif[0m [0muse_interval_msg[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   5841[0m                     [0mkey[0m [0;34m=[0m [0mlist[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 5842[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0;34mf"None of [{key}] are in the [{axis_name}]"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   5843[0m [0;34m[0m[0m
+[1;32m   5844[0m             [0mnot_found[0m [0;34m=[0m [0mlist[0m[0;34m([0m[0mensure_index[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[[0m[0mmissing_mask[0m[0;34m.[0m[0mnonzero[0m[0;34m([0m[0;34m)[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m][0m[0;34m.[0m[0munique[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mKeyError[0m: "None of [Int64Index([1], dtype='int64')] are in the [index]"
+KeyError: "None of [Int64Index([1], dtype='int64')] are in the [index]"
+

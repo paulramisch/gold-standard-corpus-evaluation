@@ -1,0 +1,8 @@
+.idea/
+.DS_Store
+bu_archiv/
+data/open_discourse/
+data/raw/
+notebooks/.ipynb_checkpoints/
+notebooks/data-check_open-discourse.log
+notebooks/enrich_xml_data.log

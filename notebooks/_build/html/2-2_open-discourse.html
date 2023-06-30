@@ -1,0 +1,1872 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.2 Open Discourse &#8212; Goldstandard-Korpus-Evaluation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="3 Methode: Goldstandard-Korpus-Evaluation" href="3_methode.html" />
+    <link rel="prev" title="2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse" href="2_daten.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="de">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Goldstandard-Korpus-Evaluation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+<a class="reference internal" href="0_start.html">Goldstandard-Korpus-Evaluation/a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1_einleitung.html">
+   1 Einleitung
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#digitale-quellenkritik-im-kontext-der-bundestagsprotokolle">1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="1_einleitung.html#goldstandard-korpus-evaluation-als-methode-der-digital-history">1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History</a>
+    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="2_daten.html">
+   2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+    <li class="toctree-l2">
+      <a class="reference internal" href="2_daten.html">2.1 Plenarprotokolle des Bundestags als Open Data</a>
+    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.2	Open Discourse
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3_methode.html">
+   3 Methode: Goldstandard-Korpus-Evaluation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+    <li class="toctree-l2">
+        <a class="reference internal" href="3_methode.html#untersuchungskriterien">3.1 Untersuchungskriterien</a>
+    </li>
+    <li class="toctree-l2">
+        <a class="reference internal" href="3_methode.html#stichprobe">3.2 Stichprobe</a>
+    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-3_korpus-erstellung.html">
+     3.3 Erstellung des Goldstandard-Korpus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-4_matching.html">
+     3.4 Matching der Redebeiträge
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-5_analyse.html">
+     3.5 Datenanalyse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3-6_fazit.html">
+     3.6 Fazit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_epistemologische-konsequenzen.html">
+   4	Epistemologische Konsequenzen für die Geschichtswissenschaften
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Schluss.html">
+   5 Schluss
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_quellen-und-daten.html">
+   Quellen- &amp; Datenverzeichnis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_literatur.html">
+   Literaturverzeichnis
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/2-2_open-discourse.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/2-2_open-discourse.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redebeitrage">
+   2.2.1 Redebeiträge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#politiker-innen">
+   2.2.2 Politiker:innen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fraktionen">
+   2.2.3 Fraktionen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     ***
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2.2	Open Discourse</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redebeitrage">
+   2.2.1 Redebeiträge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#politiker-innen">
+   2.2.2 Politiker:innen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fraktionen">
+   2.2.3 Fraktionen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     ***
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="open-discourse">
+<h1>2.2	Open Discourse<a class="headerlink" href="#open-discourse" title="Link zu dieser Überschrift">#</a></h1>
+<p>Open Discourse ist ein Forschungsprojekt des Berliner Data-Science-Unternehmens Limebit GmbH und hat das Ziel, die größte Limitierung der vorhandenen Bundestagsdebatten zu beheben: die Unmöglichkeit, Redebeiträge nach Politiker:in, Fraktion oder Position zu filtern. Zu diesem Zweck stellt das Projekt mehrere Bausteine bereit:</p>
+<ul class="simple">
+<li><p>Datenbanktabellen mit Redebeiträgen, Zwischenrufen, Politiker:innen und Fraktionen<a class="reference external" href="#ref_1">[1]</a></p></li>
+<li><p>Online-Recherche-Tool mit Volltextsuche sowie Zeit-, Personen-, Fraktion- und Positions-Filtern<a class="reference external" href="#ref_2">[2]</a></p></li>
+<li><p>Source-Code der Datenextraktion und Webseite<a class="reference external" href="#ref_3">[3]</a></p></li>
+<li><p>Diskursanalyse-Tool auf Basis von Latent Dirichlet Allocation (LDA) Topic Modelling<a class="reference external" href="#ref_4">[4]</a></p></li>
+<li><p>Eine Dokumentation zur Einführung in die Arbeit mit den Daten<a class="reference external" href="#ref_5">[5]</a></p></li>
+</ul>
+<p>In dieser Arbeit werden die Datenbanktabellen hinsichtlich der Redebeiträge und Politiker:innen untersucht und dabei in Bezug auf den Code und die Dokumentation gesetzt. Das Online-Recherche-Tool und das Diskursanalyse-Tool werden nicht betrachtet, auch wenn Letzteres eine besonders kritische Auseinandersetzung erfordert.<a class="reference external" href="#ref_6">[6]</a></p>
+<p>Der im Dezember 2020 veröffentliche Datensatz erscheint als eine sehr wertvolle Ressource für historische, politische und linguistische Forschung zur Bundesrepublik Deutschland. Der vergleichbare Datensatz GermalParl, der im Rahmen des Polmine-Projekts 2017 veröffentlicht wurde, reichte 2020 im TEI-Format nur bis 1996 zurück, seit Mai 2023 ist er vollständig seit 1949.<a class="reference external" href="#ref_7">[7]</a> Open Discourse hat also den Untersuchungszeitraum um 47 Jahre vergrößert.</p>
+<p>Bei der Erstellung werden bis zur 18. Periode komplexe Reguläre Ausdrücke (RegEx) verwendet, eine Sequenz von Zeichen, die bestimmte Suchmuster definiert, um die Protokolle in ihre Struktur (Inhaltsverzeichnis, Hauptteil, Anhang) aufzuteilen. Weiterhin werden sie benutzt, um die Texte in einzelne Redebeiträge zu segmentieren sowie Meta-Informationen zu den Sprecher:innen zu extrahieren. RegEx ist ein wirkungsvolles Werkzeug zur Textverarbeitung und Mustererkennung, das eine präzise und effiziente Datenmanipulation ermöglicht. Ab der 19. Periode basiert dies auf den XML-Tags der seitdem bereitgestellten strukturierten Daten.<a class="reference external" href="#ref_8">[8]</a></p>
+<p><img alt="Erstellen Open Discourse" src="_images/open_discourse_process.png" />
+<em>Abbildung 1: Schematische Darstellung der Erstellung der Redebeitrags-, Fraktions-, Politiker:innen- und Zwischenrufs-Tabellen für das Open-Discourse-Korpus bis Periode 18; eigene Grafik.</em></p>
+<p>Der Code wurde unter MIT-Lizenz zur kostenlosen Weiternutzung und die Daten unter der CC0-1.0-Lizenz, also ohne jegliche Einschränkungen, veröffentlicht.<a class="reference external" href="#ref_9">[9]</a> Der Code für die Erstellung der Daten ist zwar öffentlich, die Dokumentation aber nur deskriptiv hinsichtlich der Nutzung und enthält keine tiefgreifenden Informationen zum Entstehungsprozesses, den dabei getroffenen Entscheidungen oder einer Evaluation der Datenqualität.<a class="reference external" href="#ref_10">[10]</a></p>
+<p>Anfang 2023 wurde ein Preprint eines Papers veröffentlicht, darin wird auf mögliche Probleme für die zugrunde liegenden RegEx-Muster durch Tipp- und OCR-Fehler sowie Konventionsänderungen hingewiesen, Fehlerquoten werden jedoch nicht genannt.<a class="reference external" href="#ref_11">[11]</a> Explizit sind darin auch keine Zahlenangaben hinsichtlich der Vollständigkeit angegeben, auf der Webseite heißt es, dass das Open Discourse Korpus 99,7 % aller Protokolle abdecke. Worauf sich die Gesamtsumme bezieht und welche 0,3 % der Protokolle hierbei fehlen wird leider nicht klar, dabei hilft wiederum das Paper, in der darin enthaltenen Grafik 1 lassen sich die Fehlstellen auf Periode 1 und 2 eingrenzen.<a class="reference external" href="#ref_12">[12]</a> In einem Twitter-Thread von März 2020 wird erklärt: „Wir geben uns größte Mühe die Plenarprotokolle so sauber wie möglich aufzubereiten – dennoch gibt es nach wie vor Besonderheiten und Fehler in unseren Daten. Wir werden hierzu in den kommenden Wochen eine detaillierte Dokumentation [veröffentlichen]“<a class="reference external" href="#ref_13">[13]</a>, die wichtigsten Punkte wurden dort auch genannt. So könne es im Prozess der Zuordnung von Redebeiträgen zu Personen zu Nichtzuordnungen kommen. Die Gründe hierfür seien Tippfehler, uneindeutigen Namen oder weil die Personen Gastredner seien und dadurch nicht in den Listen von Mitgliedern des Bundestags (MdBs) und der Regierung vorkommen würden. Dies beträfe jedoch unter 1 % aller Redebeiträge.<a class="reference external" href="#ref_14">[14]</a> Hierzu ist anzumerken, dass Gastredner als Begriff unscharf ist, wie im vorherigen Kapitel dargelegt, gibt es im eigentlichen Sinn keine Gäste, sondern nur unterschiedliche Gruppen, die im Bundestag sprechen dürfen, echte Gäste dürfen im Bundestag eigentlich nicht sprechen. Hinsichtlich der Zwischenrufe wird erklärt: „Die Protokollierung von Zwischenrufen ist verhältnismäßig unstrukturiert, da mehrere Zwischenrufe gleichzeitig auftreten können (bspw. Heiterkeit und Applaus) und mehrere Personen und/oder Fraktionen zur gleichen Zeit dazwischen rufen können.“, was zu unzuverlässiger Erfassung und Matchings führe.<a class="reference external" href="#ref_15">[15]</a></p>
+<section id="redebeitrage">
+<h2>2.2.1 Redebeiträge<a class="headerlink" href="#redebeitrage" title="Link zu dieser Überschrift">#</a></h2>
+<p>Die Daten werden in unterschiedlichen Dateienformaten bereitgestellt, (CSV, Pickle, RDS und Feather). In dieser Arbeit wird das Feather-Format genutzt, nach dem Download lassen sie sich mit Pandas als Dataframe in einer Zeile importieren:<a class="reference external" href="#ref_16">[16]</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">dataset_open_discourse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;../data/open_discourse/speeches.feather&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Daten sind nun geladen, insgesamt sind 907.644 Redebeiträge in dem Datensatz enthalten. Um einen Eindruck über die Struktur zu erhalten, lassen sich die ersten fünf Zeilen des Dataframes ausgeben:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anzahl der Redebeiträge insgesamt:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">))</span>
+<span class="n">dataset_open_discourse</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Anzahl der Redebeiträge insgesamt: 907644
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>session</th>
+      <th>electoralTerm</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>politicianId</th>
+      <th>speechContent</th>
+      <th>factionId</th>
+      <th>documentUrl</th>
+      <th>positionShort</th>
+      <th>positionLong</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td></td>
+      <td>Köhler</td>
+      <td>11001150</td>
+      <td>Meine Damen und Herren! Ich eröffne die 2. Sit...</td>
+      <td>-1</td>
+      <td>https://dip21.bundestag.de/dip21/btp/01/01002.pdf</td>
+      <td>Presidium of Parliament</td>
+      <td>präsident</td>
+      <td>1949-09-12</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td></td>
+      <td>Arnold</td>
+      <td>-1</td>
+      <td>Der Bundesrat ist versammelt, Herr Präsident.\n</td>
+      <td>-1</td>
+      <td>https://dip21.bundestag.de/dip21/btp/01/01002.pdf</td>
+      <td>Guest</td>
+      <td>präsident des bundesrats</td>
+      <td>1949-09-12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td></td>
+      <td>Köhler</td>
+      <td>11001150</td>
+      <td>Ich danke für diese Erklärung. Ich stelle dami...</td>
+      <td>-1</td>
+      <td>https://dip21.bundestag.de/dip21/btp/01/01002.pdf</td>
+      <td>Presidium of Parliament</td>
+      <td>präsident</td>
+      <td>1949-09-12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td></td>
+      <td>Heuss</td>
+      <td>-1</td>
+      <td>Ja, ich habe den Wunsch.\n</td>
+      <td>-1</td>
+      <td>https://dip21.bundestag.de/dip21/btp/01/01002.pdf</td>
+      <td>Guest</td>
+      <td>bundespräsident</td>
+      <td>1949-09-12</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td></td>
+      <td>Köhler</td>
+      <td>11001150</td>
+      <td>Ich erteile dem Herrn Bundespräsidenten das Wo...</td>
+      <td>-1</td>
+      <td>https://dip21.bundestag.de/dip21/btp/01/01002.pdf</td>
+      <td>Presidium of Parliament</td>
+      <td>präsident</td>
+      <td>1949-09-12</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Jede Zeile repräsentiert einen Redebeitrag, die Spalten enthalten den Redetext, Vor- und Nachnamen des:der Sprecher:in, deren ID und Fraktions-ID, sowie eine Kurz- und Langversion des Titels des:der Sprecher:in. Daneben Informationen zum ursprünglichen Protokoll: die Sitzungsnummer (session), die Wahlperiode, das Datum und die PDF-URL des jeweiligen Sitzungsprotokolls.</p>
+<p>In diesem Ausschnitt lassen sich bereits einige Beobachtungen machen. So ist die Spalte für die Vornamen nicht befüllt, da in den Protokollen bis Februar 1991 neben der Fraktion nur der Nachname angegeben wurde. Die Zeilen-Informationen basieren also nur auf den Extraktionen. Sie wurden nach der Zuordnung nicht weiter aufgefüllt, auch wenn für die Sprecher:innen mit ID in den Politiker:innen-Daten der Vorname vorliegt. In den Originaldokumenten war bei Redner:innen die mithilfe der Nachnamen-Fraktion-Kombination nicht voneinander unterschieden werden konnten, beispielsweise zwei Abgeordnete Müller in der SPD, außerdem auch der Wohnort angegeben. Dem Nachnamen vorangestellt wurde der akademische Titel, bei Frauen zusätzlich „Frau“, Männer kamen dagegen ohne „Herr“ aus – sie wurden als Standard dargestellt. Dies änderte sich mit dem Protokoll <a class="reference external" href="https://dserver.bundestag.de/btp/12/12013.pdf">12013</a>, seitdem galt das Namensformat: ([akademischer Titel]) [Vorname] [Nachname].</p>
+<p>Der zweite Sprecher in dieser Tabelle, der CDU-Politiker und Ministerpräsident Nordrhein-Westfalens Karl Arnold in seiner Rolle als Präsident des Bundesrats, wie auch der Bundespräsident Theodor Heuss, haben als Kurzrolle (positionShort) die eines Gastes. Vertreter:innen des Bundesrats (Arnold) wie auch der Bundesregierung (Köhler) sind keine Mitglieder des Bundestags, sie besitzen nur ein Rederecht. Über die Details der Zuschreibung als Gast ließe sich diskutieren, wichtiger ist die Konsequenz für die Politiker:innen-Modellierung: In dieser kurzen Reihe sind beispielsweise bereits zwei Redner:innen enthalten, die keine ID besitzen. Eine Filterung ist also nur über deren Namen möglich.</p>
+<p>Eine dritte Beobachtung bezieht sich auf die fortlaufende ID und die Sessionnummer: Die ID für den ersten Redebeitrag beginnt bei 0, während die erste Session in der Tabelle die Nr. 2 trägt. Tatsächlich fehlt in den Daten die erste Sitzung des Bundestags am 7. September 1949.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;electoralTerm&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> 
+                           <span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Um systematisch nach fehlenden Protokollen zu suchen, kann über die Liste der Protokolle iteriert und die Anzahl der Reden für das jeweilige Protokoll gezählt werden. Danach wird nach den Protokollen gefiltert, für die keine Reden im OP-Korpus enthalten sind:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">store</span> -r minutes 
+<span class="n">minutes</span><span class="p">[</span><span class="s1">&#39;count_op&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">xminutes</span> <span class="ow">in</span> <span class="n">minutes</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">count_op</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;electoralTerm&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">xminutes</span><span class="o">.</span><span class="n">period</span><span class="p">)</span> <span class="o">&amp;</span> 
+                                          <span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">xminutes</span><span class="o">.</span><span class="n">nr</span><span class="p">)])</span>
+    <span class="n">minutes</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;count_op&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">count_op</span>
+    
+<span class="n">minutes_op_missing</span> <span class="o">=</span> <span class="n">minutes</span><span class="p">[</span><span class="n">minutes</span><span class="p">[</span><span class="s1">&#39;count_op&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">minutes_op_missing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>period</th>
+      <th>nr</th>
+      <th>date</th>
+      <th>len</th>
+      <th>date_anomaly</th>
+      <th>datum_duplicate</th>
+      <th>count_op</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1949-09-07</td>
+      <td>36249</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>1</td>
+      <td>14</td>
+      <td>1949-11-03</td>
+      <td>122737</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>1</td>
+      <td>19</td>
+      <td>1949-12-01</td>
+      <td>557797</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>1</td>
+      <td>41</td>
+      <td>1950-02-24</td>
+      <td>219451</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>1</td>
+      <td>42</td>
+      <td>1950-02-24</td>
+      <td>216375</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>1</td>
+      <td>183</td>
+      <td>1952-01-10</td>
+      <td>837757</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>1</td>
+      <td>223</td>
+      <td>1952-07-16</td>
+      <td>638199</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>1</td>
+      <td>224</td>
+      <td>1952-07-16</td>
+      <td>627758</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>279</th>
+      <td>1</td>
+      <td>280</td>
+      <td>1953-07-03</td>
+      <td>893683</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>280</th>
+      <td>1</td>
+      <td>281</td>
+      <td>1953-07-03</td>
+      <td>877757</td>
+      <td>False</td>
+      <td>True</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>359</th>
+      <td>2</td>
+      <td>78</td>
+      <td>1955-04-27</td>
+      <td>219933</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>469</th>
+      <td>2</td>
+      <td>188</td>
+      <td>1957-01-31</td>
+      <td>600704</td>
+      <td>False</td>
+      <td>False</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Im OP-Korpus fehlen für die ersten 18 Wahlperioden 12 Protokolle komplett. Bei insgesamt 4106 Protokollen sind das rund 0,3 %. Damit dürfte dem Open-Discourse-Team, das die Vollständigkeit mit 99,7 % angibt, diese Liste bekannt sein. Leider erscheint diese in keiner öffentlichen Dokumentation.</p>
+<p>Weiterhin führt das ID-System, das auf einer fortlaufenden Nummerierung der Reden basiert, dazu, dass keine eindeutige Referenzierbarkeit besteht, wenn es zu Updates kommt: Die ID 1 ist bereits für den ersten Redebeitrag in der zweiten Session vergeben, bei einem Update, das auch das erste Protokoll beinhaltet, würde dieses System abweichende IDs für alle Reden erzeugen.</p>
+<p>Sechs der 12 Protokolle in den Rohdaten sind Dubletten, siehe Tabelle <em>minutes_duplicates_filtered</em> im vorherigen Kapitel. Anhand des folgenden Codes wird untersucht, wie diese im OP-Korpus repräsentiert sind:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">store</span> -r minutes_duplicates_filtered
+
+<span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;count_op&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;count_op_duplicate&#39;</span><span class="p">,</span><span class="n">minutes_duplicates_filtered</span><span class="p">[</span><span class="s1">&#39;count_op&#39;</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">duplicates</span> <span class="ow">in</span> <span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">count_op</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;electoralTerm&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">duplicates</span><span class="o">.</span><span class="n">period</span><span class="p">)</span> <span class="o">&amp;</span> 
+                                          <span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">duplicates</span><span class="o">.</span><span class="n">nr</span><span class="p">)])</span>
+    <span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;count_op&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">count_op</span>
+    
+    <span class="n">count_op</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;electoralTerm&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">duplicates</span><span class="o">.</span><span class="n">period</span><span class="p">)</span> <span class="o">&amp;</span> 
+                                          <span class="p">(</span><span class="n">dataset_open_discourse</span><span class="p">[</span><span class="s1">&#39;session&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">duplicates</span><span class="o">.</span><span class="n">nr_duplicate</span><span class="p">)])</span>
+    <span class="n">minutes_duplicates_filtered</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;count_op_duplicate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">count_op</span>
+    
+    
+<span class="n">minutes_duplicates_filtered</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>period</th>
+      <th>nr</th>
+      <th>nr_duplicate</th>
+      <th>date</th>
+      <th>len</th>
+      <th>len_duplicate</th>
+      <th>diff</th>
+      <th>count_op</th>
+      <th>count_op_duplicate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>20</td>
+      <td>21</td>
+      <td>1949-12-02</td>
+      <td>144998</td>
+      <td>143193</td>
+      <td>1.012605</td>
+      <td>93</td>
+      <td>93</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>41</td>
+      <td>42</td>
+      <td>1950-02-24</td>
+      <td>219451</td>
+      <td>216375</td>
+      <td>1.014216</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1</td>
+      <td>75</td>
+      <td>76</td>
+      <td>1950-07-14</td>
+      <td>323715</td>
+      <td>320151</td>
+      <td>1.011132</td>
+      <td>109</td>
+      <td>109</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>149</td>
+      <td>150</td>
+      <td>1951-06-08</td>
+      <td>260737</td>
+      <td>257737</td>
+      <td>1.01164</td>
+      <td>138</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1</td>
+      <td>223</td>
+      <td>224</td>
+      <td>1952-07-16</td>
+      <td>638199</td>
+      <td>627758</td>
+      <td>1.016632</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>280</td>
+      <td>281</td>
+      <td>1953-07-03</td>
+      <td>893683</td>
+      <td>877757</td>
+      <td>1.018144</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2</td>
+      <td>219</td>
+      <td>220</td>
+      <td>1957-06-29</td>
+      <td>295928</td>
+      <td>290819</td>
+      <td>1.017568</td>
+      <td>77</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2</td>
+      <td>225</td>
+      <td>226</td>
+      <td>1957-07-06</td>
+      <td>173908</td>
+      <td>171244</td>
+      <td>1.015557</td>
+      <td>77</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>3</td>
+      <td>97</td>
+      <td>98</td>
+      <td>1960-01-27</td>
+      <td>297161</td>
+      <td>297345</td>
+      <td>0.999381</td>
+      <td>55</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>4</td>
+      <td>66</td>
+      <td>67</td>
+      <td>1963-03-15</td>
+      <td>187034</td>
+      <td>187034</td>
+      <td>1.0</td>
+      <td>49</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>4</td>
+      <td>87</td>
+      <td>88</td>
+      <td>1963-10-16</td>
+      <td>43093</td>
+      <td>43093</td>
+      <td>1.0</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>4</td>
+      <td>112</td>
+      <td>113</td>
+      <td>1964-02-07</td>
+      <td>231231</td>
+      <td>231267</td>
+      <td>0.999844</td>
+      <td>340</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>5</td>
+      <td>47</td>
+      <td>48</td>
+      <td>1966-06-16</td>
+      <td>344899</td>
+      <td>344899</td>
+      <td>1.0</td>
+      <td>11</td>
+      <td>305</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5</td>
+      <td>232</td>
+      <td>233</td>
+      <td>1969-05-09</td>
+      <td>318999</td>
+      <td>318999</td>
+      <td>1.0</td>
+      <td>79</td>
+      <td>139</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In den ursprünglichen Drucken, auf denen die Scans basieren, gab es absichtlich zusammenhängende Protokoll-Paare. In den XML-Rohdaten des Bundestags, in der jede Datei ein Protokoll repräsentiert, sind beide Dateien jeweils ein Scan des identischen Doppelprotokolls – dies scheint eine absichtliche Modellierungsentscheidung in dem (undokumentierten) Digitalisierungsprozess gewesen zu sein. Für das OP-Korpus müssten diese nun eigentlich getrennt werden, dies geschieht auch teilweise: Ab der dritten Periode haben die betroffenen Protokolle eine unterschiedliche Zahl von Redebeiträgen(siehe die Spalten <code class="docutils literal notranslate"><span class="pre">count_op</span></code> und <code class="docutils literal notranslate"><span class="pre">count_op_duplicate</span></code>), da sie aufgeteilt wurden. Anders sieht es dagegen für die acht Protokoll-Paare der Periode eins und zwei aus: Diese wurden entweder nicht getrennt (z.B. <a class="reference external" href="https://dserver.bundestag.de/btp/01/01020.pdf">01020</a> - <a class="reference external" href="https://dserver.bundestag.de/btp/01/01021.pdf">01021</a>), womit jeder Redebeitrag doppelt im Korpus vorhanden ist, einmal richtig und einmal mit einer falschen Protokoll-Nummer, oder sie fehlen komplett (z. B. <a class="reference external" href="https://dserver.bundestag.de/btp/01/01041.pdf">01041</a>-<a class="reference external" href="https://dserver.bundestag.de/btp/01/01042.pdf">01042</a>).<a class="reference external" href="#ref_17">[17]</a></p>
+<p>Es fehlen also 12 Protokolle (davon 6 Doppelprotokolle) vollständig, dazu kommen weitere 10 Protokolle, denen zusätzlich die gesamte Kopie eines weiteren Protokolls zugeordnet wurde. Diese 22 verteilen sich alle auf die Periode 1 und 2, im Gesamtkontext bedeutet dies zwar, dass lediglich 0,5 % der Protokolle in dieser Form beeinträchtigt sind, werden jedoch nur die ersten beiden Perioden betrachtet (1.: 282 Protokolle, 2.: 227) sind 4,3 % der Protokolle betroffen.</p>
+<p>Für automatisierte Untersuchungen von Politiker:innen und Parteien in der Frühzeit der Bundesrepublik kann dies signifikante Konsequenzen haben. Aber auch für Close-Reading-Anwendungen, für die spezifische Redebeiträge gesucht werden, beispielsweise die der ersten Sitzung des Deutschen Bundestags überhaupt, hat dies offensichtliche Konsequenzen.</p>
+<p>Daneben gibt es noch zwei Besonderheiten, die bei der Arbeit mit dem OP-Korpus ebenfalls zu beachten sind: Die Praxis, Reden zu Protokoll zu geben, wird bereits lange im Bundestag gepflegt. 2009 wurde zusätzlich die Möglichkeit geschaffen, ganze Tagesordnungspunkte zu Protokoll zu geben, sofern im Ältestenrat oder interfraktionell eine entsprechende Einigung erfolgt. Diese Reden gelten als gehalten und sind im Anhang der Protokolle zu finden.<a class="reference external" href="#ref_18">[18]</a> Dies ist zwar nicht der normale Modus einer Rede im Bundestag, dennoch kommt es häufig vor, beispielsweise in 114 der 243 Protokolle der 12. Periode.<a class="reference external" href="#ref_19">[19]</a> Diese zu Protokoll gegebenen Reden fehlen komplett im OP-Korpus.</p>
+<p>Weiterhin haben viele Protokolle Berichtigungen für Fehler in früheren Protokollen, diese stehen in den Protokollen zwischen der Enduhrzeit und dem Beginn des Anhangs, mindestens 795 der 4106 Protokolle der Periode 1-18, also 19,4 % enthalten eine oder mehrere Berichtigungen für Reden.<a class="reference external" href="#ref_20">[20]</a> Diese Berichtigungen fallen im OP-Korpus ebenfalls komplett weg und haben teils starke inhaltliche Abweichungen.<a class="reference external" href="#ref_21">[21]</a></p>
+</section>
+<section id="politiker-innen">
+<h2>2.2.2 Politiker:innen<a class="headerlink" href="#politiker-innen" title="Link zu dieser Überschrift">#</a></h2>
+<p>Neben den Redebeitrags-Daten gehört außerdem ein Datensatz aller Politiker:innen und aller Fraktionen zu den Daten. Die Daten der Politiker:innen basieren auf der Stammdaten-XML des Deutschen Bundestags. Dieser Datensatz enthält jedoch nur Politiker:innen die gewählte Abgeordnete des Bundestags waren oder sind, dabei sind nicht alle Regierungsmitglieder auch Bundestagsabgeordnete. Um auch diese in den Daten zu enthalten, wurde laut der Dokumentation auf eine Wikipedia-Liste von Regierungsmitgliedern zurückgegriffen.<a class="reference external" href="#ref_22">[22]</a></p>
+<p>Ähnlich wie die Redebeitrags-Daten, lässt sich die Tabelle der Politiker:innen mit einer einzigen Code-Zeile öffnen und so leicht in die Datenstruktur geschaut werden:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">politicians_open_discourse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;../data/open_discourse/politicians.feather&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ein kleiner Blick in die Datenstruktur:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">politicians_open_discourse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>birthPlace</th>
+      <th>birthCountry</th>
+      <th>birthDate</th>
+      <th>deathDate</th>
+      <th>gender</th>
+      <th>profession</th>
+      <th>aristocracy</th>
+      <th>academicTitle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11000001</td>
+      <td>Manfred</td>
+      <td>Abelein</td>
+      <td>Stuttgart</td>
+      <td>Deutschland</td>
+      <td>1930-10-20</td>
+      <td>2008-01-17</td>
+      <td>männlich</td>
+      <td>Rechtsanwalt, Wirtschaftsprüfer, Universitätsp...</td>
+      <td>None</td>
+      <td>Prof. Dr.</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11000002</td>
+      <td>Ernst</td>
+      <td>Achenbach</td>
+      <td>Siegen</td>
+      <td>Deutschland</td>
+      <td>1909-04-09</td>
+      <td>1991-12-02</td>
+      <td>männlich</td>
+      <td>Rechtsanwalt und Notar</td>
+      <td>None</td>
+      <td>Dr.</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>11000003</td>
+      <td>Annemarie</td>
+      <td>Ackermann</td>
+      <td>Parabutsch</td>
+      <td>Jugoslawien</td>
+      <td>1913-05-26</td>
+      <td>1994-02-18</td>
+      <td>weiblich</td>
+      <td>Hilfsreferentin</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>11000004</td>
+      <td>Else</td>
+      <td>Ackermann</td>
+      <td>Berlin</td>
+      <td>Deutschland</td>
+      <td>1933-11-06</td>
+      <td>2019-09-14</td>
+      <td>weiblich</td>
+      <td>Ärztin</td>
+      <td>None</td>
+      <td>Dr.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>11000005</td>
+      <td>Ulrich</td>
+      <td>Adam</td>
+      <td>Teterow, Kr. Teterow, Bezirk Neubrandenburg</td>
+      <td>Deutschland</td>
+      <td>1950-06-09</td>
+      <td>None</td>
+      <td>männlich</td>
+      <td>Mathematiker, Geschäftsführer</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4100</th>
+      <td>11004974</td>
+      <td>Manuela</td>
+      <td>Schwesig</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4101</th>
+      <td>11004975</td>
+      <td>Manfred</td>
+      <td>Stolpe</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4102</th>
+      <td>11004976</td>
+      <td>Johanna</td>
+      <td>Wanka</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4103</th>
+      <td>11004977</td>
+      <td>Ludger</td>
+      <td>Westrick</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4104</th>
+      <td>-1</td>
+      <td>Not found</td>
+      <td></td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+<p>4105 rows × 11 columns</p>
+</div></div></div>
+</div>
+<p>In den Daten sind insgesamt 4104 Politiker:innen vermerkt, für die Abgeordneten sind einige biografische Angaben vorhanden, für die Regierungsmitglieder, die über die Wikipedia-Datenquelle in den Datensatz einflossen, fehlen diese.</p>
+<p>Eine erste Unschärfe in der Tabelle fällt bei der Spalte aristocracy auf, die in der Dokumentation als “Royal/noble rank of the politician.” kommentiert wird.  In der Bundesrepublik Deutschland gibt es keine Adelstitel mehr, diese sind reiner Namensbestandteil. Die Existenz dieser Spalte dürfte direkt aus den Stammdaten abgeleitet sein, wo diese irritierenderweise ebenfalls als Attribut vorhanden ist. Dennoch ist diese Spalte, sofern richtig kontextualisiert, für Namensmatching wie auch manche Untersuchung interessant.</p>
+<p>Eine erste Unschärfe in der Tabelle fällt bei der Spalte aristocracy auf, die in der Dokumentation als „Royal/noble rank of the politician.“ kommentiert wird.<a class="reference external" href="#ref_23">[23]</a> In der Bundesrepublik Deutschland gibt es keine Adelstitel mehr, diese sind reiner Namensbestandteil. Die Existenz dieser Spalte dürfte direkt aus den Stammdaten abgeleitet sein, wo diese irritierenderweise ebenfalls als Attribut vorhanden ist. Dennoch ist diese Spalte, sofern richtig kontextualisiert, für Namensmatching wie auch manche Untersuchung interessant.</p>
+<p>In der Tabelle findet sich keine Zuordnung zu einer Partei, da dies auch in den Rededaten fehlt, ist eine Redebeitrags-Filterung nur über die Fraktion, nicht aber über die Partei, möglich. Hierbei sei angemerkt, dass diese Information in den Stammdaten zwar vorhanden ist, jedoch als eine statische Angabe; in den Fällen, in denen Politiker:innen die Partei gewechselt haben, bleibt nur die aktuellste Parteizugehörigkeit als Angabe stehen. Dabei modellieren die Stammdaten Namenswechsel, akademische Titelwechsel und auch Wahlperioden.</p>
+<p>Dieser Datensatz beinhaltet nur statisch den aktuellsten gültigen Namen der Personen aus den Stammdaten. Die zugrunde liegenden Bundestags-Stammdaten selbst sind zwar von hoher Qualität, der Nationalsozialist Fritz Rößler, der 1949 unter falscher Identität mit dem Namen Franz Richter (ID: 11001833) im Bundestag saß und 1952 festgenommen wurde, ist aber beispielsweise noch immer unter dem falschen Namen vermerkt – auch in den OP-Daten ist dies entsprechend zu finden.</p>
+<p>Die IDs im OP-Datensatz leiten sich von den Stammdaten ab. Für die Politiker:innen aber, die nicht in den Stammdaten vorkommen und durch den Wikipedia-Datensatz ergänzt wurden, sind diese IDs einfach weitergezählt worden. Ab der Stammdaten-ID 11004966 von Kristina Nordt wird dies zu einem Problem: Sie saß von März bis Oktober 2021 für einige Monate im Bundestag. Dagegen ist die ID in den OP-Daten an Franziska Giffey vergeben:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">politicians_open_discourse</span><span class="p">[</span><span class="n">politicians_open_discourse</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">11004966</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>birthPlace</th>
+      <th>birthCountry</th>
+      <th>birthDate</th>
+      <th>deathDate</th>
+      <th>gender</th>
+      <th>profession</th>
+      <th>aristocracy</th>
+      <th>academicTitle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4092</th>
+      <td>11004966</td>
+      <td>Franziska</td>
+      <td>Giffey</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Als Proxy, um herauszufinden, welche Politiker:innen nicht in aus den Stammdaten extrahiert sind, sondern mithilfe von Wikipedia ergänzt wurden, kann das Vorhandensein eines Geburtsdatums dienen, da dieses  aus den Stammdaten übernommen wurde. Dabei zeigt sich, dass dies 15 Politiker:innen betrifft.<a class="reference external" href="#ref_24">[24]</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">politicians_open_discourse</span><span class="p">[</span><span class="n">politicians_open_discourse</span><span class="o">.</span><span class="n">birthDate</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>birthPlace</th>
+      <th>birthCountry</th>
+      <th>birthDate</th>
+      <th>deathDate</th>
+      <th>gender</th>
+      <th>profession</th>
+      <th>aristocracy</th>
+      <th>academicTitle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4089</th>
+      <td>11004963</td>
+      <td>Christine</td>
+      <td>Bergmann</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4090</th>
+      <td>11004964</td>
+      <td>Wolfgang</td>
+      <td>Clement</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4091</th>
+      <td>11004965</td>
+      <td>Karl Heinz</td>
+      <td>Funke</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4092</th>
+      <td>11004966</td>
+      <td>Franziska</td>
+      <td>Giffey</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4093</th>
+      <td>11004967</td>
+      <td>Bodo</td>
+      <td>Hombach</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4094</th>
+      <td>11004968</td>
+      <td>Reinhard</td>
+      <td>Klimmt</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4095</th>
+      <td>11004969</td>
+      <td>Hans</td>
+      <td>Leussink</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4096</th>
+      <td>11004970</td>
+      <td>Hans</td>
+      <td>Lukaschek</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4097</th>
+      <td>11004971</td>
+      <td>Werner</td>
+      <td>Müller</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4098</th>
+      <td>11004972</td>
+      <td>Philipp</td>
+      <td>Rösler</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4099</th>
+      <td>11004973</td>
+      <td>Svenja</td>
+      <td>Schulze</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4100</th>
+      <td>11004974</td>
+      <td>Manuela</td>
+      <td>Schwesig</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4101</th>
+      <td>11004975</td>
+      <td>Manfred</td>
+      <td>Stolpe</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4102</th>
+      <td>11004976</td>
+      <td>Johanna</td>
+      <td>Wanka</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4103</th>
+      <td>11004977</td>
+      <td>Ludger</td>
+      <td>Westrick</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4104</th>
+      <td>-1</td>
+      <td>Not found</td>
+      <td></td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Bereits die ID 11004963 wurde neu vergeben, jedoch sind in den Stammdaten teils nicht alle Zahlen fortlaufend vergeben, weshalb dies noch kein Problem darstellte, erst drei Zahlen weiter kommt es zum ersten Problem mit Franziska Giffey und Kirstina Nordt.</p>
+<p>Konkret darf bei Abgeordneten, die nach März 2021 in den Bundestag eingezogen sind, nicht auf die Bundestags-IDs zurückgegriffen werden, da deren IDs potenziell bereits vergeben wurden, eine allgemeine Referenzierbarkeit ist dadurch nicht gegeben.</p>
+</section>
+<section id="fraktionen">
+<h2>2.2.3 Fraktionen<a class="headerlink" href="#fraktionen" title="Link zu dieser Überschrift">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">groups_open_discourse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;../data/open_discourse/factions.feather&quot;</span><span class="p">)</span>
+<span class="n">groups_open_discourse</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>abbreviation</th>
+      <th>fullName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1</td>
+      <td>not found</td>
+      <td>not found</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>AfD</td>
+      <td>Alternative für Deutschland</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>BHE</td>
+      <td>Block der Heimatvertriebenen und Entrechteten</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>BP</td>
+      <td>Bayernpartei</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>Grüne</td>
+      <td>Bündnis 90/Die Grünen</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4</td>
+      <td>CDU/CSU</td>
+      <td>Christlich Demokratische Union Deutschlands/Ch...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>5</td>
+      <td>DA</td>
+      <td>Demokratische Arbeitsgemeinschaft</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>6</td>
+      <td>DIE LINKE.</td>
+      <td>DIE LINKE.</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>7</td>
+      <td>DP</td>
+      <td>Deutsche Partei</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>8</td>
+      <td>DP/DBP</td>
+      <td>Deutsche Partei/Deutsche Partei Bayern</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>9</td>
+      <td>DP/FVP</td>
+      <td>Deutsche Partei/Freie Volkspartei</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>10</td>
+      <td>DPB</td>
+      <td>Deutsche Partei Bayern</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>11</td>
+      <td>DRP</td>
+      <td>Deutsche Reformpartei</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>12</td>
+      <td>DRP/NR</td>
+      <td>Deutsche Reichspartei/Nationale Rechte</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>13</td>
+      <td>FDP</td>
+      <td>Freie Demokratische Partei</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>14</td>
+      <td>FU</td>
+      <td>Föderalistische Union</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>15</td>
+      <td>FVP</td>
+      <td>Freie Volkspartei</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>16</td>
+      <td>Fraktionslos</td>
+      <td>Fraktionslos</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>17</td>
+      <td>GB/BHE</td>
+      <td>Gesamtdeutscher Block/Bund der Heimatvertriebe...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>18</td>
+      <td>Gast</td>
+      <td>Gast</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>19</td>
+      <td>KO</td>
+      <td>Kraft/Oberländer-Gruppe</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>20</td>
+      <td>KPD</td>
+      <td>Kommunistische Partei Deutschlands</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>21</td>
+      <td>NR</td>
+      <td>Nationale Rechte</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>22</td>
+      <td>PDS</td>
+      <td>Partei des Demokratischen Sozialismus</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>23</td>
+      <td>SPD</td>
+      <td>Sozialdemokratische Partei Deutschlands</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>24</td>
+      <td>SSW</td>
+      <td>Südschleswigscher Wählerverband</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>25</td>
+      <td>WAV</td>
+      <td>Wirtschaftliche Aufbau-Vereinigung</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>26</td>
+      <td>Z</td>
+      <td>Deutsche Zentrumspartei</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Die Liste der Fraktionen setzt sich laut der Dokumentation von Open Discourse aus den Stammdaten sowie allen Nennungen in den Protokollen zusammen; so seien teils auch Fraktionen in der Liste, die in den Protokollen an keiner Stelle vorkommen.<a class="reference external" href="#ref_25">[25]</a></p>
+<p>Nicht alle der Gruppen in der Liste sind tatsächlich Fraktionen: Um eine Fraktion zu bilden, muss diese mindestens einen Anteil von 5 % der Abgeordneten im Bundestag auf sich vereinen.<a class="reference external" href="#ref_26">[26]</a> Diese Prämisse trifft nicht auf alle Gruppierungen in der Liste zu. Sie bilden keine Fraktionen, sondern nur eine Gruppe, was bestimmte Einschränkungen hinsichtlich ihrer Rechte im Bundestag bedeutet. Konkret trifft dies auf DRP (ID: 11), DRP/NR (ID: 13), KO (ID: 19), NR (ID: 21) zu. Weiterhin gab es einige der in der Liste vorhandenen Gruppen eigentlich nicht als solche, sondern sie stellten vielmehr Parteien oder Bestandteil anderer Gruppen dar: BHE (ID: 1), Deutsche Partei Bayern (ID: 10) und SSW (ID: 24).<a class="reference external" href="#ref_27">[27]</a></p>
+<p>Weiterhin gibt es eine Vereinfachung hinsichtlich der Fraktion <em>Bündnis 90/Die Grünen</em> und der Fraktion <em>DIE LINKE.</em>, während bei den Kleinfraktionen und -gruppen die verschiedenen Entwicklungsstufen jeweils durch eine eigene Fraktion/Gruppe und ID dargestellt wird, ist dies bei <em>Bündnis 90/Die Grünen</em> nicht der Fall; der Zusammenschluss der Grünen mit <em>Bündnis 90</em> im Jahr 1990 lässt sich nicht abgrenzen von der vorherigen Fraktion Grüne. Wieder etwas anders sieht es bei der Fraktion <em>DIE LINKE</em>. aus, diese ist abgrenzt von der Fraktion der PDS, wobei Letztere die Fraktion <em>PDS</em> wie auch <em>PDS/Linke Liste</em> repräsentiert.</p>
+<p>Ergänzend zu den Gruppen gibt es in der Tabelle noch weitere Zeilen, um andere Politiker:innen besser einordnen zu können:</p>
+<ul class="simple">
+<li><p>not found (ID: -1): Redebeiträge, bei denen die Zuordnung nicht funktioniert hat oder möglich sei. Vor allem für Reden von Gästen (nach OP-Definition)</p></li>
+<li><p>Fraktionslos (ID: 16): Abgeordnete, die nicht Mitglied einer Fraktion oder Gruppe sind</p></li>
+<li><p>Gast (ID: 18): Für sogenannte Gäste der Fraktionen, also Nicht-Parteimitglieder; insgesamt nur 12 Redebeiträge, 10 davon von Heintz Kreutzmann, der in 5. Periode SPD-Gast war.</p></li>
+</ul>
+<section id="id1">
+<h3>***<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">#</a></h3>
+<p><a id="ref_1"></a>[1] Florian Richter, Philipp Koch, Oliver Franke, u. a., Open Discourse, Harvard Dataverse, 04.06.2023, <a class="reference external" href="https://doi.org/10.7910/DVN/FIKIBO">https://doi.org/10.7910/DVN/FIKIBO</a>.</p>
+<p><a id="ref_2"></a>[2] Plenarprotokolle des deutschen Bundestages seit 1949 - Open Discourse, o. D., <a class="reference external" href="https://opendiscourse.de">https://opendiscourse.de</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_3"></a>[3] Jakob Kraus, Oliver Franke, Florian Richter, Open Discourse, Limebit GmbH, 26.06.2023 [2. Oktober 2020], GitHub, <a class="reference external" href="https://github.com/open-discourse/open-discourse">https://github.com/open-discourse/open-discourse</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_4"></a>[4] Diskursanalyse des deutschen Bundestages seit 1949 - Open Discourse, <a class="reference external" href="https://opendiscourse.de/">https://opendiscourse.de/</a>, o. D., <a class="reference external" href="https://opendiscourse.de/diskursanalyse">https://opendiscourse.de/diskursanalyse</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_5"></a>[5] Documentation Space - Open Discourse v. 1.1.0, o. D., <a class="reference external" href="https://open-discourse.github.io/open-discourse-documentation/1.1.0/index.html">https://open-discourse.github.io/open-discourse-documentation/1.1.0/index.html</a> (abgerufen: 05.05.2023).</p>
+<p><a id="ref_6"></a>[6] Der Einsatz von LDA-Topic-Modelling für historische Quellen, gerade wenn Sie einen solch großen zeitlichen Umfang beinhalten, ist mit vielen Fallstricken behaftet. Eine Diskursanalyse – wie der Titel suggeriert – darf in jedem Fall nicht mit dieser Auswertung enden, sondern steht danach noch ganz am Anfang. Mehr zu der Nutzung von LDA-Topic-Modelling in:<br />
+Melanie Althage, Potenziale und Grenzen der Topic- Modellierung mit Latent Dirichlet Allocation für die Digital History, in: Karoline Dominika Döring Döring, Stefan Haas, Mareike König, u. a. (Hrsg.), Digital History: Konzepte, Methoden und Kritiken Digitaler Geschichtswissenschaft, Bd. 6, Berlin, Boston 2022 (Studies in Digital History and Hermeneutics), S. 255–278, <a class="reference external" href="https://doi.org/10.1515/9783110757101-014">https://doi.org/10.1515/9783110757101-014</a>.</p>
+<p><a id="ref_7"></a>[7] GermaParl - Corpus of Plenary Protocols, PolMine, 22.06.2023 [3. November 2017], GitHub, <a class="reference external" href="https://github.com/PolMine/GermaParlTEI">https://github.com/PolMine/GermaParlTEI</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_8"></a>[8] Daten &amp; Methodik, <a class="reference external" href="https://opendiscourse.de/">https://opendiscourse.de/</a>, o. D., <a class="reference external" href="https://opendiscourse.de/methodik">https://opendiscourse.de/methodik</a> (abgerufen: 05.05.2023).</p>
+<p><a id="ref_9"></a>[9] Open Discourse.</p>
+<p><a id="ref_10"></a>[10] Documentation Space - Open Discourse v. 1.1.0.</p>
+<p><a id="ref_11"></a>[11] Florian Richter, Philipp Koch, Oliver Franke, u. a., Open Discourse: Towards the first fully Comprehensive and Annotated Corpus of the Parliamentary Protocols of the German Bundestag in, 2023, S. 10. OSF Preprints, <a class="reference external" href="https://doi.org/10.31235/osf.io/dx87u">https://doi.org/10.31235/osf.io/dx87u</a>.</p>
+<p><a id="ref_12"></a>[12] Ebd., S. 3.</p>
+<p><a id="ref_13"></a>[13] Open Discourse [&#64;OpenDiscourseDE], ### Thread: Qualität unserer Daten ### (1/7), Tweet, Twitter, 08.03.2020, <a class="reference external" href="https://twitter.com/OpenDiscourseDE/status/1236590569624829953">https://twitter.com/OpenDiscourseDE/status/1236590569624829953</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_14"></a>[14] Open Discourse [&#64;OpenDiscourseDE], (5/7) Gastredner, Tweet, Twitter, 08.03.2020, <a class="reference external" href="https://twitter.com/OpenDiscourseDE/status/1236590575727632384">https://twitter.com/OpenDiscourseDE/status/1236590575727632384</a> (abgerufen: 05.05.2023).</p>
+<p><a id="ref_15"></a>[15] Open Discourse [&#64;OpenDiscourseDE], (6/7) Zwischenrufe, Tweet, Twitter, 08.03.2020, <a class="reference external" href="https://twitter.com/OpenDiscourseDE/status/1236590577040404482">https://twitter.com/OpenDiscourseDE/status/1236590577040404482</a> (abgerufen: 23.06.2023).</p>
+<p><a id="ref_16"></a>[16] Open Discourse.<br />
+Pickle hatte für diese Untersuchung die IDs beim Import unbrauchbar gemacht, durch die Nutzung von Feather – zusätzlich zu deren geringeren Dateigröße – konnte dies umschifft werden.</p>
+<p><a id="ref_17"></a>[17] Ebd. <a class="reference external" href="https://github.com/open-discourse/open-discourse/blob/develop/python/src/od_lib/01_preprocessing/03_split_xml.py">https://github.com/open-discourse/open-discourse/blob/develop/python/src/od_lib/01_preprocessing/03_split_xml.py</a> In Zeile 157-180 sind die Nummern der Doppelungen hardgecodet, aber eben nur diejenigen ab der 3. Periode, die vorherigen fehlen.</p>
+<p><a id="ref_18"></a>[18] Beschlussempfehlung und Bericht des Ausschusses für Wahlprüfung, Immunität und Geschäftsordnung (1. Ausschuss): Änderungen der Geschäftsordnung des Deutschen Bundestages, Deutscher Bundestag, 18.06.2009, <a class="reference external" href="https://dserver.bundestag.de/btd/16/134/1613492.pdf">https://dserver.bundestag.de/btd/16/134/1613492.pdf</a>.</p>
+<p><a id="ref_19"></a>[19] Diese Zahlen basieren auf einer Regex-Suche per Visual Studio Code nach <code class="docutils literal notranslate"><span class="pre">Zu</span> <span class="pre">Protokoll</span> <span class="pre">gegebene</span> <span class="pre">Rede</span></code> in data/raw/12. Diese Phrase wird im Inhaltsverzeichnis in Protokollen der 12. Periode genutzt, in anderen Perioden weicht diese Phrase dagegen ab.</p>
+<p><a id="ref_20"></a>[20] Diese Zahlen basieren auf einer Regex-Suche per Visual Studio Code nach <code class="docutils literal notranslate"><span class="pre">^Berichtigung(en)?$</span></code> in data/raw (/19 ausgeschlossen). Das ist die Überschrift der Berichtigungen am Ende des Protokolls.</p>
+<p><a id="ref_21"></a>[21] Beispielsweise in einer Rede von Nicole Höchst (AfD) am 25.10.2019, dort heißt es im Protokoll <a class="reference external" href="https://dserver.bundestag.de/btp/19/19122.pdf">19122</a> über Ehrenamt und deren Förderung: „Das ist großartig, und das sollte nicht an überbordender Demokratie […] scheitern.“, in dem Protokoll 19123 vom 6.11.2019 findet sich dann die Korrektur: „Das ist großartig, und das sollte nicht an überbordender Bürokratie […] scheitern.“</p>
+<p><a id="ref_22"></a>[22] 3.4 Politicians Table | Documentation Space - Open Discourse v. 1.1.0, o. D., <a class="reference external" href="https://open-discourse.github.io/open-discourse-documentation/1.1.0/politicians-table.html">https://open-discourse.github.io/open-discourse-documentation/1.1.0/politicians-table.html</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_23"></a>[23] Ebd.</p>
+<p><a id="ref_24"></a>[24] Dieser Proxy lässt sich mit Daten aus Kapitel 3.3.3 auch prüfen durch das Vorhandensein der ID in den Stammdaten unter Berücksichtigung der fortgezählten Ids: <code class="docutils literal notranslate"><span class="pre">politicians_open_discourse[(~politicians_open_discourse['id'].isin(mdbs.id.astype(int)))</span> <span class="pre">|</span> <span class="pre">(politicians_open_discourse['id']</span> <span class="pre">&gt;</span> <span class="pre">11004965)]</span></code></p>
+<p><a id="ref_25"></a>[25] 3.3 Factions Table | Documentation Space - Open Discourse v. 1.1.0, o. D, <a class="reference external" href="http://open-discourse.github.io">open-discourse.github.io</a>, <a class="reference external" href="https://opendiscourse.de">https://opendiscourse.de</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_26"></a>[26] Geschäftsordnung: IV. Fraktionen, Deutscher Bundestag, o. D, <a class="reference external" href="https://www.bundestag.de/parlament/aufgaben/rechtsgrundlagen/go_btg/go04-245158">https://www.bundestag.de/parlament/aufgaben/rechtsgrundlagen/go_btg/go04-245158</a> (abgerufen: 29.06.2023).</p>
+<p><a id="ref_27"></a>[27] <em>BHE</em>: Aufnahme in Liste wohl aufgrund Unschärfe in den Stammdaten, eigentlich Teil der Fraktion Gesamtdeutscher Block/Bund der Heimatvertriebenen und Entrechteten (ID: 17) <em>DPB</em>: Durch Fehlangabe in den Stammdaten, eigentlich Teil der Fraktion <em>Deutsche Partei/Deutsche Partei Bayern</em> (ID: 8) <em>SSW</em>: Aufnahme wohl durch Angabe der Partei an der Stelle, wo in der späteren Struktur nur noch die Fraktion erscheint in der ersten Periode; eigentlich weder Fraktion noch Gruppe.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2_daten.html" title="zurück Seite">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">zurück</p>
+            <p class="prev-next-title">2 Quellengrundlage &amp; Daten: Bundestagsprotokolle &amp; Open Discourse</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3_methode.html" title="weiter Seite">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">weiter</p>
+        <p class="prev-next-title">3 Methode: Goldstandard-Korpus-Evaluation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Ramisch<br/>
+  
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

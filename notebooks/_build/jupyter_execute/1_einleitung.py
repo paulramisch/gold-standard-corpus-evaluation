@@ -1,0 +1,100 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # 1 Einleitung
+# 
+# Die Zahl großer digitaler historischer Textkorpora hat in den vergangenen Jahren stark zugenommen und ermöglicht eine Vielzahl innovativer Untersuchungen. Gleichzeitig bringen diese Datenmengen Herausforderungen für die Quellen- und Datenkritik mit sich, da bisher keine adäquaten Methoden hierfür existieren. In dieser Arbeit wird am Beispiel des Open-Discourse-Korpus die Goldstandard-Korpus-Evaluation als Methode für die digitale Quellenkritik entwickelt.
+# 
+# Das Open-Discourse-Korpus ist ein umfangreicher Datensatz aller Redebeiträge der Sitzungen des Deutschen Bundestags seit der Gründung 1949 bis ins Jahr 2021. Für die Forschung zur bundesdeutschen Politikgeschichte ist das im Jahr 2020 veröffentlichte [Open-Discourse-Projekt](https://opendiscourse.de/) eine vielversprechende Quelle.[[1]](#ref-1) Im Deutschen Bundestag kommen die demokratisch gewählten Abgeordneten zusammen, um Gesetze zu diskutieren und zu verabschieden. Dadurch sind die Protokolle der Plenarsitzungen eine wichtige Quelle für die Geschichte der Bundesrepublik. Open Discourse ermöglicht mit einem Web-Interface ein einfaches Durchsuchen und Filtern aller rund 900.000 Bundestags-Redebeiträge seit 1949 nach Redeinhalt, Sprecher:in, Fraktion und Funktion. Das zugrunde liegende Korpus eröffnet vielfältige Analysemöglichkeiten über das Interface hinaus. Dieses wurde automatisiert auf Basis der Protokoll-Dokumente erstellt, die der Bundestag als Open Data veröffentlicht hat.[[2]](#ref-2)
+# 
+# Dadurch wird die Recherche des Quellenmaterials vereinfacht, insbesondere die Erfassung und Berarbeitung großer Datenmengen. Das Projekt ermöglicht aber auch neue Untersuchungen im Bereich des distant reading. Es ließe sich untersuchen, welche Themen zu welchem Zeitpunkt diskutiert wurden, oder ob strukturelle Unterschiede zwischen verschiedenen Gruppen von Politiker:innen je nach Partei und Fraktion, Alter, Geschlecht und Herkunft bestanden. Für die Geschichtswissenschaften ist die Vielschichtigkeit der  Daten von großem Nutzen: denn genauso lässt sich feststellen wie sich Diskurse verändern und Begriffe und Sprache gewandelt haben oder wie die parlamentarische Arbeit sich entwickelt hat – alles in unterschiedlicher Granularität nach Zeitpunkt, Gruppe oder auch einzelner Person.
+# 
+# Für die Geschichtswissenschaften stellen sich dabei nicht allein Fragen nach neuen Methoden für die Auswertung, sie stehen außerdem vor Herausforderungen im Kontext der Quellenkritik. Digitalisierte Quellen sind Metaquellen, die nicht nur hinsichtlich ihrer historischen Authentizität, also der Wahrhaftigkeit der historischen Darstellung, überprüft werden müssen, sondern beispielsweise auch anhand ihrer *semantischen Korrektheit*, also ob der reale und modellierte Sachverhalt identisch sind.[[3]](#ref-3) Große automatisiert verarbeitete Quell-Datensätze, die zudem häufig außerhalb der Disziplin erzeugt wurden, haben jedoch Konsequenzen, die in der bisherigen Forschung nur bedingt betrachtet wurden. Für die Untersuchung solcher Textkorpora gibt es bisher kaum Methoden oder Studien, die eine Quellenkritik vornehmen oder ein entsprechendes Vorgehen formulieren. Gleichzeitig werden digitale Ansätze nicht nur durch die stetig wachsende Menge digitaler Quellen wichtiger, ihre Nutzung wird in der Forschung teils sogar unvermeidlich.[[4]](#ref-4)
+# 
+# Die vorliegende Arbeit entwickelt eine Methode, um große digitale Quellen-Korpora quellenkritisch zu bearbeiten, und führt diese anhand des Open-Discourse-Korpus als Fallstudie durch. Dabei soll beantwortet werden, ob sich dieser Datensatz für historische Analysen eignet und untersucht werden, welche Problemstellungen dabei vorliegen. Die notwendigen methodischen Überlegungen und Ergebnisse werden zudem hinsichtlich ihrer Konsequenzen für den Erkenntnisprozess von Historiker:innen und hinsichtlich der Arbeit mit großen Datensätzen als Quellen reflektiert.
+# 
+# Ein allgemeiner Ansatz zur Evaluation automatisierter Datenverarbeitungssysteme und -modelle besteht in dem Vergleich ihrer Ausgabe- mit den Erwartungswerten. Ein solcher Erwartungswert in Form des Goldstandard-Korpus bildet hier die Grundlage der quellenkritischen Untersuchung. Diese wird an einer Stichprobe durchgeführt, um sie mit realistischem Aufwand durchführen zu können. Insgesamt 7542 Redebeiträge in 36 Protokollen wurden dabei manuell annotiert und kontrolliert automatisiert mit Zusatzinformationen angereichert. Die Analyse beschränkt sich auf die in dem Korpus enthaltenen Legislaturperioden 1-18 (1949-2017); seit 2017 werden Protokolle strukturiert im XML-Format veröffentlicht.
+
+# <a id="1-1"></a>
+# ## 1.1 Digitale Quellenkritik im Kontext der Bundestagsprotokolle
+# 
+# Johann Gustav Droysen definierte 1867 als Aufgabe der Quellenkritik herauszufinden, wie das vorliegende Material zu „Willensakten steht, von denen es zeugt“. Sie befasst sich mit der Authentizität einer Quelle, der Entwicklung von früheren zu späteren Formen des Materials und hinterfragt die Gültigkeit von Information und Quelle sowie die Richtigkeit der Information. Zur Quellenkritik gehört auch die kritische Analyse der Ereignisse und Entwicklungen selbst, die in der Quelle dargestellt werden und in welchem historischen Kontext diese und der Autor selbst standen.[[5]](#ref-5) Dabei ist das Ergebnis der Quellenkritik nur die Grundlage für die eigentliche historische Interpretation: „Das Ergebniss der Kritik ist nicht ‚die eigentliche historische Thatsache‘, sondern dass das Material fertig gemacht ist, aus dem das geistige Gegenbild derselben zu gewinnen ist.“[[6]](#ref-6) Auch heute liegt nach Achim Landwehr ein Quellenglauben vor, der diese als Beweisstücke sieht, während der Zusammenhang eben nicht kausal ist. Die Kunst der Quellenkritik ist es herauszuarbeiten, wie die mediale Repräsentation wirklich mit der historischen Wirklichkeit zusammenhängt.[[7]](#ref-7)
+# 
+# Peter Haber erklärte 2011, dass eine digitale Quellenkritik noch fehle und kombinierte Droysens Begriffe der klassischen Quellenkritik mit den Erfordernissen digitaler Dokumente.[[8]](#ref-8) Eva Pfanzelter formuliert die These, dass die Grundsätze der klassischen Quellenkritik sich durch eine „Erweiterung der Untersuchungsparameter durchaus [auf] digitale Forschungsressourcen anwenden“ ließen.[[9]](#ref-9) Dabei werden die Begriffe der äußeren und inneren Quellenkritik auf digitale Materialien angewendet.[[10]](#ref-10) Dem widerspricht Pascal Föhr, anstatt „einzelne, einer inneren und äußeren Quellenkritik zugeordnete Fragen“ zu stellen, sollten iterativ eine Reihe von Fragekomplexen zur Klärung der Authentizität, Integrität und Persistenz bearbeitet werden.[[11]](#ref-11) Für ihn verändern digitale Quellen die Art und die Rolle der Quellenkritik im Erkenntnisprozess so stark, dass dies eine neue Arbeitsweise erfordert. In seiner Dissertation Historische Quellenkritik im digitalen Zeitalter liefert er hierzu viele wichtige Impulse, Begriffe und Handlungsempfehlungen und füllt damit eine vorhandene Leerstelle.[[12]](#ref-12)
+# 
+# Zwei wichtige Abgrenzungs-Kategorien, die Föhr einführt sind die historische Authentizität, also, die Relation zwischen der Darstellung und der historischen Begebenheit, sowie die informationstechnische Authentizität, also die Richtigkeit der Bits und der Modellierung.[[13]](#ref-13) Zu letzter gehört auch die „semantische Korrektheit“ also, dass realer und modellierter Sachverhalt identisch sind.[[14]](#ref-14) 
+# 
+# Dabei gibt es nicht die eine digitale Quelle, sondern viele verschiedene, häufig multimediale Quellenarten.[[15]](#ref-15) Eine wichtige Unterscheidung basiert auf ihrer Entstehung, so sind digitalisierte Quellen vormals analoge Quellen, die zum Beispiel durch Scannen digitalisiert wurden. Born-digital Quellen sind originär digital entstanden, beispielsweise Textdokumente, Webseiten oder digitale Fotos und Videos. Digital reborn bezeichnet Material beider genannter Gruppen, wenn dieses durch einen Archivierungsprozess verändert worden ist, beispielsweise defekte Links in archivierten Webseiten. Dazwischen gibt es auch Sonderfälle wie gedruckte und wieder gescannte Dokumente, ursprünglich born-digital, nun aber digitalisiert.[[16]](#ref-16)
+# 
+# Die bestehenden Ansätze der Quellenkritik beziehen sich meist auf einzelne Quellendokumente, für große (Quell-)Datensätze wie digitale Textkorpora fehlen diese. Eines der Hauptversprechen der Digital History ist es allerdings, mit großen Mengen an Daten arbeiten zu können. Dafür müssen wir diese sorgfältig quellenkritisch bearbeiten, dem *Distant Reading* muss ein *Distant Source Criticism* zur Seite gestellt werden. Große automatisiert verarbeitete Datensätze müssen hinsichtlich expliziter und impliziter Annahmen bei der Modellierung und Verarbeitung dekonstruiert werden und auf ihre Eignung für die Forschungsfrage hin untersucht werden. Neben dieser Untersuchung muss jedoch auch die Qualität der Verarbeitung selbst im Fokus stehen. Dafür gibt es bisher kaum Ansätze und Methoden.
+# 
+# Die *digitale Quellenkritik* benennt hier eine Quellenkritik mit dem Fokus auf die Kritik digitaler Daten. Je nach Definition kann eine Datenkritik die Entstehung der Daten, also deren Übergang von der Quelle beziehungsweise deren Extraktion hin zu den Daten, also eine Art digitaler Provenienz, beinhalten. Die digitale Quellenkritik enthält all dies, aber auch eine Untersuchung der Relation zwischen der Handlung (der Rede) und dem Protokoll. Dies ließe sich zwar ebenfalls unter dem Begriff der Datenkritik oder historischer Datenkritik fassen, die Geschichtswissenschaften haben jedoch nicht nur eigene Fachtraditionen, die sich in dem Begriff der Quellenkritik spiegeln, sondern darin wiederum auch eigene Perspektiven. Diese beinhaltet viel mehr als das ergänzende Adjektiv *historisch* in *historische Datenkritik*. Komplexe Fragen hinsichtlich der Relation zwischen Ereignis, Darstellung und deren Ambiguität sind untrennbar Teil der Quellenkritik, während (historische) Datenkritik dies nicht enthält. Stattdessen besteht vielmehr eine Unschärfe darin, was das Adjektiv historisch in diesem Kontext bedeutet; eine Kritik historischer Daten, also eine Datenkritik der informationstechnischen Authentizität, die hier auf historische Daten angewendet wird, oder aber eine historisch-prozesshafte Datenkritik, die klassisch quellenkritische Fragen an Daten stellt – oder stattdessen sogar beides. Das Adjektiv *digital* in *digitale Quellenkritik* bezieht sich dagegen klar auf die Materialität, es erfordert zwar in Teilschritten besondere Methoden und Blickwinkel, aber in ihrem eigentlichen Zweck der Kritik der Quelle unterscheidet sie sich nicht. So könnte das *digital* auch einfach weggelassen werden.
+# 
+# Das Open-Discourse-Korpus (OP-Korpus) ist dabei ein interessantes Studienobjekt, da es das Ausgangsmaterial bearbeitet und die Redebeiträge in Tabellenform bringt. Dabei stellen sich klassische Fragen hinsichtlich der Entstehung als Text (z. B. „Wie wurde protokolliert“) und der Materialität der zugrunde liegenden Dokumente (digitalisiert vs. born-digital). An Letztere schließen sich Fragen nach der Entstehung als Dokumente in PDF- und XML-Form über Scan-Qualität, Optical-Character-Recognition (OCR) und Textextraktion unter Berücksichtigung des Layouts an. Als digitales Korpus spielen auch Vollständigkeit und mögliche Duplikate eine Rolle. All dies ist Teil der Quellenkritik des OP-Korpus. An diesem Punkt muss die Repräsentation dieser Quellen im OP-Korpus methodisch untersucht werden. Dabei stellen sich Fragen der semantischen Modellierung wie auch der Qualität. Die semantische Korrektheit behandelt hier, wie Redebeiträge und Politiker:innen in dem Datensatz wiedergegeben sind und welche implizite Annahmen über die Natur des Parlaments und der unterschiedlichen Akteur:innen dabei stattfinden. Die Qualität der Daten wird dadurch definiert, wie gut die automatisierte Verarbeitung tatsächlich den Teilaspekt der Redebeiträge der ursprünglichen Dokumente repräsentiert. Diese beiden Fragen nach der semantischen Korrektheit und der Qualität werden mit der Goldstandard-Korpus-Evaluation beantwortet.
+
+# <a id="1-2"></a>
+# ## 1.2 Goldstandard-Korpus-Evaluation als Methode der Digital History
+# 
+# Die Nutzung eines Goldstandard-Korpus kann die Lücke im Werkzeugkasten digitaler Quellenkritik in Bezug auf große Quellen-Datensätze füllen. Ein Goldstandard-Korpus bezeichnet im Natural-Language-Processing-Kontext und der Korpus-Linguistik eine manuell annotierte, ‚perfekte' Textsammlung, die zudem teils von mehreren Expert:innen unabhängig gesichtet wurde und als Referenz einer perfekten Textrepräsentation dient.[[17]](#ref-17) Annotation bedeutet das Taggen von Dokumenten, Sätzen oder Wörtern mit einer Auswahl vordefinierter Kategorien; dabei werden Daten mit strukturierten Informationen angereichert – in diesem Fall den Kategorien, die in dem zu untersuchen Korpus betrachtet werden sollen.[[18]](#ref-18) Eine jüngere Entwicklung ist auch die Nutzung von Silberstandard-Korpora, die automatisiert erstellt werden und bewusst nicht perfekt sind, hierzu zählt entsprechend auch das OP-Korpus.[[19]](#ref-19) Beide Korpora-Arten können für sich bereits das Ziel sein, beispielsweise sind sie für das Training lernender Systeme und Algorithmen wichtig. Für Evaluationszwecke wird das Goldstandard-Korpus automatisiert mit dem Output eines Systems verglichen, um dessen Leistung zu messen. Darüber hinaus wurde diese Methode bereits in mehreren Studien zur Messung der Relation von OCR-Qualität und deren Implikationen für nachgelagerte Aufgaben wie Information Retrieval, Autor:innenschaftsanalyse, Named-Entity-Recognition und Topic-Modelling angewandt.[[20]](#ref-20)
+# 
+# Dieser Prozess lässt sich als Goldstandard-Korpus-Evaluation für die Geschichtswissenschaften adaptieren. Dazu wird eine Stichprobe des Untersuchungsgegenstands genommen. Bestehende Untersuchungen spiegeln die untersuchten Korpora komplett, diese sollen dann beispielhaft für ähnliche Textsammlungen oder OCR-Nutzungen stehen. Weiterhin ist hier nun die automatisierte Annotation und Erkennung der Struktur der Untersuchungsgegenstand, nicht das OCR, wie es der häufigste Anwendungsfall eines Goldstandard-Korpus darstellt. Deshalb folgt auf den automatisierten Vergleich nicht nur ein Blick auf die Zahlen, sondern eine tiefgreifende Analyse der Ergebnisse.
+# 
+# Die Messung der Abweichung eines Datensatzes von einem definierten perfekten Ergebnis, einer *Ground Truth*, ist dabei auch für die Geschichtswissenschaften keine Neuheit.[[21]](#ref-21) Stattdessen stellt sie eine Evolution solcher Ansätze dar, die hilft, komplexe strukturierte Datenmengen zu untersuchen, u. a. durch das Matching mit den Vergleichsdaten und die Nutzung einer Stichprobe. Weiterhin erfordert die Überprüfung des OP-Korpus, der einen Silberstandard-Korpus darstellt, einen Goldstandard-Korpus.
+# 
+# 
+# Das Matching der sich entsprechenden Elemente beider Korpora, hier der Redebeiträge, ist ein essenzieller Schritt, um Unterschiede ausfindig zu machen. In bereits bestehenden Studien der Implikation von OCR-Qualität auf Downstream-Untersuchungen wurde ein Matching beispielsweise bereits auf Ebene einzelner Wortbestandteile (Token) durchgeführt, indem deren Ähnlichkeit verglichen wird.[[22]](#ref-22) Die Komplexität liegt dabei im Detail, da sich die Texte durch abweichende Bearbeitungen (z. B. Cleaning-Schritte) oder – das ist in dieser Arbeit nicht der Fall – durch unterschiedliche Ausgangsmaterialien unterscheiden können. Je nach Untersuchung erfordert dies die Entwicklung eines eigenen Algorithmus.
+# 
+# Nach dem Abschluss des Matchings liegt ein Parallelkorpus vor, das nicht nur hinsichtlich der Fehlerquote, sondern auch hinsichtlich der Fehlerursachen analysiert wird. Auf diese Art sollen strukturelle Fehler, die deutlich problematischer sind als zufällig verteilte Fehler („noise“) gefunden werden. Allgemein sollen die Fehlerursachen identifiziert werden, um es bei Bedarf zu ermöglichen, die Daten für den Verwendungszweck zu verbessern.
+
+# ***
+# <a id="ref-1"></a>[1] Das letzte Korpus-Update gab es am 4. Juni 2023 (Version 4), die Arbeit basiert auf der Version vom 25. April 2021 (Version 3).  
+# Florian Richter, Philipp Koch, Oliver Franke, u. a., Open Discourse, Harvard Dataverse, 04.06.2023, https://doi.org/10.7910/DVN/FIKIBO.
+# 
+# <a id="ref-2"></a>[2] Deutscher Bundestag - Open Data, Deutscher Bundestag, o. D., https://www.bundestag.de/services/opendata (abgerufen: 05.05.2023).
+# 
+# <a id="ref-3"></a>[3] Andreas Fickers, Update für die Hermeneutik. Geschichtswissenschaft auf dem Weg zur digitalen Forensik?, in: Zeithistorische Forschungen–Studies in Contemporary History 17/1, ZZF–Centre for Contemporary History: Zeithistorische Forschungen, 2020, S. 109.  
+# Pascal Föhr, Historische Quellenkritik im digitalen Zeitalter (E-humanities), Glückstadt 2019, Deutsche Nationalbibliothek, http://edoc.unibas.ch/diss/DissB_12621.
+# 
+# <a id="ref-4"></a>[4] Torsten Hiltmann, Jan Keupp, Melanie Althage, u. a., Digital Methods in Practice, in: Geschichte und Gesellschaft 47/1, Vandenhoeck & Ruprecht, (10.06.2021), https://doi.org/10.13109/gege.2021.47.1.122, S. 152.
+# 
+# <a id="ref-5"></a>[5] Hering Katharina, Provenance Meets Source Criticism Journal of Digital Humanities, in: Journal of Digital Humanities 3/2, 2014, https://journalofdigitalhumanities.org/3-2/provenance-meets-source-criticism/ (abgerufen: 06.04.2023).
+# 
+# <a id="ref-6"></a>[6] Droysen Johann Gustav, Grundriss der Historik, Leipzig 1868, Deutsches Textarchiv, https://www.deutschestextarchiv.de/book/view/droysen_historik_1868/?hl=Urtheil;p=27 (abgerufen: 28.06.2023), S. 18f.
+# 
+# <a id="ref-7"></a>[7] Landwehr in Andreas Fickers, Authenticity: Historical Data Integrity and the Layered Materiality of Digital Objects, in: Gabriele Balbi, Nelson Ribeiro, Valérie Schafer, u. a. (Hrsg.), Digital Roots. Historicizing Media and Communication Concepts of the Digital Age, Bd. 4, Berlin, Boston 20211 (Studies in Digital History and Hermeneutics), https://doi.org/10.1515/9783110740202-017, S. 301.
+# 
+# <a id="ref-8"></a>[8] Eva Pfanzelter, Die historische Quellenkritik und das Digitale, in: Archiv und Wirtschaft 48/1, 2015, https://diglib.uibk.ac.at/ulbtirolfodok/download/pdf/866898?originalFilename=true, S. 5.
+# 
+# <a id="ref-9"></a>[9] Ebd.
+# 
+# <a id="ref-10"></a>[10] Ebd., S. 14.
+# 
+# <a id="ref-11"></a>[11] Historische Quellenkritik im digitalen Zeitalter, S. 185.
+# 
+# <a id="ref-12"></a>[12] Ebd., S. 8.
+# 
+# <a id="ref-13"></a>[13] Ebd., S. 186.
+# 
+# <a id="ref-14"></a>[14] Update für die Hermeneutik. Geschichtswissenschaft auf dem Weg zur digitalen Forensik?, S. 163.
+# 
+# <a id="ref-15"></a>[15] Die historische Quellenkritik und das Digitale, S. 6.
+# 
+# <a id="ref-16"></a>[16] Ebd., S. 7.
+# 
+# <a id="ref-17"></a>[17] Lars Wissler, Mohammed Almashraee, Dagmar Monett, u. a., The Gold Standard in Corpus Annotation, in: Proceedings of the 5th IEEE Germany Students Conference 2014, ResearchGate 2014, https://doi.org/10.13140/2.1.4316.3523, S. 2.
+# 
+# <a id="ref-18"></a>[18] Ebd., S. 1.
+# 
+# <a id="ref-19"></a>[19] Ebd., S. 1, 3.
+# 
+# <a id="ref-20"></a>[20] D. van Strien, K. Beelen, M. C. Ardanuy, u. a., Assessing the impact of OCR quality on downstream NLP tasks, in: Proceedings of the 12th International Conference on Agents and Artificial Intelligence, 2020, https://doi.org/10.5220/0009169004840496, S. 2.
+# 
+# <a id="ref-21"></a>[21] Digital Methods in Practice, S. 146.
+# 
+# <a id="ref-22"></a>[22] Assessing the impact of OCR quality on downstream NLP tasks, S. 4.
+
+# In[ ]:
+
+
+
+
